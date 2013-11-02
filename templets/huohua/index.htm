@@ -1,1506 +1,350 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-		<title>应用搜 - 安卓软件搜索 Android安卓智能手机应用软件与游戏免费下载</title>
-		<meta name="Keywords" content="应用搜,搜应用,安卓网,安卓软件,安卓游戏,安卓下载,安卓应用,免费下载,智能手机应用,安卓市场,电子市场,应用商店,APP,APK,Android软件,Android应用,Android游戏,Android下载,安致软件" />
-		<meta name="description" content="应用搜(YINGYONG.SO)提供安卓软件搜索，最新最热门Android安卓智能手机应用软件与游戏的便捷免费下载服务。" />
-		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-1.4.2.min.js"></script>
-		<script language="javascript"  src="{dede:global.cfg_templets_skin/}/js/jquery_cookie.js"></script>
-		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jqModal.js"></script>
-		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/common.js"></script>
-		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/getarrjs.js"></script>
-		<link href="{dede:global.cfg_templets_skin/}/style/jqModal.css" rel="stylesheet" type="text/css">
-		<link href="{dede:global.cfg_templets_skin/}/style/newCss.css" rel="stylesheet" type="text/css">
-		<meta name="mobile-agent" content="format=xhtml;url=http://m.huohua.com">
-		<base target="_self">
+		<meta charset="UTF-8">
+		<meta name="author" content="developer:ZhangChunsheng, team:luomor, date:2013-11-02">
+		<meta name="keywords" content="火花市场,安卓游戏,安卓软件下载,安卓游戏下载,安卓手机助手,安卓,腾讯应用,应用中心,应用,游戏,android,android app,android应用,免费应用,应用下载,应用排行,应用专题">
+		<meta name="description" content="火花市场一款专门为用户提供安卓应用下载的web产品。一切以用户价值为依归，通过海量丰富的应用、游戏资源，高品质的应用推荐，丰富多彩的用户互动，努力为用户打造贴心、舒心、快乐、健康的移动应用服务平台。">
+		<title>火花市场</title>
+		<script src="http://jsqmt.qq.com/cdn_djl.js" type="text/javascript" async=""></script>
+		<script type="text/javascript">
+			var _head_start = new Date();
+			var g_returl = "http://localhost/github/iMarket/iMarket/index.php";
+			var gf_param = "";
+			var g_action = "/github/iMarket/iMarket/api/";
+			//var g_action = "http://android.myapp.com/android/";
+			//http://android.myapp.com/android/qrytopicbycms_web?r=0.018095792969688773
+			//http://android.myapp.com/android/qrynesseary_web?type=0&r=0.661279286025092
+			var g_respath = "http://localhost{dede:global.cfg_templets_skin/}";
+			var g_hostpath = "http://localhost";
+			var g_logined = false;
+			var g_qqno = 0;
+			var g_nickname = "";
+		</script>
+		<script>
+		  /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-45384518-1', 'studyandthinkhtml5.com');
+		  ga('send', 'pageview');*/
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-45384518-1']);
+			_gaq.push(['_trackPageview']);
+		</script>
+
+		<base href="http://localhost/github/iMarket/iMarket/index.php">
+		<link rel="canonical" href="http://localhost/github/iMarket/iMarket/index.php">
+		<link rel="shortcut icon" type="image/ico" href="{dede:global.cfg_templets_skin/}/images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/myapp/global.min.css?ver=2.3.5">
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/myapp/fuck-ie.css" />
+		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/myapp/html5.js"></script>
+		<![endif]-->
+		<noscript>
+			&lt;style type="text/css"&gt;
+				.wraper {display:none !important;}
+			&lt;/style&gt;
+			&lt;div class="ie-noscript-warning"&gt;
+			由于您的浏览器禁用了javascript脚本，网页无法正常浏览!
+			&lt;/div&gt;
+		</noscript>
+		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-1.4.2.min.js" async=""></script>
+		<!--<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/myapp/storescrolload.min.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/myapp/manifest.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/myapp/base.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/myapp/index.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/myapp/tcss.ping.js" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="http://img1.sj.qq.com/api/scripts/sjqqapi.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://img1.sj.qq.com/api/styles/sjqqapi.css?ver=2.3.5">
+		<style type="text/css" id="in-inline-css">
+			@font-face {
+				font-family: 'myfont';
+				src: url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.eot');
+				src: url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.eot?#iefix') format('embedded-opentype'),
+				url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.woff') format('woff'),
+				url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.ttf') format('truetype'),
+				url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.svg#Untitled1Medium')
+				format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		</style>-->
+		<script src="http://jqmt.qq.com/cdn_dianjiliu.js?a=0.33706603525206447"></script>
 	</head>
 	<body>
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
-			<tr>
-				<td background="{dede:global.cfg_templets_skin/}/images/yingyong-so_bg1.gif">
-					<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
-						<tr>
-							<td width="307" height="137">
-								<form name="searchform" id="searchform" onsubmit="return CheckSearch();" style="margin:0px;" method="post" target="_self" action="">
-									<table width="307" border="0" cellpadding="0" cellspacing="0">
-										<tr>
-											<td height="67" colspan="5" background="{dede:global.cfg_templets_skin/}/images/yys-logo_01.gif"><a href="/" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/yys-logo_01.gif" width="307" height="67" /></a></td>
-										</tr>
-										<tr>
-											<td width="20" background="{dede:global.cfg_templets_skin/}/images/yys-logo_02.gif"></td>
-											<td width="175" height="52">
-												<input name="q" type="text" id="q"
-												onblur="javascript:if(this.value==''){ this.style.background='url({dede:global.cfg_templets_skin/}/images/searchbg.gif) no-repeat 0px 0px';}"
-												onfocus="javascript:this.style.background='url({dede:global.cfg_templets_skin/}/images/searchbg.gif) no-repeat 0px -52px';" autocomplete="off"
-												style="padding: 4px 0 4px 10px; border: 0px; width: 163px; height: 42px; background: url({dede:global.cfg_templets_skin/}/images/searchbg.gif) no-repeat 0px 0px; font-family: 微软雅黑; font-size: 25px; color: #737A98;" />
-											</td>
-											<td width="9" height="52" background="{dede:global.cfg_templets_skin/}/images/yys-logo_04.gif"></td>
-											<td><input type="image" name="bt_search" on id="bt_search" src="{dede:global.cfg_templets_skin/}/images/yys-logo_05.gif" style="border-width:0px;" /></td>
-											<td width="51" height="52" background="{dede:global.cfg_templets_skin/}/images/yys-logo_06.gif">
-											</td>
-										</tr>
-										<tr>
-											<td height="18" colspan="5" background="{dede:global.cfg_templets_skin/}/images/yys-logo_07.gif"></td>
-										</tr>
-									</table>
-								</form>
-							</td>
-							<td valign="top">
-								<table width="100%" border="0" cellspacing="0" cellpadding="0">
-									<tr>
-										<td width="693" height="83" valign="top" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_02.gif">
-											<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/yingyong_user.js"></script>
-										</td>
-									</tr>
-									<tr>
-										<td align="right">
-											<table border="0" align="right" cellpadding="0" cellspacing="0">
-												<tr>
-													<td>
-														<a href="/">
-															<div style="width:132px; height:54px; background:url({dede:global.cfg_templets_skin/}/images/yingyong-so_03-000.gif)  no-repeat -32px 0px"></div>
-														</a>
-													</td>
-													<td>
-														<a href="/allapp/">
-															<div style="width:130px; height:54px; background:url({dede:global.cfg_templets_skin/}/images/yingyong-so_03-000.gif)  no-repeat -164px 0px"></div>
-														</a>
-													</td>
-													<td>
-														<a href="/topapp/">
-															<div style="width:130px; height:54px; background:url({dede:global.cfg_templets_skin/}/images/yingyong-so_03-000.gif)  no-repeat -294px 0px"></div>
-														</a>
-													</td>
-													<td>
-														<a href="/myapp/">
-															<div style="width:131px; height:54px; background:url({dede:global.cfg_templets_skin/}/images/yingyong-so_03-000.gif)  no-repeat -424px 0px"></div>
-														</a>
-													</td>
-													<td>
-														<a href="/blog/">
-															<div style="width:130px; height:54px; background:url({dede:global.cfg_templets_skin/}/images/yingyong-so_03-000.gif)  no-repeat -555px 0px"></div>
-														</a>
-													</td>
-												</tr>
-											</table>
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-		<table width="100%" height="9" border="0" align="center" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_bg3.gif">
-			<tr>
-				<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-			</tr>
-		</table>
-		<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
-			<tr>
-				<td width="750" valign="top">
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_38.gif">
-						<tr>
-							<td width="11"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_40.gif" width="11" height="28"></td>
-							<td valign="bottom">
-								<table width="100%" height="23" border="0" cellpadding="0" cellspacing="0">
-									<tr>
-										<td class="f14"><a title="今日推荐" href="/allapp/">今日推荐</a></td>
-									</tr>
-								</table>
-							</td>
-							<td></td>
-							<td width="53" align="right"><a title="更多推荐" href="/allapp/"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_42.gif" width="53" height="28"></a></td>
-						</tr>
-					</table>
-					<table width="100%" height="366" border="0" cellpadding="0" cellspacing="0">
-						<tr>
-							<td bgcolor="#CCCCCC" style="height: 354px">
-								<div class="mL">
-									<!-- 焦点图  begin begin -->
-									<div class="focus_img">
-										<div class="big_area">
-											<div class="big_img" id="con_1">
-											</div>
-											<div class="titlebg">
-											</div>
-											<h3 id="h2title">
-											</h3>
-										</div>
-										<div class="thurmb" id="con_2">
-										</div>
-									</div>
-									<script type="text/javascript">
-										var focusImg= new FocusImg();
-										focusImg.bigDiv="con_1";
-										focusImg.smallDiv="con_2";
-										focusImg.imgW=545;
-										focusImg.imgH=327;
-										focusImg.sTime=8000;
-										focusImg.titleDiv="h2title";
-										var s = {};
-										s.bigimg="{dede:global.cfg_templets_skin/}/images/171832250.jpg";
-										s.title="经典再续 FPS+TPS大作《使命召唤：突击队》";
-										s.url="http://www.huohua.com/app/25/12811.htm";
-										focusImg.imgList.push(s);
-										var s = {};
-										s.bigimg="{dede:global.cfg_templets_skin/}/images/171832250.jpg";
-										s.title="僵尸射击大作【死亡扳机2】下载开启";
-										s.url="http://www.huohua.com/app/25/12777.htm";
-										focusImg.imgList.push(s);
-										var s = {};
-										s.bigimg="{dede:global.cfg_templets_skin/}/images/171832250.jpg";
-										s.title="热血范儿动作游戏【百变英雄 Random Heroes】";
-										s.url="http://www.huohua.com/app/25/12798.htm";
-										focusImg.imgList.push(s);
-										focusImg.init();
-										focusImg.autoPlay();
-										  
-									</script>
-									<!-- 焦点图 end -->
-								</div>
-							</td>
-						</tr>
-					</table>
-					<table width="100" height="9" border="0" align="center" cellpadding="0" cellspacing="0">
-						<tr>
-							<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_08.gif">
-						<tr>
-							<td width="13"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_06.gif" width="13" height="27"></td>
-							<td valign="bottom" class="f14">
-								<table width="100%" height="23" border="0" cellpadding="0" cellspacing="0">
-									<tr>
-										<td class="f14"><a title="必备应用" href="/topapp/">必备应用</a></td>
-									</tr>
-								</table>
-							</td>
-							<td width="8"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_09.gif" width="8" height="27"></td>
-							<td width="470" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_10.gif"></td>
-							<td width="8"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_11.gif" width="8" height="27"></td>
-							<td width="13"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_12.gif" width="13" height="27"></td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so2_19.gif">
-						<tr>
-							<td height="350" bgcolor="#CCCCCC">
-								<div class="infocontent">
-									<div id="sanjiao"></div>
-									<div id="topImg" class="topImg">加载中...</div>
-									<div id="ZheZhao" onclick="Reset()" class="zhezhao"> </div>
-									<div id="content" class="infocontent">
-										<ul id="id1">
-											<li>
-												<p><a onclick="Show(36,'id1',7)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>微博社交</p>
-											</li>
-											<li>
-												<p><a onclick="Show(129,'id1',14)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>即时通讯</p>
-											</li>
-											<li>
-												<p><a onclick="Show(221,'id1',5)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>QQ大全</p>
-											</li>
-											<li>
-												<p><a onclick="Show(313,'id1',1)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>Google官方</p>
-											</li>
-											<li>
-												<p><a onclick="Show(408,'id1',6)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>输入法</p>
-											</li>
-											<li>
-												<p><a href="http://www.yingyong.so/app/25/12629.htm"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>NBA 2K14</p>
-											</li>
-											<li>
-												<p><a href="http://www.yingyong.so/app/25/12595.htm"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>弹珠世界</p>
-											</li>
-											<li>
-												<p><a href="http://www.yingyong.so/app/25/12668.htm"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>像素铁拳</p>
-											</li>
-										</ul>
-										<ul id="id2">
-											<li>
-												<p><a onclick="Show(36,'id2',15)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>影视音乐</p>
-											</li>
-											<li>
-												<p><a onclick="Show(129,'id2',9)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>图片拍照</p>
-											</li>
-											<li>
-												<p><a onclick="Show(221,'id2',27)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>网页浏览</p>
-											</li>
-											<li>
-												<p><a onclick="Show(313,'id2',24)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>耐玩游戏</p>
-											</li>
-											<li>
-												<p><a onclick="Show(408,'id2',25)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>3D大作</p>
-											</li>
-											<li>
-												<p><a href="http://www.yingyong.so/app/25/12777.htm"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>死亡扳机2</p>
-											</li>
-											<li>
-												<p><a href="http://www.yingyong.so/app/25/12688.htm"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>疯兔大爆炸</p>
-											</li>
-											<li>
-												<p><a href="http://www.yingyong.so/app/25/12687.htm"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>铁甲钢拳：世界机器人拳击</p>
-											</li>
-										</ul>
-										<ul id="id3">
-											<li>
-												<p><a onclick="Show(36,'id3',8)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>系统加强</p>
-											</li>
-											<li>
-												<p><a onclick="Show(129,'id3',22)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>办公商务</p>
-											</li>
-											<li>
-												<p><a onclick="Show(221,'id3',21)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>定位导航</p>
-											</li>
-											<li>
-												<p><a onclick="Show(313,'id3',13)" href="javascript:;" target="_self"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>安全杀毒</p>
-											</li>
-											<li>
-												<p><a href="http://www.yingyong.so/app/15/7633.htm"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>驱家新闻</p>
-											</li>
-											<li>
-												<p><a href="http://www.yingyong.so/app/25/12689.htm"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>咒灵诞生</p>
-											</li>
-											<li>
-												<p><a href="http://www.yingyong.so/app/24/12434.htm"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>死亡漩涡2</p>
-											</li>
-											<li>
-												<p><a href="http://www.yingyong.so/app/25/12667.htm"><img src="{dede:global.cfg_templets_skin/}/images/095527854.png" /></a></p>
-												<p>霓虹暗影</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_19.gif">
-						<tr>
-							<td width="11"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_18.gif" width="11" height="7"></td>
-							<td height="7"><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-							<td width="11"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_20.gif" width="11" height="7"></td>
-						</tr>
-					</table>
-					<table width="100" height="9" border="0" align="center" cellpadding="0" cellspacing="0">
-						<tr>
-							<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_08.gif">
-						<tr>
-							<td width="13"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_06.gif" width="13" height="27"></td>
-							<td valign="bottom" class="f14">
-								<table width="100%" height="23" border="0" cellpadding="0" cellspacing="0">
-									<tr>
-										<td class="f14"><a title="最新更新" href="/allapp/">最新更新</a></td>
-									</tr>
-								</table>
-							</td>
-							<td width="8"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_09.gif" width="8" height="27"></td>
-							<td width="470" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_10.gif"></td>
-							<td width="8"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_11.gif" width="8" height="27"></td>
-							<td width="13"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_12.gif" width="13" height="27"></td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so2_19.gif">
-						<tr>
-							<td>
-								<div class="RPCataloAppList">
-									<ul>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="My Calc" href="/app/25/12821.htm"><img alt="My Calc" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="My Calc" href="/app/25/12821.htm" class="yys-12b">My Calc
-															</a><BR><a title="日常工具" href="/appcatalog-24-1/" class="yys-12s">日常工具</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="Recovery Tools" href="/app/25/12813.htm"><img alt="Recovery Tools" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="Recovery Tools" href="/app/25/12813.htm" class="yys-12b">Recovery Too
-															</a><BR><a title="系统工具" href="/appcatalog-7-1/" class="yys-12s">系统工具</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="tinyCam网络摄像头" href="/app/25/12815.htm"><img alt="tinyCam网络摄像头" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="tinyCam网络摄像头" href="/app/25/12815.htm" class="yys-12b">tinyCam网络摄
-															</a><BR><a title="商务办公" href="/appcatalog-19-1/" class="yys-12s">商务办公</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="AK74武器专家" href="/app/25/12814.htm"><img alt="AK74武器专家" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="AK74武器专家" href="/app/25/12814.htm" class="yys-12b">AK74武器专家
-															</a><BR><a title="休闲娱乐" href="/appcatalog-15-1/" class="yys-12s">休闲娱乐</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="iHeartRadio世界电台" href="/app/25/12818.htm"><img alt="iHeartRadio世界电台" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="iHeartRadio世界电台" href="/app/25/12818.htm" class="yys-12b">iHeartRadio世
-															</a><BR><a title="视频音乐" href="/appcatalog-16-1/" class="yys-12s">视频音乐</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="加强型计算器" href="/app/25/12817.htm"><img alt="加强型计算器" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="加强型计算器" href="/app/25/12817.htm" class="yys-12b">加强型计算器
-															</a><BR><a title="日常工具" href="/appcatalog-24-1/" class="yys-12s">日常工具</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="Flowpaper流线" href="/app/25/12816.htm"><img alt="Flowpaper流线" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="Flowpaper流线" href="/app/25/12816.htm" class="yys-12b">Flowpaper流线
-															</a><BR><a title="休闲娱乐" href="/appcatalog-15-1/" class="yys-12s">休闲娱乐</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="贴图日历" href="/app/25/12820.htm"><img alt="贴图日历" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="贴图日历" href="/app/25/12820.htm" class="yys-12b">贴图日历
-															</a><BR><a title="日常工具" href="/appcatalog-24-1/" class="yys-12s">日常工具</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="GPS Widget Pro" href="/app/25/12819.htm"><img alt="GPS Widget Pro" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="GPS Widget Pro" href="/app/25/12819.htm" class="yys-12b">GPS Widget P
-															</a><BR><a title="桌面插件" href="/appcatalog-13-1/" class="yys-12s">桌面插件</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="以太竞技场：英雄冲突 beta版" href="/app/25/12812.htm"><img alt="以太竞技场：英雄冲突 beta版" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="以太竞技场：英雄冲突 beta版" href="/app/25/12812.htm" class="yys-12b">以太竞技场：
-															</a><BR><a title="策略经营" href="/appcatalog-30-1/" class="yys-12s">策略经营</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="搜狗地图" href="/app/2/1156.htm"><img alt="搜狗地图" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="搜狗地图" href="/app/2/1156.htm" class="yys-12b">搜狗地图
-															</a><BR><a title="出行地图" href="/appcatalog-25-1/" class="yys-12s">出行地图</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="百度视频" href="/app/4/2072.htm"><img alt="百度视频" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="百度视频" href="/app/4/2072.htm" class="yys-12b">百度视频
-															</a><BR><a title="视频音乐" href="/appcatalog-16-1/" class="yys-12s">视频音乐</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-									</ul>
-								</div>
-								<table width="100"  border="0" align="center" cellpadding="0" cellspacing="0">
-									<tr>
-										<td height="30"><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-									</tr>
-								</table>
-								<table width="100%" border="0" cellspacing="0" cellpadding="0">
-									<tr>
-										<td align="center"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_37.gif" width="710" height="8"></td>
-									</tr>
-								</table>
-								<table width="100" border="0" align="center" cellpadding="0" cellspacing="0">
-									<tr>
-										<td height="30"><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-									</tr>
-								</table>
-								<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
-									<tr>
-										<td align="center"><a target="_blank" title="健康工作 快乐生活" href="/zhuantiinfo.aspx?id=231"><img alt="健康工作 快乐生活" src="{dede:global.cfg_templets_skin/}/images/095527854.png" width="144" height="111"></a></td>
-										<td align="center"><a target="_blank" title="萌系休闲游合集" href="/zhuantiinfo.aspx?id=53"><img alt="萌系休闲游合集" src="{dede:global.cfg_templets_skin/}/images/095527854.png" width="144" height="111"></a></td>
-										<td align="center"><a target="_blank" title="我猜 我猜 我猜猜猜" href="/zhuantiinfo.aspx?id=205"><img alt="我猜 我猜 我猜猜猜" src="{dede:global.cfg_templets_skin/}/images/095527854.png" width="144" height="111"></a></td>
-										<td align="center"><a target="_blank" title="最美不过像素风" href="/zhuantiinfo.aspx?id=187"><img alt="最美不过像素风" src="{dede:global.cfg_templets_skin/}/images/095527854.png" width="144" height="111"></a></td>
-									</tr>
-								</table>
-								<table width="100"  border="0" align="center" cellpadding="0" cellspacing="0">
-									<tr>
-										<td height="30"><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-									</tr>
-								</table>
-								<table width="100%" border="0" cellspacing="0" cellpadding="0">
-									<tr>
-										<td height="8" align="center"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_37.gif" width="710" height="8"></td>
-									</tr>
-								</table>
-								<div class="RPCataloAppList">
-									<ul>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="幸运破解器" href="/app/8/4388.htm"><img alt="幸运破解器" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="幸运破解器" href="/app/8/4388.htm" class="yys-12b">幸运破解器
-															</a><BR><a title="系统工具" href="/appcatalog-7-1/" class="yys-12s">系统工具</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="Jego" href="/app/22/11228.htm"><img alt="Jego" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="Jego" href="/app/22/11228.htm" class="yys-12b">Jego
-															</a><BR><a title="即时通讯" href="/appcatalog-3-1/" class="yys-12s">即时通讯</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="饭本" href="/app/25/12623.htm"><img alt="饭本" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="饭本" href="/app/25/12623.htm" class="yys-12b">饭本
-															</a><BR><a title="购物消费" href="/appcatalog-23-1/" class="yys-12s">购物消费</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="Opera 浏览器" href="/app/2/1326.htm"><img alt="Opera 浏览器" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="Opera 浏览器" href="/app/2/1326.htm" class="yys-12b">Opera 浏览器
-															</a><BR><a title="浏览器" href="/appcatalog-12-1/" class="yys-12s">浏览器</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="DFX音乐播放器 专业版" href="/app/25/12570.htm"><img alt="DFX音乐播放器 专业版" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="DFX音乐播放器 专业版" href="/app/25/12570.htm" class="yys-12b">DFX音乐播放器
-															</a><BR><a title="视频音乐" href="/appcatalog-16-1/" class="yys-12s">视频音乐</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="OfficeSuite Pro 7 (PDF & HD)" href="/app/0/383.htm"><img alt="OfficeSuite Pro 7 (PDF & HD)" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="OfficeSuite Pro 7 (PDF & HD)" href="/app/0/383.htm" class="yys-12b">OfficeSuite 
-															</a><BR><a title="商务办公" href="/appcatalog-19-1/" class="yys-12s">商务办公</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="Mantano阅读器" href="/app/3/1932.htm"><img alt="Mantano阅读器" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="Mantano阅读器" href="/app/3/1932.htm" class="yys-12b">Mantano阅读器
-															</a><BR><a title="动漫图书" href="/appcatalog-21-1/" class="yys-12s">动漫图书</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="闹钟ONE" href="/app/21/10883.htm"><img alt="闹钟ONE" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="闹钟ONE" href="/app/21/10883.htm" class="yys-12b">闹钟ONE
-															</a><BR><a title="日常工具" href="/appcatalog-24-1/" class="yys-12s">日常工具</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="小米司机" href="/app/0/196.htm"><img alt="小米司机" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="小米司机" href="/app/0/196.htm" class="yys-12b">小米司机
-															</a><BR><a title="出行地图" href="/appcatalog-25-1/" class="yys-12s">出行地图</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="最强科学计算器" href="/app/6/3257.htm"><img alt="最强科学计算器" src="{dede:global.cfg_templets_skin/}/images/095527854.png"></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="最强科学计算器" href="/app/6/3257.htm" class="yys-12b">最强科学计算
-															</a><BR><a title="日常工具" href="/appcatalog-24-1/" class="yys-12s">日常工具</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="凡客诚品" href="/app/10/5007.htm"><img alt="凡客诚品" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="凡客诚品" href="/app/10/5007.htm" class="yys-12b">凡客诚品
-															</a><BR><a title="购物消费" href="/appcatalog-23-1/" class="yys-12s">购物消费</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-										<li>
-											<TABLE border=0 cellSpacing=0 cellPadding=0 width="95%" align=center>
-												<TBODY>
-													<TR>
-														<TD align=center>
-															<TABLE border=0 cellSpacing=0 cellPadding=0 width=80 align=center height=80>
-																<TBODY>
-																	<TR>
-																		<TD background="{dede:global.cfg_templets_skin/}/images/logo-001-bg.png" align="center"><a title="QQ电影票" href="/app/10/5264.htm"><img alt="QQ电影票" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></TD>
-																	</TR>
-																</TBODY>
-															</TABLE>
-														</TD>
-													</TR>
-													<TR>
-														<TD height=35 align=center class="yys-12s"><a title="QQ电影票" href="/app/10/5264.htm" class="yys-12b">QQ电影票
-															</a><BR><a title="购物消费" href="/appcatalog-23-1/" class="yys-12s">购物消费</a>
-														</TD>
-													</TR>
-												</TBODY>
-											</TABLE>
-										</li>
-									</ul>
-								</div>
-								<table width="100"  border="0" align="center" cellpadding="0" cellspacing="0">
-									<tr>
-										<td height="12"><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_19.gif">
-						<tr>
-							<td width="11"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_18.gif" width="11" height="7"></td>
-							<td height="7"><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-							<td width="11"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_20.gif" width="11" height="7"></td>
-						</tr>
-					</table>
-					<table width="100" height="9" border="0" align="center" cellpadding="0" cellspacing="0">
-						<tr>
-							<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-						</tr>
-					</table>
-				</td>
-				<td width="7"><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-				<td width="243" valign="top">
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_08.gif">
-						<tr>
-							<td width="13"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_06.gif" width="13" height="27"></td>
-							<td valign="bottom" class="f14">
-								<table width="100%" height="23" border="0" cellpadding="0" cellspacing="0">
-									<tr>
-										<td class="f14">关注我们</td>
-									</tr>
-								</table>
-							</td>
-							<td width="8"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_09.gif" width="8" height="27"></td>
-							<td width="100" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_10.gif"></td>
-							<td width="8"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_11.gif" width="8" height="27"></td>
-							<td width="13"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_12.gif" width="13" height="27"></td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so2_13.gif">
-						<tr>
-							<td>
-								<table width="100%" height="115" border="0" cellpadding="0" cellspacing="0">
-									<tr>
-										<td>
-											<table width="120" border="0" align="center" cellpadding="0" cellspacing="0">
-												<tr>
-													<td height="40" align="center"><a target="_blank" href="
-														http://weibo.com/yingyongso/"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_26.gif" width="102" height="34"></a></td>
-												</tr>
-												<tr>
-													<td height="40" align="center"><a target="_blank" href="
-														http://t.qq.com/yingyongso/"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_29.gif" width="102" height="33"></a></td>
-												</tr>
-											</table>
-										</td>
-										<td width="100">
-											<table width="100%" border="0" cellspacing="0" cellpadding="0">
-												<tr>
-													<td align="center"><img src="{dede:global.cfg_templets_skin/}/images/yingyongso weixin.jpg" width="77" height="77"></td>
-												</tr>
-												<tr>
-													<td height="26" align="center" class="f12_black"><a title="微信扫一扫" href="http://www.yingyong.so/app/0/294.htm">微信扫一扫</a></td>
-												</tr>
-											</table>
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_19.gif">
-						<tr>
-							<td width="11"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_18.gif" width="11" height="7"></td>
-							<td height="7"><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-							<td width="11"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_20.gif" width="11" height="7"></td>
-						</tr>
-					</table>
-					<table width="100" height="9" border="0" align="center" cellpadding="0" cellspacing="0">
-						<tr>
-							<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_08.gif">
-						<tr>
-							<td width="13"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_06.gif" width="13" height="27"></td>
-							<td valign="bottom" class="f14">
-								<table width="100%" height="23" border="0" cellpadding="0" cellspacing="0">
-									<tr>
-										<td class="f14"><a href="/topapp-1-1/">软件排行</a></td>
-									</tr>
-								</table>
-							</td>
-							<td width="8"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_09.gif" width="8" height="27"></td>
-							<td width="100" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_10.gif"></td>
-							<td width="8"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_11.gif" width="8" height="27"></td>
-							<td width="13"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_12.gif" width="13" height="27"></td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so2_13.gif">
-						<tr>
-							<td>
-								<table width="100" height="15" border="0" align="center" cellpadding="0" cellspacing="0">
-									<tr>
-										<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-									</tr>
-								</table>
-								<table border="0" cellSpacing="0" cellPadding="0" width="95%" align="center">
-									<tbody>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="Google Play 服务" href="/app/16/8061.htm"><img alt="Google Play 服务" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="Google Play 服务" href="/app/16/8061.htm" class="yys-12b">Google Play 服务
-												</a><BR><a title="系统工具" href="/topapp-7-1/" class="yys-12s">系统工具</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="谷歌拼音输入法" href="/app/0/457.htm"><img alt="谷歌拼音输入法" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="谷歌拼音输入法" href="/app/0/457.htm" class="yys-12b">谷歌拼音输入法
-												</a><BR><a title="输入法" href="/topapp-9-1/" class="yys-12s">输入法</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="WiFi万能钥匙" href="/app/11/5680.htm"><img alt="WiFi万能钥匙" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="WiFi万能钥匙" href="/app/11/5680.htm" class="yys-12b">WiFi万能钥匙
-												</a><BR><a title="系统工具" href="/topapp-7-1/" class="yys-12s">系统工具</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="金山WPS Office手机版" href="/app/1/819.htm"><img alt="金山WPS Office手机版" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="金山WPS Office手机版" href="/app/1/819.htm" class="yys-12b">金山WPS Office手机版
-												</a><BR><a title="商务办公" href="/topapp-19-1/" class="yys-12s">商务办公</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="微云" href="/app/13/6971.htm"><img alt="微云" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="微云" href="/app/13/6971.htm" class="yys-12b">微云
-												</a><BR><a title="系统工具" href="/topapp-7-1/" class="yys-12s">系统工具</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="手机QQ2013" href="/app/2/1327.htm"><img alt="手机QQ2013" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="手机QQ2013" href="/app/2/1327.htm" class="yys-12b">手机QQ2013
-												</a><BR><a title="即时通讯" href="/topapp-3-1/" class="yys-12s">即时通讯</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="多看阅读" href="/app/4/2492.htm"><img alt="多看阅读" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="多看阅读" href="/app/4/2492.htm" class="yys-12b">多看阅读
-												</a><BR><a title="动漫图书" href="/topapp-21-1/" class="yys-12s">动漫图书</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="官方电子市场" href="/app/3/1511.htm"><img alt="官方电子市场" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="官方电子市场" href="/app/3/1511.htm" class="yys-12b">官方电子市场
-												</a><BR><a title="系统工具" href="/topapp-7-1/" class="yys-12s">系统工具</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="驱家新闻" href="/app/15/7633.htm"><img alt="驱家新闻" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="驱家新闻" href="/app/15/7633.htm" class="yys-12b">驱家新闻
-												</a><BR><a title="新闻资讯" href="/topapp-20-1/" class="yys-12s">新闻资讯</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="安兔兔评测" href="/app/0/289.htm"><img alt="安兔兔评测" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="安兔兔评测" href="/app/0/289.htm" class="yys-12b">安兔兔评测
-												</a><BR><a title="系统工具" href="/topapp-7-1/" class="yys-12s">系统工具</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="天天动听" href="/app/0/42.htm"><img alt="天天动听" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="天天动听" href="/app/0/42.htm" class="yys-12b">天天动听
-												</a><BR><a title="视频音乐" href="/topapp-16-1/" class="yys-12s">视频音乐</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="金山安全彩票" href="/app/24/12322.htm"><img alt="金山安全彩票" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="金山安全彩票" href="/app/24/12322.htm" class="yys-12b">金山安全彩票
-												</a><BR><a title="购物消费" href="/topapp-23-1/" class="yys-12s">购物消费</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="烧饼游戏修改器" href="/app/18/9129.htm"><img alt="烧饼游戏修改器" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="烧饼游戏修改器" href="/app/18/9129.htm" class="yys-12b">烧饼游戏修改器
-												</a><BR><a title="系统工具" href="/topapp-7-1/" class="yys-12s">系统工具</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<table width="100" height="15" border="0" align="center" cellpadding="0" cellspacing="0">
-									<tr>
-										<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_19.gif">
-						<tr>
-							<td width="11"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_18.gif" width="11" height="7"></td>
-							<td height="7"><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-							<td width="11"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_20.gif" width="11" height="7"></td>
-						</tr>
-					</table>
-					<table width="100" height="9" border="0" align="center" cellpadding="0" cellspacing="0">
-						<tr>
-							<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_08.gif">
-						<tr>
-							<td width="13"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_06.gif" width="13" height="27"></td>
-							<td valign="bottom" class="f14">
-								<table width="100%" height="23" border="0" cellpadding="0" cellspacing="0">
-									<tr>
-										<td class="f14"><a href="/topapp-2-1/">游戏排行</a></td>
-									</tr>
-								</table>
-							</td>
-							<td width="8"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_09.gif" width="8" height="27"></td>
-							<td width="100" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_10.gif"></td>
-							<td width="8"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_11.gif" width="8" height="27"></td>
-							<td width="13"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_12.gif" width="13" height="27"></td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so2_13.gif">
-						<tr>
-							<td>
-								<table width="100" height="15" border="0" align="center" cellpadding="0" cellspacing="0">
-									<tr>
-										<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-									</tr>
-								</table>
-								<table border="0" cellSpacing="0" cellPadding="0" width="95%" align="center">
-									<tbody>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="植物大战僵尸2" href="/app/24/12398.htm"><img alt="植物大战僵尸2" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="植物大战僵尸2" href="/app/24/12398.htm" class="yys-12b">植物大战僵尸2
-												</a><BR><a title="策略经营" href="/topapp-30-1/" class="yys-12s">策略经营</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="王国保卫战之前线" href="/app/25/12515.htm"><img alt="王国保卫战之前线" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="王国保卫战之前线" href="/app/25/12515.htm" class="yys-12b">王国保卫战之前线
-												</a><BR><a title="策略经营" href="/topapp-30-1/" class="yys-12s">策略经营</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="猎鹿人2014" href="/app/24/12496.htm"><img alt="猎鹿人2014" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="猎鹿人2014" href="/app/24/12496.htm" class="yys-12b">猎鹿人2014
-												</a><BR><a title="飞行射击" href="/topapp-34-1/" class="yys-12s">飞行射击</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="FIFA 14" href="/app/24/12471.htm"><img alt="FIFA 14" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="FIFA 14" href="/app/24/12471.htm" class="yys-12b">FIFA 14
-												</a><BR><a title="体育竞速" href="/topapp-33-1/" class="yys-12s">体育竞速</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="艾诺迪亚4" href="/app/12/6456.htm"><img alt="艾诺迪亚4" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="艾诺迪亚4" href="/app/12/6456.htm" class="yys-12b">艾诺迪亚4
-												</a><BR><a title="角色养成" href="/topapp-29-1/" class="yys-12s">角色养成</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="捣蛋猪" href="/app/16/8045.htm"><img alt="捣蛋猪" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="捣蛋猪" href="/app/16/8045.htm" class="yys-12b">捣蛋猪
-												</a><BR><a title="休闲益智" href="/topapp-31-1/" class="yys-12s">休闲益智</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="蘑菇战争" href="/app/24/12484.htm"><img alt="蘑菇战争" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="蘑菇战争" href="/app/24/12484.htm" class="yys-12b">蘑菇战争
-												</a><BR><a title="策略经营" href="/topapp-30-1/" class="yys-12s">策略经营</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="水果忍者" href="/app/0/89.htm"><img alt="水果忍者" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="水果忍者" href="/app/0/89.htm" class="yys-12b">水果忍者
-												</a><BR><a title="休闲益智" href="/topapp-31-1/" class="yys-12s">休闲益智</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="狂野飙车8：极速凌云" href="/app/24/12186.htm"><img alt="狂野飙车8：极速凌云" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="狂野飙车8：极速凌云" href="/app/24/12186.htm" class="yys-12b">狂野飙车8：极速凌云
-												</a><BR><a title="体育竞速" href="/topapp-33-1/" class="yys-12s">体育竞速</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="极速枢纽" href="/app/24/12469.htm"><img alt="极速枢纽" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="极速枢纽" href="/app/24/12469.htm" class="yys-12b">极速枢纽
-												</a><BR><a title="休闲益智" href="/topapp-31-1/" class="yys-12s">休闲益智</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="死亡巨石" href="/app/24/12490.htm"><img alt="死亡巨石" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="死亡巨石" href="/app/24/12490.htm" class="yys-12b">死亡巨石
-												</a><BR><a title="休闲益智" href="/topapp-31-1/" class="yys-12s">休闲益智</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="疼痛之旅" href="/app/17/8548.htm"><img alt="疼痛之旅" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="疼痛之旅" href="/app/17/8548.htm" class="yys-12b">疼痛之旅
-												</a><BR><a title="动作冒险" href="/topapp-4-1/" class="yys-12s">动作冒险</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="f12-0" height="50" vAlign="middle" width="63" align="center">
-												<table border="0" cellSpacing="0" cellPadding="0" width="38" height="38">
-													<tbody>
-														<tr>
-															<td background="{dede:global.cfg_templets_skin/}/images/logo-001-bg 08.png" align="center"><a title="神庙逃亡" href="/app/10/5265.htm"><img alt="神庙逃亡" width="32" height="32" src="{dede:global.cfg_templets_skin/}/images/095527854.png "></a></td>
-														</tr>
-													</tbody>
-												</table>
-											</td>
-											<td vAlign="middle" width="168"><a title="神庙逃亡" href="/app/10/5265.htm" class="yys-12b">神庙逃亡
-												</a><BR><a title="动作冒险" href="/topapp-4-1/" class="yys-12s">动作冒险</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<table width="100" height="22" border="0" align="center" cellpadding="0" cellspacing="0">
-									<tr>
-										<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-					<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{dede:global.cfg_templets_skin/}/images/yingyong-so_19.gif">
-						<tr>
-							<td width="11"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_18.gif" width="11" height="7"></td>
-							<td height="7"><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-							<td width="11"><img src="{dede:global.cfg_templets_skin/}/images/yingyong-so_20.gif" width="11" height="7"></td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-		<table border="0" cellSpacing="0" cellPadding="0" width="100%" bgColor="#cccccc" height="1">
-			<tbody>
-				<tr>
-					<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-				</tr>
-			</tbody>
-		</table>
-		<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
-			<tr>
-				<td>
-					<table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
-						<tr>
-							<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-						</tr>
-					</table>
-					<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
-						<tr>
-							<td align="left" class="f12g" valign="middle">友情链接:  <a target="_blank" href="http://www.ijinshan.com" class="f12g">金山网络</a> <a target="_blank" href="http://www.mydrivers.com" class="f12g">驱动之家</a> <a target="_blank" href="http://m.yingyong.so/" class="f12g">应用搜手机版</a> <a target="_blank" href="http://www.drivergenius.com" class="f12g">驱动精灵</a> <a target="_blank" href="http://www.shoujikong.cn/" class="f12g">金山手机助手</a> <a target="_blank" href="http://www.liebao.cn/" class="f12g">猎豹浏览器</a> <a target="_blank" href="http://bbs.xiaomi.cn" class="f12g">小米手机</a> <a target="_blank" href="http://digi.tech.qq.com/mobile/smartphone/" class="f12g">腾讯智能手机</a> <a target="_blank" href="http://tech.sina.com.cn/3gsoft/" class="f12g">新浪手机软件</a> <a target="_blank" href="http://apk.gfan.com/" class="f12g">机锋市场</a> <a target="_blank" href="http://app.sohu.com" class="f12g">搜狐软件下载</a> <a target="_blank" href="http://www.myfiles.com.cn/" class="f12g">软件之家</a> <a target="_blank" href="http://sj.zol.com.cn" class="f12g">ZOL手机软件</a> <a target="_blank" href="http://game.d.cn/" class="f12g">当乐手机游戏</a> <a target="_blank" href="http://www.miui.com/index.php" class="f12g">MIUI</a> <a target="_blank" href="http://www.myapks.com/" class="f12g">安卓网</a> <a target="_blank" href="http://www.tompda.com/soft/" class="f12g">手机软件</a> <a target="_blank" href="http://softdown.cnmo.com/" class="f12g">手机软件下载</a> <a target="_blank" href="http://www.anzhuo.cn" class="f12g">安卓论坛</a> <a target="_blank" href="http://www.pinguo.us/" class="f12g">Camera360</a> <a target="_blank" href="http://www.quickpai.mobi/" class="f12g">快拍二维码</a> <a target="_blank" href="http://zx.sj.91.com/" class="f12g">91手机资讯</a> <a target="_blank" href="http://www.starandroid.com/" class="f12g">安卓星空</a> <a target="_blank" href="http://bbs.nduoa.com/forum.php" class="f12g">N多网</a> <a target="_blank" href="http://m.ijinshan.com/" class="f12g">金山手机卫士</a> <a target="_blank" href="http://www.talkphone.cn/" class="f12g">锋潮网</a> <a target="_blank" href="http://www.candou.com/" class="f12g">蚕豆网</a> <a target="_blank" href="http://www.rexsee.com/" class="f12g">Rexsee开源平台</a> <a target="_blank" href="http://photo.poco.cn/" class="f12g">POCO摄影网</a> <a target="_blank" href="http://patch.ali213.net" class="f12g">单机游戏补丁</a> <a target="_blank" href="http://www.otapp.com/" class="f12g">空中苹果</a> <a target="_blank" href="http://www.uu.cc/" class="f12g">游娱网</a> <a target="_blank" href="http://iphone.duowan.com/" class="f12g">多玩iPhone</a> </td>
-						</tr>
-					</table>
-					<table width="100%" height="25" border="0" cellpadding="0" cellspacing="0">
-						<tr>
-							<td><img src="{dede:global.cfg_templets_skin/}/images/spacer.gif" width="1" height="1"></td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-		<table width="100%" height="130" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
-			<tr>
-				<td align="center">
-					<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
-						<tr>
-							<td align="center" class="f14_black"><a href="/about/aboutus.shtml" class="newstiao4-1">关于我们</a> | <a href="/about/contact.shtml" class="newstiao4-1">联系我们</a> |<a href="/about/askapp.shtml" class="newstiao4-1">我要找应用</a> | <a href="/about/upapp.shtml" class="newstiao4-1">我有新应用</a></td>
-						</tr>
-						<tr>
-							<td height="70" align="center" class="f12g">  Copyright 2011-2013 应用搜 ALL Rights Reserved <a href="http://www.miibeian.gov.cn/" target="_blank">豫ICP证010012-5</a></td>
-						</tr>
-					</table>
-					<a href="http://www.mydrivers.com/"><img width="75" height="26" src="{dede:global.cfg_templets_skin/}/images/xzd.jpg" border="0" /></a>
-				</td>
-			</tr>
-		</table>
-		<div style="display:none;">
+		<div class="wraper">
+			<header class="user-information">
+				<a href="http://hao.qq.com/?cid=dh.mobapp" onclick="_gaq.push(['_trackEvent', 'outsite', 'hao.qq', 'index']);pingHotag('outsite.hao.qq.index');" target="_blank">QQ导航</a>&nbsp;|&nbsp;
+				<a href="http://tap.myapp.com/" onclick="_gaq.push(['_trackEvent', 'outsite', 'tap.myapp', 'index']);pingHotag('outsite.tap.myapp.index');" target="_blank">开发者</a>&nbsp;|&nbsp;
+				<a href="http://support.qq.com/discuss/693_1.shtml" target="_blank">反馈建议</a>&nbsp;|&nbsp;
+				<a href="/android/copyright.jsp">侵权投诉</a>&nbsp;|&nbsp;
+				<a href="http://kf.qq.com/special_auto/txyyzxweb.html" target="_blank">腾讯客服</a>&nbsp;|&nbsp;
+				<a class="mblog" href="http://t.qq.com/download_app" target="_blank"><s></s>关注我们</a>
+			</header>
+			<div id="login_wrap" style="position:absolute; display:none; width:552px; height:380px; padding:0; margin:0; z-index:10000;" align="center">
+				<iframe id="login_frame" name="login_frame" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
+			</div>
+			<div class="ie6-header"></div>
+			<div class="main" role="main">
+				<div class="ie-main-header"></div>
+				<header role="banner">
+					<h1 class="logo"><a href="/android/index.jsp"><img src="{dede:global.cfg_templets_skin/}/images/logo.png" width="210" height="60" alt="应用宝网"></a></h1>
+
+					<div class="login logout">
+						<a class="user-avatar" href="javascript:openLogin();">
+							<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" width="50" height="50" alt="">
+							<div class="shadow"></div>
+						</a>
+						<div class="user-name"><a href="javascript:openLogin();">请登录</a></div>
+						<div class="target"></div>
+					</div>
+
+					<nav role="navigation">
+						<h1 class="hide-clip">网站导航</h1>
+						<ul class="navigation">
+							<li><a class="nownav" href="/android/index.jsp" hidefocus=""><span>首页</span></a></li>
+							<li><a href="/android/app.jsp" hidefocus=""><span>应用</span></a></li>
+							<li><a href="/android/game.jsp" hidefocus=""><span>游戏</span></a></li>
+							<li><a href="/android/topic.jsp" hidefocus=""><span>专题</span></a></li>
+							<li><a href="javascript:UI.goUserCenter('http://android.myapp.com/android/user/');" hidefocus=""><span>个人</span></a></li>
+							<li><a href="http://bbs.myapp.com/forum.php" target="_blank" hidefocus=""><span>论坛</span></a></li>
+						</ul>
+					</nav>
+					<div class="search" role="form">
+						<input id="keyword" class="input-box" type="search" title="试试搜索应用名称或功能" placeholder="试试搜索应用名称或功能" role="search" onkeydown="return UI.onSearchKeyDown(event);" x-webkit-speech="">
+						<input type="button" value="搜索" class="submit-button" title="搜索" onclick="UI.searchapp();">
+					</div>
+				</header>
+				<!--banner轮播展示和应用宝下载-->
+				<div class="mod-box">
+					<div class="ie-model-header-left w910 transparent-header"><div class="ie-model-header-right"></div></div>
+					<section id="flash-wrap" class="flash" style="position:relative;">
+						<h1 class="hide-clip">banner轮播展示</h1>
+						<div class="flash-content" style="width: 630px; height: 200px; overflow: hidden; opacity: 1;">
+							<ul class="flash-img" style="width:37266px;"><li><a href="appdetail.jsp?appid=50801&amp;icfa=15142232050801001000&amp;lmid=2001"><img src="http://3gimg.qq.com/appcenter/icon/huodong/11.1/gxd_web.png" width="630" height="200" alt="" data-pinit="registered"></a></li><li><a href="topicdetail.jsp?topicid=20240&amp;icfa=15142233020240001000&amp;lmid=2002"><img data-url="http://3gimg.qq.com/appcenter/icon/zhuanti/10.30/zxq_web.png" width="630" height="200" alt="" data-pinit="registered" src="http://3gimg.qq.com/appcenter/icon/zhuanti/10.30/zxq_web.png"></a></li><li><a href="topicdetail.jsp?topicid=20238&amp;icfa=15142233020238001000&amp;lmid=2003"><img data-url="http://appimg1.3g.qq.com/msoft/android/wenyi600.200.png" width="630" height="200" alt="" data-pinit="registered" src="http://appimg1.3g.qq.com/msoft/android/wenyi600.200.png"></a></li><li><a href="topicdetail.jsp?topicid=20236&amp;icfa=15142233020236001000&amp;lmid=2004"><img data-url="http://appimg1.3g.qq.com/msoft/android/xiaomogame600.200.png" width="630" height="200" alt="" data-pinit="registered" src="http://appimg1.3g.qq.com/msoft/android/xiaomogame600.200.png"></a></li></ul>
+						</div>
+						<ul class="flash-nav" style="position:absolute;"><li class=""><a href="javascript:void(0);">1</a></li><li class=""><a href="javascript:void(0);">2</a></li><li class=""><a href="javascript:void(0);">3</a></li><li class="nownav"><a href="javascript:void(0);">4</a></li></ul>
+					</section>
+					<section class="yingyongbao-download">
+						<h1>应用宝</h1>
+						<ul>
+							<li>
+								<a class="mobile" href="http://softfile.3g.qq.com/msoft/allen/991246_tencentmobileassistant_3.7beta2.apk" onclick="_gaq.push(['_trackPageview', '/virtual/insite/downapp/2015/list/appassistant']);pingHotag('downapp.2015.list.appassistant');" title="下载应用宝">
+									下载应用宝
+									<div class="phone-inner"><span></span></div>
+								</a>
+							</li>
+							<li>
+								<a class="pad" href="http://androidpc.app.qq.com/app1/downUrlJump.do?qdh=990420&amp;pv=2&amp;v=2.0.1302.3498" onclick="_gaq.push(['_trackPageview', '/virtual/insite/downapp/2016/list/appassistantpc']);pingHotag('downapp.2016.list.appassistantpc');" title="下载应用宝PC版">
+									下载应用宝PC版
+									<div class="pad-inner"><span></span></div>
+								</a>
+							</li>
+						</ul>
+					</section>
+					<div class="ie-model-footer-left w910 transparent-footer"><div class="ie-model-footer-right"></div></div>
+				</div>
+
+				<!--必备软件列表-->
+				<section class="mod-box mod-box-padding">
+				
+					<div class="ie-model-header-left w910"><div class="ie-model-header-right"></div></div>
+				
+					<h1 class="hide-clip">各种类别的必备软件</h1>
+					<ul id="necessary_tab" class="necessary-title">
+						<li class="nownav"><h2><a href="javascript:void(0);">装机必备</a></h2></li>
+					</ul>
+					<div id="app_nesseary" class="change-item">
+						<a href="javascript:pageAppNesseary('prev');" class="prev prevdis">
+							<span class="prev-disable"></span>
+							<span class="prev-normal"></span>
+						</a>
+						<div class="show-app">
+							<ul class="mod-app-item" style="width:37266px;"><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=50801&amp;icfa=15144102050801001000&amp;lmid=2017" title="应用宝">			<img class="img_scrolloading_2017" src="http://appimg1.3g.qq.com/android/50801/16629897/icon_72.png" width="72" height="72" alt="应用宝">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=50801&amp;icfa=15144102050801001000&amp;lmid=2017">应用宝</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:60%" itemprop="rating">60</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=48462&amp;icfa=15144102048462002000&amp;lmid=2017" title="腾讯手机管家">			<img class="img_scrolloading_2017" src="http://appimg1.3g.qq.com/android/48462/16505622/icon_72.png" width="72" height="72" alt="腾讯手机管家">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=48462&amp;icfa=15144102048462002000&amp;lmid=2017">腾讯手机管家</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=32244&amp;icfa=15144102032244003000&amp;lmid=2017" title="优酷视频播放器">			<img class="img_scrolloading_2017" src="http://appimg1.3g.qq.com/android/32244/16679094/icon_72.png" width="72" height="72" alt="优酷视频播放器">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=32244&amp;icfa=15144102032244003000&amp;lmid=2017">优酷视频播放器</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=48157&amp;icfa=15144102048157004000&amp;lmid=2017" title="微信">			<img class="img_scrolloading_2017" src="http://appimg1.3g.qq.com/android/48157/16681860/icon_72.png" width="72" height="72" alt="微信">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=48157&amp;icfa=15144102048157004000&amp;lmid=2017">微信</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=10098215&amp;icfa=15144102100982005000&amp;lmid=2017" title="天天爱消除">			<img class="img_scrolloading_2017" src="http://appimg1.3g.qq.com/android_new/215/10098215/16467370/icon_72.png" width="72" height="72" alt="天天爱消除">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=10098215&amp;icfa=15144102100982005000&amp;lmid=2017">天天爱消除</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=1061053&amp;icfa=15144102106105006000&amp;lmid=2017" title="找你妹">			<img class="img_scrolloading_2017" src="http://appimg1.3g.qq.com/android_new/53/1061053/16680000/icon_72.png" width="72" height="72" alt="找你妹">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=1061053&amp;icfa=15144102106105006000&amp;lmid=2017">找你妹</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=36112&amp;icfa=15144102036112007000&amp;lmid=2017" title="QQ音乐">			<img class="img_scrolloading_2017" src="http://appimg1.3g.qq.com/android/36112/16502574/icon_72.png" width="72" height="72" alt="QQ音乐">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=36112&amp;icfa=15144102036112007000&amp;lmid=2017">QQ音乐</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=783260&amp;icfa=15144102783260008000&amp;lmid=2017" title="保卫萝卜">			<img class="img_scrolloading_2017" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/260/783260/16548547/icon_72.png" width="72" height="72" alt="保卫萝卜">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=783260&amp;icfa=15144102783260008000&amp;lmid=2017">保卫萝卜</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=15668&amp;icfa=15144102015668009000&amp;lmid=2017" title="QQ游戏">			<img class="img_scrolloading_2017" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android/15668/16377603/icon_72.png" width="72" height="72" alt="QQ游戏">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=15668&amp;icfa=15144102015668009000&amp;lmid=2017">QQ游戏</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=618236&amp;icfa=15144102618236010000&amp;lmid=2017" title="愤怒小鸟纪念版">			<img class="img_scrolloading_2017" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/236/618236/16685017/icon_72.png" width="72" height="72" alt="愤怒小鸟纪念版">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=618236&amp;icfa=15144102618236010000&amp;lmid=2017">愤怒小鸟纪念版</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=45592&amp;icfa=15144102045592011000&amp;lmid=2017" title="QQ 2013">			<img class="img_scrolloading_2017" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android/45592/16661706/icon_72.png" width="72" height="72" alt="QQ 2013">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=45592&amp;icfa=15144102045592011000&amp;lmid=2017">QQ 2013</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=48809&amp;icfa=15144102048809012000&amp;lmid=2017" title="墨迹天气">			<img class="img_scrolloading_2017" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android/48809/16597151/icon_72.png" width="72" height="72" alt="墨迹天气">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=48809&amp;icfa=15144102048809012000&amp;lmid=2017">墨迹天气</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=49367&amp;icfa=15144102049367013000&amp;lmid=2017" title="QQ浏览器">			<img class="img_scrolloading_2017" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android/49367/16677996/icon_72.png" width="72" height="72" alt="QQ浏览器">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=49367&amp;icfa=15144102049367013000&amp;lmid=2017">QQ浏览器</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=42277&amp;icfa=15144102042277014000&amp;lmid=2017" title="SOSO街景地图">			<img class="img_scrolloading_2017" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android/42277/16676906/icon_72.png" width="72" height="72" alt="SOSO街景地图">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=42277&amp;icfa=15144102042277014000&amp;lmid=2017">SOSO街景地图</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p></li></ul>
+						</div>
+						<a href="javascript:pageAppNesseary('next');" class="next">
+							<span class="next-disable"></span>
+							<span class="next-normal"></span>
+						</a>
+					</div>
+				
+					<div class="ie-model-footer-left w910"><div class="ie-model-footer-right"></div></div>
+				
+				</section>
+				<div class="column2 ofh">
+					<article class="mod-box mod-box-padding daily-pick">
+					
+						<div class="ie-model-header-left w630"><div class="ie-model-header-right"></div></div>
+					
+						<h1 class="ajax_scrolloading" data-func="getDailyChosen">精品推荐</h1>
+						<ul id="daily_chosen" class="mod-app-item daily-pick-ul"><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=25585&amp;icfa=15144132025585001000&amp;lmid=2021" title="搜狐新闻">			<div class="first"></div>			<img class="img_scrolloading_2021" src="http://appimg1.3g.qq.com/android/25585/16673732/icon_72.png" data-url="http://appimg1.3g.qq.com/android/25585/16673732/icon_72.png" width="72" height="72" alt="搜狐新闻">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=25585&amp;icfa=15144132025585001000&amp;lmid=2021">搜狐新闻</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=586088&amp;icfa=15144132586088002000&amp;lmid=2021" title="小伴龙">			<div class="first"></div>			<img class="img_scrolloading_2021" src="http://appimg1.3g.qq.com/android_new/88/586088/16680213/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/88/586088/16680213/icon_72.png" width="72" height="72" alt="小伴龙">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=586088&amp;icfa=15144132586088002000&amp;lmid=2021">小伴龙</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=698898&amp;icfa=15144132698898003000&amp;lmid=2021" title="时空猎人">			<div class="first"></div>			<img class="img_scrolloading_2021" src="http://appimg1.3g.qq.com/android_new/898/698898/16681389/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/898/698898/16681389/icon_72.png" width="72" height="72" alt="时空猎人">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=698898&amp;icfa=15144132698898003000&amp;lmid=2021">时空猎人</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=48462&amp;icfa=15144142048462001000&amp;lmid=1032" title="腾讯手机管家">			<img class="img_scrolloading_2020" src="http://appimg1.3g.qq.com/android/48462/16505622/icon_72.png" data-url="http://appimg1.3g.qq.com/android/48462/16505622/icon_72.png" width="72" height="72" alt="腾讯手机管家">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=48462&amp;icfa=15144142048462001000&amp;lmid=1032">腾讯手机管家</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=49367&amp;icfa=15144142049367002000&amp;lmid=1032" title="QQ浏览器">			<img class="img_scrolloading_2020" src="http://appimg1.3g.qq.com/android/49367/16677996/icon_72.png" data-url="http://appimg1.3g.qq.com/android/49367/16677996/icon_72.png" width="72" height="72" alt="QQ浏览器">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=49367&amp;icfa=15144142049367002000&amp;lmid=1032">QQ浏览器</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=48420&amp;icfa=15144142048420003000&amp;lmid=1032" title="百度视频-影音高清播放器">			<img class="img_scrolloading_2020" src="http://appimg1.3g.qq.com/android/48420/16614344/icon_72.png" data-url="http://appimg1.3g.qq.com/android/48420/16614344/icon_72.png" width="72" height="72" alt="百度视频-影音高清播放器">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=48420&amp;icfa=15144142048420003000&amp;lmid=1032">百度视频-影音高清播放器</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=789830&amp;icfa=15144142789830004000&amp;lmid=1032" title="瘦瘦(健康瘦身减肥顾问)">			<img class="img_scrolloading_2020" src="http://appimg1.3g.qq.com/android_new/830/789830/16514049/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/830/789830/16514049/icon_72.png" width="72" height="72" alt="瘦瘦(健康瘦身减肥顾问)">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=789830&amp;icfa=15144142789830004000&amp;lmid=1032">瘦瘦(健康瘦身减肥顾问)</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=48628&amp;icfa=15144142048628005000&amp;lmid=1032" title="如意彩票">			<img class="img_scrolloading_2020" src="http://appimg1.3g.qq.com/android/48628/16410619/icon_72.png" data-url="http://appimg1.3g.qq.com/android/48628/16410619/icon_72.png" width="72" height="72" alt="如意彩票">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=48628&amp;icfa=15144142048628005000&amp;lmid=1032">如意彩票</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=10267795&amp;icfa=15144142102677006000&amp;lmid=1032" title="进击的部落">			<img class="img_scrolloading_2020" src="http://appimg1.3g.qq.com/android_new/795/10267795/16679452/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/795/10267795/16679452/icon_72.png" width="72" height="72" alt="进击的部落">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=10267795&amp;icfa=15144142102677006000&amp;lmid=1032">进击的部落</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=44319&amp;icfa=15144142044319007000&amp;lmid=1032" title="iReader读书-电子书小说阅读">			<img class="img_scrolloading_2020" src="http://appimg1.3g.qq.com/android/44319/16684942/icon_72.png" data-url="http://appimg1.3g.qq.com/android/44319/16684942/icon_72.png" width="72" height="72" alt="iReader读书-电子书小说阅读">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=44319&amp;icfa=15144142044319007000&amp;lmid=1032">iReader读书-电子书小说阅读</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=95085&amp;icfa=15144142095085008000&amp;lmid=1032" title="极品钢琴">			<img class="img_scrolloading_2020" src="http://appimg1.3g.qq.com/android_new/85/95085/16292820/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/85/95085/16292820/icon_72.png" width="72" height="72" alt="极品钢琴">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=95085&amp;icfa=15144142095085008000&amp;lmid=1032">极品钢琴</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=605787&amp;icfa=15144142605787009000&amp;lmid=1032" title="小米桌面（主题壁纸锁屏）">			<img class="img_scrolloading_2020" src="http://appimg1.3g.qq.com/android_new/787/605787/16677972/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/787/605787/16677972/icon_72.png" width="72" height="72" alt="小米桌面（主题壁纸锁屏）">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=605787&amp;icfa=15144142605787009000&amp;lmid=1032">小米桌面（主题壁纸锁屏）</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=797212&amp;icfa=15144142797212010000&amp;lmid=1032" title="美柚">			<img class="img_scrolloading_2020" src="http://ugc.qpic.cn/appcenter_icon/0/797212_16680758_-1238365750/72" data-url="http://ugc.qpic.cn/appcenter_icon/0/797212_16680758_-1238365750/72" width="72" height="72" alt="美柚">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=797212&amp;icfa=15144142797212010000&amp;lmid=1032">美柚</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:100%" itemprop="rating">100</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=10010626&amp;icfa=15144142100106011000&amp;lmid=1032" title="妖姬三国">			<img class="img_scrolloading_2020" src="http://appimg1.3g.qq.com/android_new/626/10010626/16630105/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/626/10010626/16630105/icon_72.png" width="72" height="72" alt="妖姬三国">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=10010626&amp;icfa=15144142100106011000&amp;lmid=1032">妖姬三国</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p></li><li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">	<div class="app-img">		<a href="/android/appdetail.jsp?appid=36112&amp;icfa=15144142036112012000&amp;lmid=1032" title="QQ音乐">			<img class="img_scrolloading_2020" src="http://appimg1.3g.qq.com/android/36112/16502574/icon_72.png" data-url="http://appimg1.3g.qq.com/android/36112/16502574/icon_72.png" width="72" height="72" alt="QQ音乐">		</a>	</div>	<p class="app-name"><a href="/android/appdetail.jsp?appid=36112&amp;icfa=15144142036112012000&amp;lmid=1032">QQ音乐</a></p>	<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p></li></ul>
+					
+						<div class="ie-model-footer-left w630"><div class="ie-model-footer-right"></div></div>
+					
+					</article>
+					<article class="mod-box mod-box-padding app-rank">
+					
+						<div class="ie-model-header-left w270"><div class="ie-model-header-right"></div></div>
+					
+						<h1 class="hide-clip ajax_scrolloading" data-func="tabAppRank">排行榜</h1>
+						<ul class="rank-ul">
+							<li onclick="tabAppRank(-1);">应用排行</li>
+							<li onclick="tabAppRank(120);" class="rank-now">游戏排行</li>
+						</ul>
+						<ol id="appRankList"><li class="hover">	<div class="app-rank-normal">		<div class="rank-number"><s class="first">r</s><span>1</span></div>		<p>天天酷跑</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=10099632&amp;icfa=15144162100996001000&amp;lmid=2023" title="天天酷跑">				<img src="http://appimg1.3g.qq.com/android_new/632/10099632/16286054/icon_72.png" width="60" height="60" alt="天天酷跑">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=10099632&amp;icfa=15144162100996001000&amp;lmid=2023">天天酷跑</a></p>		<p class="grey">400万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '10099632']);pingHotag('list.download.easy.10099632');" ex_url="http://android.myapp.com/android/down.jsp?appid=10099632&amp;pkgid=16286051&amp;type=5&amp;icfa=15144162100996001000&amp;lmid=2023" asistanturlid="990428" appname="天天酷跑" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li><li>	<div class="app-rank-normal">		<div class="rank-number"><s class="second">r</s><span>2</span></div>		<p>欢乐斗地主(QQ游戏官方版)</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=788688&amp;icfa=15144162788688002000&amp;lmid=2023" title="欢乐斗地主(QQ游戏官方版)">				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/688/788688/16505480/icon_72.png" width="60" height="60" alt="欢乐斗地主(QQ游戏官方版)">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=788688&amp;icfa=15144162788688002000&amp;lmid=2023">欢乐斗地主(QQ游戏官方版)</a></p>		<p class="grey">1,000万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '788688']);pingHotag('list.download.easy.788688');" ex_url="http://android.myapp.com/android/down.jsp?appid=788688&amp;pkgid=16465408&amp;type=5&amp;icfa=15144162788688002000&amp;lmid=2023" asistanturlid="990428" appname="欢乐斗地主(QQ游戏官方版)" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li><li>	<div class="app-rank-normal">		<div class="rank-number"><s class="third">r</s><span>3</span></div>		<p>QQ游戏</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=15668&amp;icfa=15144162015668003000&amp;lmid=2023" title="QQ游戏">				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android/15668/16377603/icon_72.png" width="60" height="60" alt="QQ游戏">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=15668&amp;icfa=15144162015668003000&amp;lmid=2023">QQ游戏</a></p>		<p class="grey">9,000万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '15668']);pingHotag('list.download.easy.15668');" ex_url="http://android.myapp.com/android/down.jsp?appid=15668&amp;pkgid=16377603&amp;type=5&amp;icfa=15144162015668003000&amp;lmid=2023" asistanturlid="990428" appname="QQ游戏" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li><li>	<div class="app-rank-normal">		<div class="rank-number"><s>r</s><span>4</span></div>		<p>找你妹</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=1061053&amp;icfa=15144162106105004000&amp;lmid=2023" title="找你妹">				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/53/1061053/16680000/icon_72.png" width="60" height="60" alt="找你妹">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=1061053&amp;icfa=15144162106105004000&amp;lmid=2023">找你妹</a></p>		<p class="grey">900万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '1061053']);pingHotag('list.download.easy.1061053');" ex_url="http://android.myapp.com/android/down.jsp?appid=1061053&amp;pkgid=16680000&amp;type=5&amp;icfa=15144162106105004000&amp;lmid=2023" asistanturlid="990428" appname="找你妹" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li><li>	<div class="app-rank-normal">		<div class="rank-number"><s>r</s><span>5</span></div>		<p>老爸曾是小偷</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=967854&amp;icfa=15144162967854005000&amp;lmid=2023" title="老爸曾是小偷">				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/854/967854/16092615/icon_72.png" width="60" height="60" alt="老爸曾是小偷">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=967854&amp;icfa=15144162967854005000&amp;lmid=2023">老爸曾是小偷</a></p>		<p class="grey">83万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '967854']);pingHotag('list.download.easy.967854');" ex_url="http://android.myapp.com/android/down.jsp?appid=967854&amp;pkgid=16092615&amp;type=5&amp;icfa=15144162967854005000&amp;lmid=2023" asistanturlid="990428" appname="老爸曾是小偷" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li><li>	<div class="app-rank-normal">		<div class="rank-number"><s>r</s><span>6</span></div>		<p>单机斗地主</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=610846&amp;icfa=15144162610846006000&amp;lmid=2023" title="单机斗地主">				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/846/610846/16559048/icon_72.png" width="60" height="60" alt="单机斗地主">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=610846&amp;icfa=15144162610846006000&amp;lmid=2023">单机斗地主</a></p>		<p class="grey">400万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '610846']);pingHotag('list.download.easy.610846');" ex_url="http://android.myapp.com/android/down.jsp?appid=610846&amp;pkgid=16559048&amp;type=5&amp;icfa=15144162610846006000&amp;lmid=2023" asistanturlid="990428" appname="单机斗地主" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li><li>	<div class="app-rank-normal">		<div class="rank-number"><s>r</s><span>7</span></div>		<p>消灭星星</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=530372&amp;icfa=15144162530372007000&amp;lmid=2023" title="消灭星星">				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://img1.myapp.com/image/3/99/73/442B/ICON_72_72/popstar_0.png" width="60" height="60" alt="消灭星星">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=530372&amp;icfa=15144162530372007000&amp;lmid=2023">消灭星星</a></p>		<p class="grey">200万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '530372']);pingHotag('list.download.easy.530372');" ex_url="http://android.myapp.com/android/down.jsp?appid=530372&amp;pkgid=15678217&amp;type=5&amp;icfa=15144162530372007000&amp;lmid=2023" asistanturlid="990428" appname="消灭星星" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li><li>	<div class="app-rank-normal">		<div class="rank-number"><s>r</s><span>8</span></div>		<p>天天爱消除</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=10098215&amp;icfa=15144162100982008000&amp;lmid=2023" title="天天爱消除">				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/215/10098215/16467370/icon_72.png" width="60" height="60" alt="天天爱消除">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=10098215&amp;icfa=15144162100982008000&amp;lmid=2023">天天爱消除</a></p>		<p class="grey">800万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '10098215']);pingHotag('list.download.easy.10098215');" ex_url="http://android.myapp.com/android/down.jsp?appid=10098215&amp;pkgid=16467370&amp;type=5&amp;icfa=15144162100982008000&amp;lmid=2023" asistanturlid="990428" appname="天天爱消除" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li><li>	<div class="app-rank-normal">		<div class="rank-number"><s>r</s><span>9</span></div>		<p>横扫僵尸</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=1062726&amp;icfa=15144162106272009000&amp;lmid=2023" title="横扫僵尸">				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/726/1062726/16371966/icon_72.png" width="60" height="60" alt="横扫僵尸">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=1062726&amp;icfa=15144162106272009000&amp;lmid=2023">横扫僵尸</a></p>		<p class="grey">50万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '1062726']);pingHotag('list.download.easy.1062726');" ex_url="http://android.myapp.com/android/down.jsp?appid=1062726&amp;pkgid=15760414&amp;type=5&amp;icfa=15144162106272009000&amp;lmid=2023" asistanturlid="990428" appname="横扫僵尸" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li><li>	<div class="app-rank-normal">		<div class="rank-number"><s>r</s><span class="two">10</span></div>		<p>保卫萝卜</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=783260&amp;icfa=15144162783260010000&amp;lmid=2023" title="保卫萝卜">				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/260/783260/16548547/icon_72.png" width="60" height="60" alt="保卫萝卜">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=783260&amp;icfa=15144162783260010000&amp;lmid=2023">保卫萝卜</a></p>		<p class="grey">500万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '783260']);pingHotag('list.download.easy.783260');" ex_url="http://android.myapp.com/android/down.jsp?appid=783260&amp;pkgid=16548547&amp;type=5&amp;icfa=15144162783260010000&amp;lmid=2023" asistanturlid="990428" appname="保卫萝卜" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li><li>	<div class="app-rank-normal">		<div class="rank-number"><s>r</s><span class="two">11</span></div>		<p>植物大战僵尸2腾讯社交版</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=10189972&amp;icfa=15144162101899011000&amp;lmid=2023" title="植物大战僵尸2腾讯社交版">				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/972/10189972/16627936/icon_72.png" width="60" height="60" alt="植物大战僵尸2腾讯社交版">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=10189972&amp;icfa=15144162101899011000&amp;lmid=2023">植物大战僵尸2腾讯社交版</a></p>		<p class="grey">200万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '10189972']);pingHotag('list.download.easy.10189972');" ex_url="http://android.myapp.com/android/down.jsp?appid=10189972&amp;pkgid=16627936&amp;type=5&amp;icfa=15144162101899011000&amp;lmid=2023" asistanturlid="990428" appname="植物大战僵尸2腾讯社交版" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li><li>	<div class="app-rank-normal">		<div class="rank-number"><s>r</s><span class="two">12</span></div>		<p>JJ斗地主(支持单机)</p>		<div class="rank-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></div>	</div>	<div class="app-rank-hover">		<div class="app-img">			<a href="/android/appdetail.jsp?appid=84628&amp;icfa=15144162084628012000&amp;lmid=2023" title="JJ斗地主(支持单机)">				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android/84628/16425896/icon_72.png" width="60" height="60" alt="JJ斗地主(支持单机)">			</a>		</div>		<p><a href="/android/appdetail.jsp?appid=84628&amp;icfa=15144162084628012000&amp;lmid=2023">JJ斗地主(支持单机)</a></p>		<p class="grey">100万次下载</p>		<div class="free-download">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '84628']);pingHotag('list.download.easy.84628');" ex_url="http://android.myapp.com/android/down.jsp?appid=84628&amp;pkgid=16425896&amp;type=5&amp;icfa=15144162084628012000&amp;lmid=2023" asistanturlid="990428" appname="JJ斗地主(支持单机)" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>	</div></li></ol>
+					
+						<div class="ie-model-footer-left w270"><div class="ie-model-footer-right"></div></div>
+					
+					</article>
+				</div>
+			
+				<section class="mod-box ad-model ajax_scrolloading" data-func="getHotCategory">
+					<h1 class="hide-clip">图片广告位</h1>
+					<a href="appwall.jsp?icfa=15144180000000000000&amp;lmid=2026"><img class="img-ad" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/ad.jpg" width="910" height="130" alt="" data-pinit="registered"></a>
+				</section>
+			
+				<section class="mod-box mod-box-padding category">
+				
+					<div class="ie-model-header-left w910"><div class="ie-model-header-right"></div></div>
+				
+					<h1>热门分类</h1>
+					<div id="hot_category" class="decoration"><article>	<h2><a href="app.jsp?cid=106&amp;cname=%E7%A4%BE%E4%BA%A4&amp;lmid=2025">社交</a></h2>	<ul class="mod-app-item mod-app-category">		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=45592&amp;icfa=15144172045592001000&amp;lmid=2024" title="QQ 2013">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/45592/16661706/icon_48.png" data-url="http://appimg1.3g.qq.com/android/45592/16661706/icon_48.png" width="48" height="48" itemprop="photo" alt="QQ 2013">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=45592&amp;icfa=15144172045592001000&amp;lmid=2024">QQ 2013</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p>			<p class="grey">9.1亿次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=48157&amp;icfa=15144172048157002000&amp;lmid=2024" title="微信">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/48157/16681860/icon_48.png" data-url="http://appimg1.3g.qq.com/android/48157/16681860/icon_48.png" width="48" height="48" itemprop="photo" alt="微信">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=48157&amp;icfa=15144172048157002000&amp;lmid=2024">微信</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">2.2亿次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=48810&amp;icfa=15144172048810003000&amp;lmid=2024" title="QQ空间">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/48810/16610621/icon_48.png" data-url="http://appimg1.3g.qq.com/android/48810/16610621/icon_48.png" width="48" height="48" itemprop="photo" alt="QQ空间">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=48810&amp;icfa=15144172048810003000&amp;lmid=2024">QQ空间</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">6.2亿次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=87984&amp;icfa=15144172087984004000&amp;lmid=2024" title="陌陌">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android_new/984/87984/16625915/icon_48.png" data-url="http://appimg1.3g.qq.com/android_new/984/87984/16625915/icon_48.png" width="48" height="48" itemprop="photo" alt="陌陌">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=87984&amp;icfa=15144172087984004000&amp;lmid=2024">陌陌</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p>			<p class="grey">900万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=35678&amp;icfa=15144172035678005000&amp;lmid=2024" title="新浪微博">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/35678/16673220/icon_48.png" data-url="http://appimg1.3g.qq.com/android/35678/16673220/icon_48.png" width="48" height="48" itemprop="photo" alt="新浪微博">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=35678&amp;icfa=15144172035678005000&amp;lmid=2024">新浪微博</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p>			<p class="grey">2,000万次下载</p>		</li>	</ul></article><article>	<h2><a href="app.jsp?cid=117&amp;cname=%E7%B3%BB%E7%BB%9F&amp;lmid=2025">系统</a></h2>	<ul class="mod-app-item mod-app-category">		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=50801&amp;icfa=15144172050801001000&amp;lmid=2024" title="应用宝">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/50801/16629897/icon_48.png" data-url="http://appimg1.3g.qq.com/android/50801/16629897/icon_48.png" width="48" height="48" itemprop="photo" alt="应用宝">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=50801&amp;icfa=15144172050801001000&amp;lmid=2024">应用宝</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:60%" itemprop="rating">60</span></span></p>			<p class="grey">2亿次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=10108868&amp;icfa=15144172101088002000&amp;lmid=2024" title="金山清理大师">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android_new/868/10108868/16681289/icon_48.png" data-url="http://appimg1.3g.qq.com/android_new/868/10108868/16681289/icon_48.png" width="48" height="48" itemprop="photo" alt="金山清理大师">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=10108868&amp;icfa=15144172101088002000&amp;lmid=2024">金山清理大师</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>			<p class="grey">200万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=45317&amp;icfa=15144172045317003000&amp;lmid=2024" title="金山电池医生">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/45317/16681425/icon_48.png" data-url="http://appimg1.3g.qq.com/android/45317/16681425/icon_48.png" width="48" height="48" itemprop="photo" alt="金山电池医生">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=45317&amp;icfa=15144172045317003000&amp;lmid=2024">金山电池医生</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>			<p class="grey">2,000万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=10051908&amp;icfa=15144172100519004000&amp;lmid=2024" title="百度一键root">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android_new/908/10051908/16587252/icon_48.png" data-url="http://appimg1.3g.qq.com/android_new/908/10051908/16587252/icon_48.png" width="48" height="48" itemprop="photo" alt="百度一键root">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=10051908&amp;icfa=15144172100519004000&amp;lmid=2024">百度一键root</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:60%" itemprop="rating">60</span></span></p>			<p class="grey">100万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=48182&amp;icfa=15144172048182005000&amp;lmid=2024" title="安兔兔评测">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/48182/16680080/icon_48.png" data-url="http://appimg1.3g.qq.com/android/48182/16680080/icon_48.png" width="48" height="48" itemprop="photo" alt="安兔兔评测">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=48182&amp;icfa=15144172048182005000&amp;lmid=2024">安兔兔评测</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">200万次下载</p>		</li>	</ul></article><article>	<h2><a href="app.jsp?cid=118&amp;cname=%E5%AE%89%E5%85%A8&amp;lmid=2025">安全</a></h2>	<ul class="mod-app-item mod-app-category">		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=48462&amp;icfa=15144172048462001000&amp;lmid=2024" title="腾讯手机管家">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/48462/16505622/icon_48.png" data-url="http://appimg1.3g.qq.com/android/48462/16505622/icon_48.png" width="48" height="48" itemprop="photo" alt="腾讯手机管家">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=48462&amp;icfa=15144172048462001000&amp;lmid=2024">腾讯手机管家</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>			<p class="grey">1.5亿次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=45482&amp;icfa=15144172045482002000&amp;lmid=2024" title="LBE安全大师(免ROOT)">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/45482/16681386/icon_48.png" data-url="http://appimg1.3g.qq.com/android/45482/16681386/icon_48.png" width="48" height="48" itemprop="photo" alt="LBE安全大师(免ROOT)">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=45482&amp;icfa=15144172045482002000&amp;lmid=2024">LBE安全大师(免ROOT)</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">100万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=47428&amp;icfa=15144172047428003000&amp;lmid=2024" title="QQ安全中心">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/47428/15867021/icon_48.png" data-url="http://appimg1.3g.qq.com/android/47428/15867021/icon_48.png" width="48" height="48" itemprop="photo" alt="QQ安全中心">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=47428&amp;icfa=15144172047428003000&amp;lmid=2024">QQ安全中心</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>			<p class="grey">1,000万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=592401&amp;icfa=15144172592401004000&amp;lmid=2024" title="手机毒霸">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android_new/401/592401/16681471/icon_48.png" data-url="http://appimg1.3g.qq.com/android_new/401/592401/16681471/icon_48.png" width="48" height="48" itemprop="photo" alt="手机毒霸">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=592401&amp;icfa=15144172592401004000&amp;lmid=2024">手机毒霸</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>			<p class="grey">600万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=727593&amp;icfa=15144172727593005000&amp;lmid=2024" title="乐安全">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android_new/593/727593/16566807/icon_48.png" data-url="http://appimg1.3g.qq.com/android_new/593/727593/16566807/icon_48.png" width="48" height="48" itemprop="photo" alt="乐安全">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=727593&amp;icfa=15144172727593005000&amp;lmid=2024">乐安全</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">100万次下载</p>		</li>	</ul></article><article>	<h2><a href="app.jsp?cid=115&amp;cname=%E5%B7%A5%E5%85%B7&amp;lmid=2025">工具</a></h2>	<ul class="mod-app-item mod-app-category">		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=49367&amp;icfa=15144172049367001000&amp;lmid=2024" title="QQ浏览器">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/49367/16677996/icon_48.png" data-url="http://appimg1.3g.qq.com/android/49367/16677996/icon_48.png" width="48" height="48" itemprop="photo" alt="QQ浏览器">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=49367&amp;icfa=15144172049367001000&amp;lmid=2024">QQ浏览器</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>			<p class="grey">8,000万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=43276&amp;icfa=15144172043276002000&amp;lmid=2024" title="搜狗手机输入法">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/43276/16663009/icon_48.png" data-url="http://appimg1.3g.qq.com/android/43276/16663009/icon_48.png" width="48" height="48" itemprop="photo" alt="搜狗手机输入法">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=43276&amp;icfa=15144172043276002000&amp;lmid=2024">搜狗手机输入法</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">4,000万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=95914&amp;icfa=15144172095914003000&amp;lmid=2024" title="百度">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android_new/914/95914/16320616/icon_48.png" data-url="http://appimg1.3g.qq.com/android_new/914/95914/16320616/icon_48.png" width="48" height="48" itemprop="photo" alt="百度">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=95914&amp;icfa=15144172095914003000&amp;lmid=2024">百度</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>			<p class="grey">900万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=48463&amp;icfa=15144172048463004000&amp;lmid=2024" title="讯飞输入法手机版">					<img class="img_scrolloading_2024" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android/48463/16585039/icon_48.png" width="48" height="48" itemprop="photo" alt="讯飞输入法手机版">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=48463&amp;icfa=15144172048463004000&amp;lmid=2024">讯飞输入法手机版</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">2,000万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=784914&amp;icfa=15144172784914005000&amp;lmid=2024" title="安卓手电筒">					<img class="img_scrolloading_2024" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/914/784914/16601239/icon_48.png" width="48" height="48" itemprop="photo" alt="安卓手电筒">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=784914&amp;icfa=15144172784914005000&amp;lmid=2024">安卓手电筒</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">82万次下载</p>		</li>	</ul></article><article>	<h2><a href="app.jsp?cid=116&amp;cname=%E9%80%9A%E8%AE%AF&amp;lmid=2025">通讯</a></h2>	<ul class="mod-app-item mod-app-category">		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=47883&amp;icfa=15144172047883001000&amp;lmid=2024" title="QQ同步助手 刷机必备通讯录短信一键备份">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/47883/16510294/icon_48.png" data-url="http://appimg1.3g.qq.com/android/47883/16510294/icon_48.png" width="48" height="48" itemprop="photo" alt="QQ同步助手 刷机必备通讯录短信一键备份">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=47883&amp;icfa=15144172047883001000&amp;lmid=2024">QQ同步助手 刷机必备通讯录短信一键备份</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p>			<p class="grey">2,000万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=637288&amp;icfa=15144172637288002000&amp;lmid=2024" title="Youni有你">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android_new/288/637288/16677567/icon_48.png" data-url="http://appimg1.3g.qq.com/android_new/288/637288/16677567/icon_48.png" width="48" height="48" itemprop="photo" alt="Youni有你">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=637288&amp;icfa=15144172637288002000&amp;lmid=2024">Youni有你</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>			<p class="grey">400万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=86584&amp;icfa=15144172086584003000&amp;lmid=2024" title="来电通最新版">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android_new/584/86584/16245038/icon_48.png" data-url="http://appimg1.3g.qq.com/android_new/584/86584/16245038/icon_48.png" width="48" height="48" itemprop="photo" alt="来电通最新版">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=86584&amp;icfa=15144172086584003000&amp;lmid=2024">来电通最新版</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p>			<p class="grey">200万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=49105&amp;icfa=15144172049105004000&amp;lmid=2024" title="七彩来显">					<img class="img_scrolloading_2024" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android/49105/16680153/icon_48.png" width="48" height="48" itemprop="photo" alt="七彩来显">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=49105&amp;icfa=15144172049105004000&amp;lmid=2024">七彩来显</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">100万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=46438&amp;icfa=15144172046438005000&amp;lmid=2024" title="QQ通讯录">					<img class="img_scrolloading_2024" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android/46438/887304/icon_48.png" width="48" height="48" itemprop="photo" alt="QQ通讯录">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=46438&amp;icfa=15144172046438005000&amp;lmid=2024">QQ通讯录</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p>			<p class="grey">3,000万次下载</p>		</li>	</ul></article><article>	<h2><a href="app.jsp?cid=101&amp;cname=%E9%9F%B3%E4%B9%90&amp;lmid=2025">音乐</a></h2>	<ul class="mod-app-item mod-app-category">		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=36112&amp;icfa=15144172036112001000&amp;lmid=2024" title="QQ音乐">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/36112/16502574/icon_48.png" data-url="http://appimg1.3g.qq.com/android/36112/16502574/icon_48.png" width="48" height="48" itemprop="photo" alt="QQ音乐">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=36112&amp;icfa=15144172036112001000&amp;lmid=2024">QQ音乐</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">8,000万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=50161&amp;icfa=15144172050161002000&amp;lmid=2024" title="酷我音乐播放器">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/50161/16672814/icon_48.png" data-url="http://appimg1.3g.qq.com/android/50161/16672814/icon_48.png" width="48" height="48" itemprop="photo" alt="酷我音乐播放器">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=50161&amp;icfa=15144172050161002000&amp;lmid=2024">酷我音乐播放器</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">2,000万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=49993&amp;icfa=15144172049993003000&amp;lmid=2024" title="天天动听音乐播放器">					<img class="img_scrolloading_2024" src="http://appimg1.3g.qq.com/android/49993/16680144/icon_48.png" data-url="http://appimg1.3g.qq.com/android/49993/16680144/icon_48.png" width="48" height="48" itemprop="photo" alt="天天动听音乐播放器">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=49993&amp;icfa=15144172049993003000&amp;lmid=2024">天天动听音乐播放器</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">3,000万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=127224&amp;icfa=15144172127224004000&amp;lmid=2024" title="铃声多多2013(支持移动彩铃)">					<img class="img_scrolloading_2024" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android_new/224/127224/16680999/icon_48.png" width="48" height="48" itemprop="photo" alt="铃声多多2013(支持移动彩铃)">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=127224&amp;icfa=15144172127224004000&amp;lmid=2024">铃声多多2013(支持移动彩铃)</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">700万次下载</p>		</li>		<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">			<div class="app-img">				<a href="appdetail.jsp?appid=48833&amp;icfa=15144172048833005000&amp;lmid=2024" title="多米音乐">					<img class="img_scrolloading_2024" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-icon.jpg" data-url="http://appimg1.3g.qq.com/android/48833/16621955/icon_48.png" width="48" height="48" itemprop="photo" alt="多米音乐">				</a>			</div>			<p class="app-name"><a href="appdetail.jsp?appid=48833&amp;icfa=15144172048833005000&amp;lmid=2024">多米音乐</a></p>			<p class="category-star"><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>			<p class="grey">1,000万次下载</p>		</li>	</ul></article></div>
+					<div class="all-category"><a href="app.jsp?cid=103&amp;cname=%E8%A7%86%E9%A2%91&amp;lmid=2025">视频</a><a href="app.jsp?cid=105&amp;cname=%E5%A8%B1%E4%B9%90&amp;lmid=2025">娱乐</a><a href="app.jsp?cid=102&amp;cname=%E9%98%85%E8%AF%BB&amp;lmid=2025">阅读</a><a href="app.jsp?cid=119&amp;cname=%E7%BE%8E%E5%8C%96&amp;lmid=2025">美化</a><a href="app.jsp?cid=107&amp;cname=%E7%94%9F%E6%B4%BB&amp;lmid=2025">生活</a><a href="app.jsp?cid=112&amp;cname=%E5%AF%BC%E8%88%AA&amp;lmid=2025">导航</a><a href="app.jsp?cid=104&amp;cname=%E6%91%84%E5%BD%B1&amp;lmid=2025">摄影</a><a href="app.jsp?cid=114&amp;cname=%E7%90%86%E8%B4%A2&amp;lmid=2025">理财</a><a href="app.jsp?cid=111&amp;cname=%E6%95%99%E8%82%B2&amp;lmid=2025">教育</a><a href="app.jsp?cid=109&amp;cname=%E5%81%A5%E5%BA%B7&amp;lmid=2025">健康</a><a href="app.jsp?cid=122&amp;cname=%E8%B4%AD%E7%89%A9&amp;lmid=2025">购物</a><a href="app.jsp?cid=113&amp;cname=%E5%8A%9E%E5%85%AC&amp;lmid=2025">办公</a><a href="app.jsp?cid=110&amp;cname=%E6%96%B0%E9%97%BB&amp;lmid=2025">新闻</a><a href="app.jsp?cid=108&amp;cname=%E6%97%85%E6%B8%B8&amp;lmid=2025">旅游</a><a href="app.jsp?cid=100&amp;cname=%E5%84%BF%E7%AB%A5&amp;lmid=2025">儿童</a></div>
+				
+					<div class="ie-model-footer-left w910"><div class="ie-model-footer-right"></div></div>
+				
+				</section>
+
+				<aside class="mod-box mod-box-padding appcenter-product" role="complementary">
+					<div class="ie-model-header-left w910"><div class="ie-model-header-right"></div></div>
+					<h1 style="display:none;">腾讯应用中心荣誉出品</h1>
+					<div style="display:none;">
+						<a class="product-first" href="http://bao.myapp.com/" onclick="_gaq.push(['_trackEvent', 'outsite', 'bao.myapp', 'android']);pingHotag('outsite.bao.myapp.android');" target="_blank"></a>
+						<a class="product-second" href="http://bao.myapp.com/android/hd/" onclick="_gaq.push(['_trackEvent', 'outsite', 'bao.myapp', 'androidhd']);pingHotag('outsite.bao.myapp.androidhd');" target="_blank"></a>
+						<a class="product-third" href="http://sj.qq.com/" onclick="_gaq.push(['_trackEvent', 'outsite', 'sj.qq', 'index']);pingHotag('outsite.sj.qq.index');" target="_blank"></a>
+					</div>
+					<div class="word">腾讯应用中心开放平台 -- 免费发布 聚合价值</div>
+					<div class="hand-outter anim_scrolloading" data-func="handAnimate">
+						<a class="app-submit" href="http://tap.myapp.com/" onclick="_gaq.push(['_trackEvent', 'outsite', 'tap.myapp', 'index']);pingHotag('outsite.tap.myapp.index');" target="_blank">提交应用</a>
+						<div class="hand"></div>
+					</div>
+					<div class="ie-model-footer-left w910"><div class="ie-model-footer-right"></div></div>
+				</aside>
+				<div class="ie-main-footer"></div>
+			</div>
+			<div id="qrcodefloatwin" class="float-win" style="">
+				<a class="close" href="javascript:void(0);" onclick="$(this).parent().hide();" title="关闭"></a>
+				<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/two-code.jpg" width="104" height="104" alt="" data-pinit="registered">
+				<div class="weixin" title="微信扫描，关注应用宝公众帐号，第一时间获得热门应用">关注最新应用</div>
+				<div><a class="wblog" href="javascript:void(0);" onclick="dofollowmicro();" title="收听应用宝官方微博，热门应用随时关注分享">分享热门应用</a></div>
+			</div>
+			<div id="message_toast" class="toast" style="display:none;">
+				<div class="toast-logo"></div><span></span>
+			</div>
+			<section id="message_info" class="popwin" style="display:none;">
+				<header>
+					<h1>消息</h1><a href="javascript:UI.popwinWrap('#message_info');UI.popwinMask(0);" class="close" title="关闭">关闭</a>
+				</header>
+				<div class="body">
+					<b class="notice"></b>
+					<div class="line1"></div>
+				</div>
+				<footer>
+					<a href="javascript:UI.popwinWrap('#message_info');UI.popwinMask(0);" class="left"><span>确定</span></a>
+				</footer>
+			</section>
+
+			<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/myapp/in-min.js" autoload="true" core="http://3gimg.qq.com/web/webapp_webmarket/android/js/jquery-1.4.2.min.js"></script>
 			<script type="text/javascript">
-				updateUrl();
-				  var _gaq = _gaq || [];
-				  _gaq.push(['_setAccount', 'UA-24027202-1']);
-				  _gaq.push(['_trackPageview']);
-				
-				  (function() {
-				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-				  })();
-				
+			In.add("sjqqapi",{path:"http://img1.sj.qq.com/api/scripts/sjqqapi.js?ver=2.3.5",type:"js",charset:"utf-8"});
+			In.add("storescrolload",{path:"{dede:global.cfg_templets_skin/}/js/myapp/storescrolload.min.js?ver=2.3.5",type:"js",charset:"utf-8"});
+			In.add("manifest",{path:"{dede:global.cfg_templets_skin/}/js/myapp/manifest.js?ver=2.3.5",type:"js",charset:"utf-8"});
+			In.add("base",{path:"{dede:global.cfg_templets_skin/}/js/myapp/base.js?ver=2.3.5",type:"js",charset:"utf-8"});
+			In.add("index",{path:"{dede:global.cfg_templets_skin/}/js/myapp/index.js?ver=2.3.5",type:"js",charset:"utf-8",rely:["storescrolload","manifest","base"]});
+			In("index",function(){
+				//加载导航下面的广告
+				getFlashAdvs();
+				//装机必备
+				getAppNesseary(0);
+				//按需加载ajax
+				$(".ajax_scrolloading").scrolloading({"attr":"data-func"});
+				$(".anim_scrolloading").scrolloading({"attr":"data-func"});
+				g_model = true;
+				In.later(500,"sjqqapi",function(){
+					UI.loadstyles("http://img1.sj.qq.com/api/styles/sjqqapi.css?ver=2.3.5");
+				});
+			});
 			</script>
+			
+
+
+			<div class="gototop" style="display: none; bottom: -3px;">
+				<a href="javascript:gototop();">返回顶部</a>
+			</div>
 			<script type="text/javascript">
-				var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-				document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3ea711da81b3b7b525cab22fb2096d33' type='text/javascript'%3E%3C/script%3E"));
+			In.ready(function(){
+				var srule = [];
+				srule.push("@font-face {");
+				srule.push("    font-family: 'myfont';");
+				srule.push("	src: url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.eot');");
+				srule.push("	src: url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.eot?#iefix') format('embedded-opentype'),")
+				srule.push("	url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.woff') format('woff'),");
+				srule.push("	url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.ttf') format('truetype'),");
+				srule.push("	url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.svg#Untitled1Medium') format('svg');");
+				srule.push("	font-weight: normal;");
+				srule.push("	font-style: normal;");
+				srule.push("}");
+				//var browserName = navigator.userAgent;
+				//if(!(/Windows NT 5.1|Windows Xp|Windows NT 5.0|Windows 2000/i.test(browserName) && /webkit/i.test(browserName) && !(/chrome/i.test(browserName) && /webkit/i.test(browserName) && /mozilla/i.test(browserName)))){
+					In.css(srule.join(""));
+				//}
+			});
+			function pingHotag(str){
+				if(typeof(pgvSendClick) == "function"){
+					pgvSendClick({hottag:str,virtualDomain:"android.app.qq.com"});
+				}
+			}
+			In.add("pingjs",{path:"{dede:global.cfg_templets_skin/}/js/myapp/tcss.ping.js",type:"js",charset:"utf-8"});
+			var G_STAT = window.setInterval(function(){
+				if(typeof(g_model)!="undefined" && g_model){
+					window.clearInterval(G_STAT);
+					In("pingjs",function(){
+						if(typeof(pgvMain) == "function"){
+							pgvMain("", {virtualDomain:"android.app.qq.com"});
+							pageSpeedTrack();
+						}
+					});
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				}
+			},100);
+			var _foot_start = new Date();
+			</script>
+
+			<footer class="footer" role="contentinfo">
+				<div class="mqparty-footer">
+					<script charset="utf-8" src="{dede:global.cfg_templets_skin/}/js/myapp/mqq_footer_normal.js" type="text/javascript"></script>
+				</div>
+			</footer>
+
+			<script type="text/javascript">
+			var _body_end = new Date();
+			function pageSpeedTrack(){
+				if(typeof(_head_start) == typeof(_body_end)){
+					var loading_time = _body_end - _head_start;
+					if(loading_time>0 && loading_time<60*1000){
+						var speed = loading_time > 3*1000 ? "slow" : "quick";
+						var page_path = window.location.pathname.replace(/(\.jsp)$/i, "");
+						_gaq.push(["_trackEvent", "pagespeed", speed, page_path, loading_time]);
+						pingHotag("pagespeed."+speed+"."+page_path+"."+window.navigator.appName.replace(/^\s*(.*?)\s.*$/, "$1"));
+					}
+				}
+			}
 			</script>
 		</div>
 	</body>
