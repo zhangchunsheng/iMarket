@@ -9,14 +9,14 @@
 		<script src="http://jsqmt.qq.com/cdn_djl.js" type="text/javascript" async=""></script>
 		<script type="text/javascript">
 			var _head_start = new Date();
-			var g_returl = "http://localhost/github/iMarket/iMarket/index.php";
+			var g_returl = "{dede:global.cfg_clihost/}{dede:global.cfg_cmsurl/}";
 			var gf_param = "";
-			var g_action = "/github/iMarket/iMarket/api/";
+			var g_action = "{dede:global.cfg_cmsurl/}/api/";
 			//var g_action = "http://android.myapp.com/android/";
 			//http://android.myapp.com/android/qrytopicbycms_web?r=0.018095792969688773
 			//http://android.myapp.com/android/qrynesseary_web?type=0&r=0.661279286025092
-			var g_respath = "http://localhost{dede:global.cfg_templets_skin/}";
-			var g_hostpath = "http://localhost";
+			var g_respath = "{dede:global.cfg_clihost/}{dede:global.cfg_templets_skin/}";
+			var g_hostpath = "{dede:global.cfg_clihost/}";
 			var g_logined = false;
 			var g_qqno = 0;
 			var g_nickname = "";
@@ -36,8 +36,8 @@
 			_gaq.push(['_trackPageview']);
 		</script>
 
-		<base href="http://localhost/github/iMarket/iMarket/index.php">
-		<link rel="canonical" href="http://localhost/github/iMarket/iMarket/index.php">
+		<base href="{dede:global.cfg_clihost/}{dede:global.cfg_cmsurl/}index.php">
+		<link rel="canonical" href="{dede:global.cfg_clihost/}{dede:global.cfg_cmsurl/}index.php">
 		<link rel="shortcut icon" type="image/ico" href="{dede:global.cfg_templets_skin/}/images/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/myapp/global.min.css?ver=2.3.5">
 		<!--[if lt IE 9]>
