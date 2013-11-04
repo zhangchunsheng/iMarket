@@ -47,6 +47,7 @@ SELECT * FROM huohua_channeltype;
  SHOW CREATE TABLE huohua_addonimages;
  
  -- 2013-11-04
+ SELECT * FROM huohua_channeltype;
  SELECT * FROM huohua_addonapp;
  
  SELECT * FROM huohua_softconfig;
