@@ -570,10 +570,16 @@ function MakeOneTag(&$dtp, &$refObj, $parfield='Y')
  * @param     array  $typeinfos  栏目信息
  * @return    string
  */
-function GetOneTypeUrlA($typeinfos)
-{
+function GetOneTypeUrlA($typeinfos) {
     return GetTypeUrl($typeinfos['id'],MfTypedir($typeinfos['typedir']),$typeinfos['isdefault'],$typeinfos['defaultname'],
     $typeinfos['ispart'],$typeinfos['namerule2'],$typeinfos['moresite'],$typeinfos['siteurl'],$typeinfos['sitepath']);
+}
+
+/**
+ */
+function GetNid($typedir) {
+	$nid = substr($typedir, strripos($typedir, "/", 0) + 1);
+	return $nid;
 }
 
 /**

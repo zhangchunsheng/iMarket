@@ -433,8 +433,7 @@ class SgListView
      * @access    public
      * @return    void
      */
-    function DisplayPartTemplets()
-    {
+    function DisplayPartTemplets() {
         $this->PartView = new PartView($this->TypeID,false);
         $this->PartView->SetTypeLink($this->TypeLink);
         $nmfa = 0;

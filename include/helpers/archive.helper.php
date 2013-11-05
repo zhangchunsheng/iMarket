@@ -229,16 +229,12 @@ if ( ! function_exists('UpIndexKey'))
  * @param     int  $aid  文档AID
  * @return    void
  */
-if ( ! function_exists('InsertTags'))
-{
-    function InsertTags($tag, $aid)
-    {
-        $tags = explode(',',$tag);
-        foreach($tags as $tag)
-        {
+if ( ! function_exists('InsertTags')) {
+    function InsertTags($tag, $aid) {
+        $tags = explode(',', $tag);
+        foreach($tags as $tag) {
             $tag = trim($tag);
-            if(isset($tag[20]) || $tag!=stripslashes($tag))
-            {
+            if(isset($tag[20]) || $tag!=stripslashes($tag)) {
                 continue;
             }
             InsertOneTag($tag,$aid);

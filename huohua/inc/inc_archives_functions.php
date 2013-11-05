@@ -193,55 +193,43 @@ function GetCurContent($body)
  * @param     int  $uid  用户id
  * @return    array
  */
-function GetRemoteImage($url, $uid=0)
-{
+function GetRemoteImage($url, $uid=0) {
     global $cfg_basedir, $cfg_image_dir, $cfg_addon_savetype;
     $cfg_uploaddir = $cfg_image_dir;
     $revalues = Array();
     $ok = false;
     $htd = new DedeHttpDown();
-    $htd->OpenUrl($url);
+    $htd -> OpenUrl($url);
     $sparr = Array("image/pjpeg", "image/jpeg", "image/gif", "image/png", "image/xpng", "image/wbmp");
-    if(!in_array($htd->GetHead("content-type"),$sparr))
-    {
+    if(!in_array($htd -> GetHead("content-type"),$sparr)) {
         return '';
-    }
-    else
-    {
-        $imgUrl = $cfg_uploaddir.'/'.MyDate($cfg_addon_savetype, time());
+    } else {
+        $imgUrl = $cfg_uploaddir . '/' . MyDate($cfg_addon_savetype, time());
         $imgPath = $cfg_basedir.$imgUrl;
         CreateDir($imgUrl);
-        $itype = $htd->GetHead("content-type");
-        if($itype=="image/gif")
-        {
+        $itype = $htd -> GetHead("content-type");
+        if($itype=="image/gif") {
             $itype = '.gif';
-        }
-        else if($itype=="image/png")
-        {
+        } else if($itype=="image/png") {
             $itype = '.png';
-        }
-        else if($itype=="image/wbmp")
-        {
+        } else if($itype=="image/wbmp") {
             $itype = '.bmp';
-        }
-        else
-        {
+        } else {
             $itype = '.jpg';
         }
         $rndname = dd2char($uid.'_'.MyDate('mdHis',time()).mt_rand(1000,9999));
         $rndtrueName = $imgPath.'/'.$rndname.$itype;
         $fileurl = $imgUrl.'/'.$rndname.$itype;
-        $ok = $htd->SaveToBin($rndtrueName);
+        $ok = $htd -> SaveToBin($rndtrueName);
         @WaterImg($rndtrueName, 'down');
-        if($ok)
-        {
+        if($ok) {
             $data = GetImageSize($rndtrueName);
             $revalues[0] = $fileurl;
             $revalues[1] = $data[0];
             $revalues[2] = $data[1];
         }
     }
-    $htd->Close();
+    $htd -> Close();
     return ($ok ? $revalues : '');
 }
 
@@ -431,19 +419,16 @@ function GetDDImgFromBody(&$body)
  * @param     string  $isremote  是否远程
  * @return    string
  */
-function GetDDImage($litpic, $picname, $isremote)
-{
+function GetDDImage($litpic, $picname, $isremote) {
     global $cuserLogin,$cfg_ddimg_width,$cfg_ddimg_height,$cfg_basedir,$ddcfg_image_dir,$cfg_addon_savetype;
     $ntime = time();
     if( ($litpic != 'none' || $litpic != 'ddfirst') && 
-     !empty($_FILES[$litpic]['tmp_name']) && is_uploaded_file($_FILES[$litpic]['tmp_name']))
-    {
+     !empty($_FILES[$litpic]['tmp_name']) && is_uploaded_file($_FILES[$litpic]['tmp_name'])) {
         //如果用户自行上传缩略图
         $istype = 0;
         $sparr = Array("image/pjpeg", "image/jpeg", "image/gif", "image/png");
         $_FILES[$litpic]['type'] = strtolower(trim($_FILES[$litpic]['type']));
-        if(!in_array($_FILES[$litpic]['type'], $sparr))
-        {
+        if(!in_array($_FILES[$litpic]['type'], $sparr)) {
             ShowMsg("上传的图片格式错误，请使用JPEG、GIF、PNG格式的其中一种！","-1");
             exit();
         }
@@ -451,16 +436,11 @@ function GetDDImage($litpic, $picname, $isremote)
 
         CreateDir($savepath);
         $fullUrl = $savepath.'/'.dd2char(MyDate('mdHis', $ntime).$cuserLogin->getUserID().mt_rand(1000, 9999));
-        if(strtolower($_FILES[$litpic]['type']) == "image/gif")
-        {
+        if(strtolower($_FILES[$litpic]['type']) == "image/gif") {
             $fullUrl = $fullUrl.".gif";
-        }
-        else if(strtolower($_FILES[$litpic]['type']) == "image/png")
-        {
+        } else if(strtolower($_FILES[$litpic]['type']) == "image/png") {
             $fullUrl = $fullUrl.".png";
-        }
-        else
-        {
+        } else {
             $fullUrl = $fullUrl.".jpg";
         }
 
@@ -470,44 +450,32 @@ function GetDDImage($litpic, $picname, $isremote)
         if($GLOBALS['cfg_ddimg_full']=='Y') @ImageResizeNew($cfg_basedir.$fullUrl,$cfg_ddimg_width,$cfg_ddimg_height);
         else @ImageResize($cfg_basedir.$fullUrl,$cfg_ddimg_width,$cfg_ddimg_height);
         
-        $img = $cfg_basedir.$litpic;
-
-    }
-    else
-    {
-
+        $img = $cfg_basedir . $litpic;
+    } else {
         $picname = trim($picname);
-        if($isremote==1 && preg_match("#^http:\/\/#i", $picname))
-        {
+        if($isremote==1 && preg_match("#^http:\/\/#i", $picname)) {
             $litpic = $picname;
             $ddinfos = GetRemoteImage($litpic, $cuserLogin->getUserID());
 
-            if(!is_array($ddinfos))
-            {
+            if(!is_array($ddinfos)) {
                 $litpic = '';
-            }
-            else
-            {
+            } else {
                 $litpic = $ddinfos[0];
-                if($ddinfos[1] > $cfg_ddimg_width || $ddinfos[2] > $cfg_ddimg_height)
-                {
-                    if($GLOBALS['cfg_ddimg_full']=='Y') @ImageResizeNew($cfg_basedir.$litpic,$cfg_ddimg_width,$cfg_ddimg_height);
-                    else @ImageResize($cfg_basedir.$litpic,$cfg_ddimg_width,$cfg_ddimg_height);
+                if($ddinfos[1] > $cfg_ddimg_width || $ddinfos[2] > $cfg_ddimg_height) {
+                    if($GLOBALS['cfg_ddimg_full']=='Y')
+						@ImageResizeNew($cfg_basedir . $litpic, $cfg_ddimg_width, $cfg_ddimg_height);
+                    else
+						@ImageResize($cfg_basedir . $litpic, $cfg_ddimg_width, $cfg_ddimg_height);
                 }
             }
-        }
-        else
-        {
-            if($litpic=='ddfirst' && !preg_match("#^http:\/\/#i", $picname))
-            {
+        } else {
+            if($litpic=='ddfirst' && !preg_match("#^http:\/\/#i", $picname)) {
                 $oldpic = $cfg_basedir.$picname;
                 $litpic = str_replace('.', '-lp.', $picname);
                 if($GLOBALS['cfg_ddimg_full']=='Y') @ImageResizeNew($oldpic,$cfg_ddimg_width,$cfg_ddimg_height,$cfg_basedir.$litpic);
                 else @ImageResize($oldpic,$cfg_ddimg_width,$cfg_ddimg_height,$cfg_basedir.$litpic);
                 if(!is_file($cfg_basedir.$litpic)) $litpic = '';
-            }
-            else
-            {
+            } else {
                 $litpic = $picname;
                 return $litpic;
             }

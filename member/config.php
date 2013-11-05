@@ -21,8 +21,7 @@ $menutype_son = '';
 $gourl = empty($gourl)? "" : RemoveXSS($gourl);
 
 //检查是否开放会员功能
-if($cfg_mb_open=='N')
-{
+if($cfg_mb_open=='N') {
     ShowMsg("系统关闭了会员功能，因此你无法访问此页面！","javascript:;");
     exit();
 }
@@ -31,10 +30,10 @@ $cfg_ml = new MemberLogin($keeptime);
 
 //判断用户是否登录
 $myurl = '';
-if($cfg_ml->IsLogin())
-{
-    $myurl = $cfg_memberurl."/index.php?uid=".urlencode($cfg_ml->M_LoginID);
-    if(!preg_match("#^http:#i", $myurl)) $myurl = $cfg_basehost.$myurl;
+if($cfg_ml->IsLogin()) {
+    $myurl = $cfg_memberurl . "/index.php?uid=" . urlencode($cfg_ml -> M_LoginID);
+    if(!preg_match("#^http:#i", $myurl))
+		$myurl = $cfg_basehost . $myurl;
 }
 
 /**

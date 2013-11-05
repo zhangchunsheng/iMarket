@@ -1,4 +1,6 @@
-<?php   if(!defined('DEDEINC')) exit('Request Error!');
+<?php
+if(!defined('DEDEINC'))
+	exit('Request Error!');
 /**
  * 文档列表类
  *
@@ -21,8 +23,7 @@ helper('cache');
  * @subpackage       DedeCMS.Libraries
  * @link             http://www.dedecms.com
  */
-class ListView
-{
+class ListView {
     var $dsql;
     var $dtp;
     var $dtp2;
@@ -477,8 +478,7 @@ class ListView
      * @param     string
      * @return    string
      */
-    function DisplayPartTemplets()
-    {
+    function DisplayPartTemplets() {
         $this->PartView = new PartView($this->TypeID,false);
         $this->PartView->SetTypeLink($this->TypeLink);
         $nmfa = 0;

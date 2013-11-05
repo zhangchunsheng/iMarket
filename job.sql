@@ -19,6 +19,7 @@ SELECT * FROM huohua_channeltype;
  × appName varchar 应用名称
  * cid int 分类
  * cname varchar 分类名称
+ * filetype varchar 文件类型
  * starLevel int 星级
  * scoreNum int 评分人数
  * downloadNum int 下载次数
@@ -42,18 +43,54 @@ SELECT * FROM huohua_channeltype;
  * screenShot text 软件截图
  * comments text 评价
  */
- SHOW CREATE TABLE huohua_addonarticle;
- SHOW CREATE TABLE huohua_addonsoft;
- SHOW CREATE TABLE huohua_addonimages;
- 
- -- 2013-11-04
- SELECT * FROM huohua_channeltype;
- SELECT * FROM huohua_addonapp;
- 
- SELECT * FROM huohua_softconfig;
- SELECT * FROM huohua_soft_backup;
- SELECT * FROM huohua_soft_belong;
- SELECT * FROM huohua_soft_favorites;
- SELECT * FROM huohua_soft_version;
- SELECT * FROM huohua_software;
- SELECT * FROM huohua_software_temp;
+SHOW CREATE TABLE huohua_addonarticle;
+SHOW CREATE TABLE huohua_addonsoft;
+SHOW CREATE TABLE huohua_addonimages;
+
+-- 2013-11-04
+SELECT * FROM huohua_channeltype;
+SELECT * FROM huohua_addonapp;
+SELECT * FROM huohua_archives;
+
+SHOW CREATE TABLE huohua_addonapp;
+SHOW CREATE TABLE huohua_archives;
+SHOW CREATE TABLE huohua_addonsoft;
+
+ALTER TABLE huohua_addonapp ADD COLUMN `weight` INT(10) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonapp ADD COLUMN `typeid2` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonapp ADD COLUMN `topTypeId` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonapp ADD COLUMN `writer` CHAR(20) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `redirecturl` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `sortrank` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonapp ADD COLUMN `ismake` SMALLINT(6) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonapp ADD COLUMN `shorttitle` CHAR(36) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `color` CHAR(7) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `source` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `publishdate` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonapp ADD COLUMN `notpost` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonapp ADD COLUMN `description` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `keywords` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `filename` VARCHAR(40) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `dutyadmin` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0';
+
+SELECT * FROM huohua_tagindex;
+SELECT * FROM huohua_taglist;
+
+SELECT * FROM huohua_softconfig;
+SELECT * FROM huohua_soft_backup;
+SELECT * FROM huohua_soft_belong;
+SELECT * FROM huohua_soft_favorites;
+SELECT * FROM huohua_soft_version;
+SELECT * FROM huohua_software;
+SELECT * FROM huohua_software_temp;
+
+-- 2013-11-05
+SELECT * FROM huohua_channeltype;
+SELECT * FROM huohua_arctype;
+SELECT * FROM huohua_arctype WHERE reid=0;
+
+SELECT * FROM huohua_member;
+
+SHOW CREATE TABLE huohua_member;
+
+SHOW CREATE TABLE huohua_addonspec;
