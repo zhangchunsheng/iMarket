@@ -85,6 +85,7 @@ SELECT * FROM huohua_software;
 SELECT * FROM huohua_software_temp;
 
 -- 2013-11-05
+SELECT * FROM huohua_addonapp;
 SELECT * FROM huohua_channeltype;
 SELECT * FROM huohua_arctype;
 SELECT * FROM huohua_arctype WHERE reid=0;
@@ -94,3 +95,4 @@ SELECT * FROM huohua_member;
 SHOW CREATE TABLE huohua_member;
 
 SHOW CREATE TABLE huohua_addonspec;
+SHOW CREATE TABLE huohua_addonsubject;
