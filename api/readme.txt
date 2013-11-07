@@ -22,3 +22,15 @@ http://android.myapp.com/android/qrycategoryranking_web?cid=120&ranktype=2&icfa=
 
 专题
 http://android.myapp.com/android/qrytopiclist_web?pageNo=1&pageIndex=-1&pageSize=12&type=0&r=0.5361363203264773
+
+推荐
+http://android.myapp.com/android/qryrelatesoft_web?appid=10099632&icontype=60&pageNo=1&pageSize=10&r=0.9966088098008186
+评论
+http://android.myapp.com/android/commentlist_web?appid=10099632&pkgid=16286051&pageNo=1&pageIndex=-1&pageSize=10&r=0.29149256530217826
+
+分享
+http://android.myapp.com/android/share_web?appid=10099632&sharetype=0&reason=&r=0.20062188222073019
+
+专题详情
+http://android.myapp.com/android/qrytopicdetail_web?pageNo=1&pageSize=50&topicid=20241&r=0.2269687505904585
+http://android.myapp.com/android/qrytopiclist_web?pageNo=1&pageSize=5&type=1&r=0.9457609034143388

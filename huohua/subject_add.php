@@ -1,8 +1,8 @@
 <?php
 /**
- * 应用发布
+ * 应用专题发布
  *
- * @version        $Id: app_add.php 1 16:09 2010年7月20日Z tianya $
+ * @version        $Id: subject_add.php 1 16:09 2010年7月20日Z tianya $
  * @package        DedeCMS.Administrator
  * @copyright      Copyright (c) 2007 - 2010, DesDev, Inc.
  * @license        http://help.dedecms.com/usersguide/license.html
@@ -37,7 +37,7 @@ if($dopost != 'save') {
 	$cInfos     = $dsql -> GetOne(" SELECT * FROM  `#@__channeltype` WHERE id='$channelid' ");
 	$channelid  = $cInfos['id'];
 	
-	include DedeInclude("templets/app_add.htm");
+	include DedeInclude("templets/subject_add.htm");
 	exit();
 } else if ($dopost == 'save') {
 	/*--------------------------------
@@ -63,7 +63,11 @@ if($dopost != 'save') {
 		$autolitpic = 0;
 		
 	if(empty($pubDate))
-		$pubDate = 0;
+		$pubDate = time();
+		
+	if(empty($date)) {
+		$date = time();
+	}
 	
 	if ($typeid == 0) {
 		ShowMsg("请指定文档的栏目！", "-1");
@@ -98,8 +102,8 @@ if($dopost != 'save') {
 	if (empty($click))
 		$click = ($cfg_arc_click == '-1' ? mt_rand(50, 200) : $cfg_arc_click);
 	
-	$appName       = preg_replace('#"#', '＂', $appName);
-	$appName       = cn_substrR($appName, $cfg_title_maxlen);
+	$subjectName       = preg_replace('#"#', '＂', $subjectName);
+	$subjectName       = cn_substrR($subjectName, $cfg_title_maxlen);
 	$color       = cn_substrR($color, 7);
 	$writer      = cn_substrR($writer, 20);
 	$source      = cn_substrR($source, 30);
@@ -112,13 +116,13 @@ if($dopost != 'save') {
 	if (!TestPurview('a_Check,a_AccCheck,a_MyCheck')) {
 		$arcrank = -1;
 	}
-	$adminid = $cuserLogin->getUserID();
+	$adminid = $cuserLogin -> getUserID();
 	
 	//处理上传的缩略图
 	if (empty($ddisremote))
 		$ddisremote = 0;
 	$litpic = GetDDImage('none', $picname, $ddisremote);
-	$icon = $litpic;
+	$litpic = $picture;
 	
 	//生成文档ID
 	$arcID = GetIndexKey($arcrank, $typeid, $sortrank, $channelid, $senddate, $adminid);
@@ -174,7 +178,7 @@ if($dopost != 'save') {
 	//保存到主表
 	$inQuery = "INSERT INTO `#@__archives`(id,typeid,typeid2,sortrank,flag,ismake,channel,arcrank,click,money,title,shorttitle,
 				color,writer,source,litpic,pubdate,senddate,mid,notpost,description,keywords,filename,dutyadmin,weight)
-				VALUES ('$arcID','$typeid','$typeid2','$sortrank','$flag','$ismake','$channelid','$arcrank','$click','$money','$appName','$shorttitle',
+				VALUES ('$arcID','$typeid','$typeid2','$sortrank','$flag','$ismake','$channelid','$arcrank','$click','$money','$subjectName','$shorttitle',
 				'$color','$writer','$source','$litpic','$pubdate','$senddate','$adminid','$notpost','$description','$keywords','$filename','$adminid','$weight');";
 	if (!$dsql -> ExecuteNoneQuery($inQuery)) {
 		$gerr = $dsql -> GetError();
@@ -182,22 +186,6 @@ if($dopost != 'save') {
 		ShowMsg("把数据保存到数据库主表 `#@__archives` 时出错，请把相关信息提交给DedeCms官方。" . str_replace('"', '', $gerr), "javascript:;");
 		exit();
 	}
-	
-	//应用链接列表
-	$urls = '';
-	
-	//应用大小
-	if (!empty($nsizeInfo))
-		$sizeInfo = $nsizeInfo;
-	else if (empty($sizeInfo))
-		$sizeInfo = '未知';
-	else
-		$sizeInfo = $sizeInfo . ' ' . $unit;
-	
-	if ($downloadLink != 'http://') {
-		$urls .= "{dede:link text=''} $downloadLink {/dede:link}\r\n";
-	}
-	$urls = addslashes($urls);
 	
 	//保存到附加表
 	$cts      = $dsql -> GetOne("SELECT addtable FROM `#@__channeltype` WHERE id='$channelid' ");
@@ -212,12 +200,10 @@ if($dopost != 'save') {
 	$useip   = GetIP();
 	$inQuery = "INSERT INTO `$addtable`(aid,typeid,typeid2,topTypeId,sortrank,flag,ismake,channel,arcrank,click,title,shorttitle,
 				color,writer,source,litpic,publishdate,senddate,mid,notpost,description,keywords,filename,dutyadmin,weight,
-				icon,appName,cid,cname,starLevel,scoreNum,downloadNum,sizeInfo,priceInfo,languageInfo,version,pubDate,needOSInfo,
-				developerInfo,isTencentPMAuth,isSafeMAuth,qrCode,downloadLink,introduction,screenShot,comments,redirecturl,userip,filetype{$inadd_f})
-				VALUES ('$arcID','$typeid','$typeid2','$topTypeId','$sortrank','$flag','$ismake','$channelid','$arcrank','$click','$appName','$shorttitle',
+				subjectName,picture,date,pubDate,apps,goodNum,badNum{$inadd_f})
+				VALUES ('$arcID','$typeid','$typeid2','$topTypeId','$sortrank','$flag','$ismake','$channelid','$arcrank','$click','$subjectName','$shorttitle',
 				'$color','$writer','$source','$litpic','$pubdate','$senddate','$adminid','$notpost','$description','$keywords','$filename','$adminid','$weight',
-				'$icon','$appName','$cid','$cname','$starLevel','$scoreNum','$downloadNum','$sizeInfo','$priceInfo','$languageInfo','$version','$pubDate','$needOSInfo',
-				'$developerInfo','$isTencentPMAuth','$isSafeMAuth','$qrCode','$urls','$introduction','$screenShot','$comments','$redirecturl','$useip','$filetype'{$inadd_v});";
+				'$subjectName','$picture','$date','$pubDate','$apps','$goodNum','$badNum'{$inadd_v});";
 	if (!$dsql -> ExecuteNoneQuery($inQuery)) {
 		$gerr = $dsql -> GetError();
 		$dsql -> ExecuteNoneQuery("DELETE FROM `#@__archives` WHERE id='$arcID'");
@@ -252,22 +238,22 @@ if($dopost != 'save') {
 	//返回成功信息
 	$msg = "
     　　请选择你的后续操作：
-    <a href='app_add.php?cid=$typeid'><u>继续发布应用</u></a>
+    <a href='subject_add.php?cid=$typeid'><u>继续发布应用专题</u></a>
     &nbsp;&nbsp;
-    <a href='$arcUrl' target='_blank'><u>查看应用</u></a>
+    <a href='$arcUrl' target='_blank'><u>查看应用专题</u></a>
     &nbsp;&nbsp;
-    <a href='archives_do.php?aid=" . $arcID . "&dopost=editArchives'><u>更改应用</u></a>
+    <a href='archives_do.php?aid=" . $arcID . "&dopost=editArchives'><u>更改应用专题</u></a>
     &nbsp;&nbsp;
-    <a href='catalog_do.php?cid=$typeid&dopost=listArchives'><u>已发布应用管理</u></a>
+    <a href='catalog_do.php?cid=$typeid&dopost=listArchives'><u>已发布应用专题管理</u></a>
     &nbsp;&nbsp;
     <a href='catalog_main.php'><u>网站栏目管理</u></a>
    ";
 	$msg = "<div style=\"line-height:36px;height:36px\">{$msg}</div>" . GetUpdateTest();
 	
-	$wintitle    = "成功发布一个应用！";
-	$wecome_info = "文章管理::发布应用";
+	$wintitle    = "成功发布一个应用专题！";
+	$wecome_info = "文章管理::发布应用专题";
 	$win         = new OxWindow();
-	$win->AddTitle("成功发布应用：");
+	$win->AddTitle("成功发布应用专题：");
 	$win->AddMsgItem($msg);
 	$winform = $win->GetWindow("hand", "&nbsp;", FALSE);
 	$win->Display();

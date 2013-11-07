@@ -96,3 +96,49 @@ SHOW CREATE TABLE huohua_member;
 
 SHOW CREATE TABLE huohua_addonspec;
 SHOW CREATE TABLE huohua_addonsubject;
+SHOW CREATE TABLE huohua_addonapp;
+
+/**
+ * subjectName varchar 名称
+ * picture varchar 图片
+ * description varchar 简介
+ * date int 日期
+ * pubDate int 发布时间
+ * apps text 应用信息
+ * click int 浏览次数
+ * goodNum int 赞
+ * badNum int 踩
+ */
+
+-- 2013-11-06
+SELECT * FROM huohua_addonapp;
+SELECT * FROM huohua_addonsubject;
+
+SHOW CREATE TABLE huohua_addonsubject;
+
+ALTER TABLE huohua_addonsubject ADD COLUMN `description` VARCHAR(255) NOT NULL DEFAULT '';
+
+-- 2013-11-07
+SELECT * FROM huohua_addonapp;
+SELECT * FROM huohua_addonsubject;
+SHOW CREATE TABLE huohua_addonsubject;
+
+SELECT id,typename,ispart,channeltype FROM `huohua_arctype` WHERE ispart<>2 AND reid=0 ORDER BY sortrank ASC;
+SELECT * FROM huohua_arctype;
+
+ALTER TABLE huohua_addonsubject ADD COLUMN `weight` INT(10) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonsubject ADD COLUMN `typeid2` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonsubject ADD COLUMN `topTypeId` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonsubject ADD COLUMN `writer` CHAR(20) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `redirecturl` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `sortrank` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonsubject ADD COLUMN `ismake` SMALLINT(6) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonsubject ADD COLUMN `shorttitle` CHAR(36) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `color` CHAR(7) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `source` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `publishdate` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonsubject ADD COLUMN `notpost` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonsubject ADD COLUMN `description` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `keywords` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `filename` VARCHAR(40) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `dutyadmin` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0';

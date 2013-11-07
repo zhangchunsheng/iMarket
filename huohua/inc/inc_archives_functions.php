@@ -280,14 +280,16 @@ function GetRemoteFlash($url, $uid=0)
  * @param     int  $channelid  频道ID
  * @return    bool
  */
-function CheckChannel($typeid, $channelid)
-{
+function CheckChannel($typeid, $channelid) {
     global $dsql;
-    if($typeid==0) return TRUE;
+    if($typeid == 0)
+		return TRUE;
 
-    $row = $dsql->GetOne("SELECT ispart,channeltype FROM `#@__arctype` WHERE id='$typeid' ");
-    if($row['ispart']!=0 || $row['channeltype'] != $channelid) return FALSE;
-    else return TRUE;
+    $row = $dsql -> GetOne("SELECT ispart,channeltype FROM `#@__arctype` WHERE id='$typeid' ");
+    if($row['ispart']!=0 || $row['channeltype'] != $channelid)
+		return FALSE;
+    else
+		return TRUE;
 }
 
 /**

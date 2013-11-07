@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
-		<title>应用管理</title>
+		<title>应用专题管理</title>
 		<link rel="stylesheet" type="text/css" href="css/base.css">
 		<script language="javascript" src="../include/js/dedeajax2.js"></script>
 		<script language="javascript" src="js/ieemu.js"></script>
@@ -51,7 +51,7 @@
 				var qstr=getCheckboxItem();
 				if(qstr=='')
 				{
-					alert('必须选择一个或多个应用！');
+					alert('必须选择一个或多个应用专题！');
 					return;
 				}
 				LoadQuickDiv(e, 'archives_do.php?dopost=moveArchives&qstr='+qstr+'&channelid='+cid+'&rnd='+Math.random(), 'moveArchives', '450px', '180px');
@@ -62,13 +62,13 @@
 			{
 			  var popupoptions
 			  popupoptions = [
-			    new ContextItem("浏览应用",function(){ viewArc(aid); }),
-			    new ContextItem("编辑应用",function(){ editArc(aid); }),
+			    new ContextItem("浏览应用专题",function(){ viewArc(aid); }),
+			    new ContextItem("编辑应用专题",function(){ editArc(aid); }),
 			    new ContextSeperator(),
 			    new ContextItem("更新HTML",function(){ updateArc(aid); }),
-			    new ContextItem("审核应用",function(){ checkArc(aid); }),
-			    new ContextItem("推荐应用",function(){ adArc(aid); }),
-			    new ContextItem("删除应用",function(){ delArc(aid); }),
+			    new ContextItem("审核应用专题",function(){ checkArc(aid); }),
+			    new ContextItem("推荐应用专题",function(){ adArc(aid); }),
+			    new ContextItem("删除应用专题",function(){ delArc(aid); }),
 			    new ContextSeperator(),
 			    new ContextItem("复制(<u>C</u>)",function(){ copyToClipboard(atitle); }),
 			    new ContextItem("重载页面",function(){ location.reload(); }),
@@ -148,15 +148,15 @@
 								<table width="98%" border="0" cellspacing="0" cellpadding="0">
 									<tr>
 										<td align="center">
-											<input type='button' class="coolbg np" onClick="location='catalog_do.php?channelid={dede:global.channelid/}&cid={dede:global.cid/}&dopost=addArchives';" value='添加应用' />
+											<input type='button' class="coolbg np" onClick="location='catalog_do.php?channelid={dede:global.channelid/}&cid={dede:global.cid/}&dopost=addArchives';" value='添加应用专题' />
 											{dede:if $adminid==$mid }
-											<input type='button' class="coolbg np" onClick="location='content_list.php?cid={dede:global.cid/}&mid=0';" value='全部应用' />
+											<input type='button' class="coolbg np" onClick="location='content_list.php?cid={dede:global.cid/}&mid=0';" value='全部应用专题' />
 											{else}
-											<input type='button' class="coolbg np" onClick="location='content_list.php?cid={dede:global.cid/}&mid=<?php echo $cuserLogin->getUserID(); ?>';" value='我的应用' />
+											<input type='button' class="coolbg np" onClick="location='content_list.php?cid={dede:global.cid/}&mid=<?php echo $cuserLogin->getUserID(); ?>';" value='我的应用专题' />
 											{/dede:if}
 											<input type='button' class="coolbg np" onClick="location='catalog_main.php';" value='栏目管理' />
 											<input type='button' class="coolbg np" name='bb1' onClick="location='makehtml_list.php?cid={dede:global.cid/}';" value='更新列表' />
-											<input type='button' class="coolbg np" name='bb2' onClick="location='makehtml_archives.php?cid={dede:global.cid/}';" value='更新应用' />
+											<input type='button' class="coolbg np" name='bb2' onClick="location='makehtml_archives.php?cid={dede:global.cid/}';" value='更新应用专题' />
 											<?php echo $CheckUserSend; ?>
 										</td>
 									</tr>
@@ -171,7 +171,7 @@
 					</table>
 					<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#cfcfcf">
 						<tr bgcolor="#E7E7E7">
-							<td height="24" colspan="9" background="images/tbg.gif" style="padding-left:10px;">{dede:global.positionname/}应用列表 &nbsp;(使用鼠标右键进行常用操作)</td>
+							<td height="24" colspan="9" background="images/tbg.gif" style="padding-left:10px;">{dede:global.positionname/}应用专题列表 &nbsp;(使用鼠标右键进行常用操作)</td>
 						</tr>
 						<form name="form2">
 							<tr align="center" bgcolor="#FBFCE2" height="25">

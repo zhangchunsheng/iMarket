@@ -69,9 +69,9 @@ if($cid!=0)
 
 if($arcrank!='') {
     $whereSql .= " AND arc.arcrank = '$arcrank' ";
-    $CheckUserSend = "<input type='button' class='coolbg np' onClick=\"location='content_sg_list.php?cid={$cid}&channelid={$channelid}&dopost=listArchives';\" value='所有文档' />";
+    $CheckUserSend = "<input type='button' class='coolbg np' onClick=\"location='content_app_list.php?cid={$cid}&channelid={$channelid}&dopost=listArchives';\" value='所有文档' />";
 } else {
-    $CheckUserSend = "<input type='button' class='coolbg np' onClick=\"location='content_sg_list.php?cid={$cid}&channelid={$channelid}&dopost=listArchives&arcrank=-1';\" value='稿件审核' />";
+    $CheckUserSend = "<input type='button' class='coolbg np' onClick=\"location='content_app_list.php?cid={$cid}&channelid={$channelid}&dopost=listArchives&arcrank=-1';\" value='稿件审核' />";
 }
 
 $query = "SELECT arc.aid,arc.aid as id,arc.typeid,arc.arcrank,arc.flag,arc.senddate,arc.channel,arc.title,arc.mid,arc.click,tp.typename,ch.typename as channelname

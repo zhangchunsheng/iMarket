@@ -1,0 +1,295 @@
+@charset "utf-8";
+/* CSS Document */
+#qqappextcontainer{ position:absolute; height:1px; overflow:hidden;}
+.sjqqapi_popwin{
+    margin:0;
+    padding:0;
+	width:440px;
+	color:#666;
+	position:absolute;
+	z-index:9999;
+	left:50%;
+	margin-left:-220px;
+	background:url(http://img2.sj.qq.com/api/images/sjbg.png);
+	_background:#e5e5e5;
+	font-size:12px;
+	display:none;
+	text-align:left;
+	
+}
+.sjqqapi_popwin .innner{
+    width:428px;
+    margin:5px;
+	border:1px solid #bbbbbb;
+	position:relative;
+}
+.sjqqapi_popwin .sjqqapi_head{
+	background:#78aadb;
+	color:#ffffff;
+	font-weight:bold;
+	line-height:30px;
+	overflow:hidden;
+	width:100%;
+	height:30px;
+
+}
+.sjqqapi_popwin .sjqqapi_close{
+    margin:0;
+    padding:0;
+    background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png) 0px -148px no-repeat;
+	display:block;
+	width:10px;
+	height:10px;
+	border:none;
+	position:absolute;
+	right:12px;
+	top:10px;
+	cursor:pointer;
+	z-index:9999;
+	font-size:0;
+}
+.sjqqapi_popwin .sjqqapi_content{ 
+	width:100%;
+	background:#ffffff;
+	border-bottom:1px solid #dedede;
+	position:relative;
+	overflow:hidden;
+	height:225px;
+}
+.sjqqapi_popwin .clear{ clear:both;}
+.sjqqapi_popwin .sjqqapi_content .sjqqapi_con{
+    background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png) 15px 0 no-repeat;
+    height:84px;
+    margin:0px 0px 0px 30px;
+    float:left;
+	_display:inline;
+}
+.sjqqapi_popwin .sjqqapi_em{
+    margin:0;
+    padding:0;
+    color:#333333;
+    font-style:normal;
+    font-size:14px;
+    display:block;
+    width:16em;
+    margin-left:180px;
+    line-height:22px;
+    overflow:hidden;
+ }
+.sjqqapi_popwin .siqqapi_em_color{
+   color:#527e3e;
+   font-weight:bold;
+ }
+.sjqqapi_popwin .sjqqapi_downloadapp{
+    margin:0;
+    padding:0;
+	width:130px;
+	height:35px;
+	background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png)  0 -104px  no-repeat;
+	font-size:0;
+	margin:10px 0 0 210px;
+	border:none;
+	cursor:pointer;
+ }
+.sjqqapi_popwin .sjqqapi_downloadapphover{
+    margin:0;
+    padding:0;
+	width:130px;
+	height:35px;
+	background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png)  -141px -104px  no-repeat;
+	font-size:0;
+	margin:10px 0 0 210px;
+	border:none;
+	cursor:pointer;
+ }
+.sjqqapi_popwin .sjqqapi_downloadappclick{
+    margin:0;
+    padding:0;
+	width:130px;
+	height:35px;
+	background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png)  -281px -104px  no-repeat;
+	font-size:0;
+	margin:10px 0 0 210px;
+	border:none;
+	cursor:pointer;
+ }
+.sjqqapi_popwin .sjqqapi_downloadappdisable{
+    margin:0;
+    padding:0;
+	width:130px;
+	height:35px;
+	background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png)  -420px -104px  no-repeat;
+	font-size:0;
+	margin:10px 0 0 210px;
+	border:none;
+	cursor:auto;
+ }
+.sjqqapi_popwin .sjqqapi_checkbox{
+ 	margin:0px 0 0 0;
+    padding:0;
+    width:16px;
+    heigth:16px;
+    border:none;
+	cursor:pointer;
+	background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png)  -138px -241px  no-repeat;
+ }
+.sjqqapi_popwin .sjqqapi_checkboxclick{
+	margin:0px 0 0 0;
+    padding:0;
+    width:16px;
+    heigth:16px;
+    border:none;
+	cursor:pointer;
+	background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png)  -154px -241px  no-repeat;
+ }
+.sjqqapi_popwin .sjqqapi_xyapp{
+	width:140px;
+	height:16px;
+	margin:10px 0 0 210px;
+	border:none;
+	cursor:pointer;
+	font-size:12px;
+ 
+ }
+.sjqqapi_popwin .sjqqapi_foot{
+ 	background:#fafafa;
+	width:100%;
+	height:40px;
+	position:relative;
+    line-height:40px;
+ }
+.sjqqapi_popwin .sjqqapi_tp{
+    margin:0;
+    padding:0;
+	font-style:normal;
+	display:block;
+	text-indent:30px;
+	white-space:nowrap;
+	
+ }
+.sjqqapi_popwin .sjqqapi_next{
+ 	background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png) 0 -167px no-repeat;
+ 	width:90px; 
+ 	height:29px;
+ 	position:absolute;
+ 	right:10px;
+ 	top:6px;
+	text-align:center;
+	line-height:29px;
+	color:#333333;
+	font-size:14px;
+	font-weight:bold;
+	cursor:pointer;
+ }
+.sjqqapi_popwin .sjqqapi_nexthover{
+ 	background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png) -116px -167px no-repeat;
+ 	width:90px; 
+ 	height:29px;
+ 	position:absolute;
+ 	right:10px;
+ 	top:6px;
+	text-align:center;
+	line-height:29px;
+	color:#333333;
+	font-size:14px;
+	font-weight:bold;
+	cursor:pointer;
+ }
+.sjqqapi_popwin .sjqqapi_nextclick{
+ 	background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png) -234px -167px no-repeat;
+ 	width:90px; 
+ 	height:29px;
+ 	position:absolute;
+ 	right:10px;
+ 	top:6px;
+	text-align:center;
+	line-height:29px;
+	color:#333333;
+	font-size:14px;
+	font-weight:bold;
+	cursor:pointer;
+ }
+.sjqqapi_popwin .sjqqapi_icon{
+	width:40px;
+	height:40px;
+	position:absolute;
+	left:45px;
+	top:82px;
+}
+.sjqqapi_popwin .sjqqapi_tip{
+    margin:0;
+	padding:24px 0 0 0;
+	_padding:23px 0 0 0;
+	text-indent:40px;
+	font-size:14px;
+	color:#333333;
+}
+.sjqqapi_popwin .sjqqapi_st{
+    background:url(http://img2.sj.qq.com/api/images/sj.gif) no-repeat;
+	width:164px;
+	height:11px;
+	overflow:hidden;
+	font-size:0;
+	display:block;
+	float:left;
+	margin-top:27px;
+	margin-left:28px;
+	margin-right:28px;
+}
+.sjqqapi_popwin .sjqqapi_sj{
+   background:url(http://img2.sj.qq.com/api/images/sjqq_sprite.png) 0 -214px no-repeat;
+   width:42px;
+   height:66px;
+   display:block;
+   float:left;
+}
+.sjqqapi_popwin .sjqqapi_head_title_s{
+  max-width:170px;
+  _width:expression(this.scrollWidth > 170? "170px" : "");
+  height:30px;
+  overflow:hidden;
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  word-break:keep-all;
+  float:left;
+  margin:0;
+  padding:0;
+  text-indent:0px;
+ 
+
+}
+.sjqqapi_popwin .sjqqapi_head_install{
+  display:block;
+  float:left;
+  text-indent:10px;
+}
+.sjqqapi_popwin .sjqqapiti0{
+	text-indent:0px;
+}
+.sjqqapi_popwin .sjqqapi_iconimg{
+	margin:0;
+	padding:0;
+	display:block;
+	float:left;
+	margin-left:47px;
+	width:50px;
+	height:50px;
+	margin-top:7px;
+	_display:inline;
+}
+.sjqqapi_popwin .sjqqapi_c{
+	padding-top:8px;
+}
+.sjqqapi_popwin .lh30{
+	line-height:30px;
+}
+.sjqqapi_popwin .pt10{ padding-top:10px;}
+.sjqqapi_popwin .pt20{ padding-top:20px;}
+.sjqqapi_popwin .pb20{ padding-bottom:20px;}
+.sjqqapi_popwin .pt30{ padding-top:30px;}
+.sjqqapi_popwin .pt35{ padding-top:35px;}
+.sjqqapi_popwin .fs14{ font-size:14px;}
+.sjqqapi_popwin #dckb{display:block;float:left; }
+.sjqqapi_popwin .c1071bb{ color:#1071bb; cursor:pointer; }

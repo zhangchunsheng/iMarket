@@ -205,13 +205,11 @@ class TypeLink
     //hid 是指默认选中类目，0 表示“请选择类目”或“不限类目”
     //oper 是用户允许管理的类目，0 表示所有类目
     //channeltype 是指类目的内容类型，0 表示不限频道
-    function GetOptionArray($hid=0,$oper=0,$channeltype=0,$usersg=0)
-    {
+    function GetOptionArray($hid=0,$oper=0,$channeltype=0,$usersg=0) {
         return $this->GetOptionList($hid,$oper,$channeltype,$usersg);
     }
 
-    function GetOptionList($hid=0,$oper=0,$channeltype=0,$usersg=0)
-    {
+    function GetOptionList($hid=0,$oper=0,$channeltype=0,$usersg=0) {
         global $cfg_admin_channel;
         if(empty($cfg_admin_channel)) $cfg_admin_channel = 'all';
         

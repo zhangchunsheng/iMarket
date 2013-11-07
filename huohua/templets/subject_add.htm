@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
-		<title>增加应用集</title>
+		<title>增加应用专题集</title>
 		<link href="css/base.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="../include/js/dedeajax2.js"></script>
 		<script type="text/javascript" src="js/calendar/calendar.js"></script>
@@ -10,30 +10,17 @@
 		<script type="text/javascript">
 			<!--
 				function checkSubmit() {
-					if(document.form_app.title.value == '') {
-						alert('应用名称不能为空！');
-						document.form_app.title.focus();
+					if(document.form_subject.subjectName.value == '') {
+						alert('应用专题名称不能为空！');
+						document.form_subject.subjectName.focus();
 						return false;
 					}
-					if(document.form_app.typeid.value == 0) {
-						alert('请选择应用的主类别！');
-						return false;
-					}
-					if(document.form_app.cid.value == 0) {
-						alert('请选择应用的分类！');
-						return false;
-					}
-					if(document.form_app.topTypeId.value == 0) {
-						alert('请选择应用的顶级栏目！');
+					if(document.form_subject.typeid.value == 0) {
+						alert('请选择应用专题的主类别！');
 						return false;
 					}
 				}
 				-->
-			function changeCid(e, obj) {
-				var category = obj.selectedOptions[0];
-				var cname = category.innerText.replace("─", "");
-				document.getElementById("cname").value = cname;
-			}
 		</script>
 		<style type="text/css">
 			<!--
@@ -43,13 +30,13 @@
 		</style>
 	</head>
 	<body topmargin="8">
-		<form name="form_app" action="app_add.php" enctype="multipart/form-data" method="post" onSubmit="return checkSubmit();">
+		<form name="form_subject" action="subject_add.php" enctype="multipart/form-data" method="post" onSubmit="return checkSubmit();">
 			<input type="hidden" name="dopost" value="save" />
 			<input type="hidden" name="channelid" value="<?php echo $channelid?>" />
 			<input type="hidden" name="cid" value="<?php echo $cid; ?>" />
 			<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
 				<tr>
-					<td width="64%" height="30"><IMG height=14 src="images/book1.gif" width=20>&nbsp;<a href="catalog_do.php?cid=<?php echo $cid?>&channelid=<?php echo $channelid?>&dopost=listArchives"><u>应用列表</u></a>&gt;&gt;发布新应用</td>
+					<td width="64%" height="30"><IMG height=14 src="images/book1.gif" width=20>&nbsp;<a href="catalog_do.php?cid=<?php echo $cid?>&channelid=<?php echo $channelid?>&dopost=listArchives"><u>应用专题列表</u></a>&gt;&gt;发布新应用专题</td>
 					<td align="right">
 						&nbsp; <a href="catalog_main.php">[<u>栏目管理</u>]</a>
 					</td>
@@ -84,8 +71,8 @@
 					<td height="24"  class="bline">
 						<table width="800" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="90">&nbsp;应用名称：</td>
-								<td width='408'><input name="appName" type="text" id="appName" style="width:388px"></td>
+								<td width="90">&nbsp;应用专题名称：</td>
+								<td width='408'><input name="subjectName" type="text" id="subjectName" style="width:388px"></td>
 							</tr>
 						</table>
 					</td>
@@ -142,51 +129,21 @@
 					<td height="24"  class="bline">
 						<table width="800" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="90"> &nbsp;缩 略 图：</td>
+								<td width="90"> &nbsp;专题图片：</td>
 								<td width="560">
-									<table width="100%" border="0" cellspacing="1" cellpadding="1">
-										<tr>
-											<td height="30">
-												<input name="picname" type="text" id="picname" style="width:240px" />
-												<input type="button"  value="本地上传" style="width:70px;cursor:pointer;" />
-												<iframe name='uplitpicfra' id='uplitpicfra' src='' style='display:none'></iframe>
-												<span class="litpic_span"><input name="litpic" type="file" id="litpic"  onChange="SeePicNew(this, 'divpicview', 'uplitpicfra', 165, 'app_add.php');" size="1" class='np coolbg'/></span>
-												<input type="button" name="Submit2" value="站内选择" style="margin-left:8px;" onClick="SelectImage('form_app.picname','small');" class='np coolbg'/>
-												<input type="button" name="Submit2" value="裁剪" style="margin-left:8px;" onClick="imageCut('picname');" class='np coolbg'/>
-												<input type='checkbox' class='np' name='ddisremote' value='1' id='ddisremote'/>远程
-											</td>
-										</tr>
-									</table>
-								</td>
-								<td width="150" align="center">
-									<div id='divpicview' class='divpre'></div>
+									<input type='text' name='picture' id="picture" value='' style="width: 600px"/>
 								</td>
 							</tr>
 						</table>
 					</td>
 				</tr>
-				<tr id="icontable">
+				<tr>
 					<td height="24"  class="bline">
 						<table width="800" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="90"> &nbsp;icon：</td>
+								<td width="90">&nbsp;description：</td>
 								<td width="560">
-									<table width="100%" border="0" cellspacing="1" cellpadding="1">
-										<tr>
-											<td height="30">
-												<input name="iconurl" type="text" id="iconurl" style="width:240px" />
-												<input type="button"  value="本地上传" style="width:70px;cursor:pointer;" />
-												<iframe name='upiconfra' id='upiconfra' src='' style='display:none'></iframe>
-												<span class="litpic_span">
-													<input name="icon" type="file" id="icon"  onChange="SeePicNew(this, 'diviconview', 'upiconfra', 165, 'app_add.php');" size="1" class='np coolbg'/>
-												</span>
-												<input type="button" name="Submit2" value="站内选择" style="margin-left:8px;" onClick="SelectImage('form_app.picname','small');" class='np coolbg'/>
-											</td>
-										</tr>
-									</table>
-								</td>
-								<td width="150" align="center">
-									<div id='diviconview' class='divpre'></div>
+									<input type='text' name='description：' id="description：" value='' style="width: 600px"/>
 								</td>
 							</tr>
 						</table>
@@ -196,106 +153,12 @@
 					<td height="24"  class="bline">
 						<table width="800" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="90">&nbsp;分类：</td>
+								<td width="90">&nbsp;日期：</td>
 								<td>
-									<span>
-									<?php
-										$typeOptions = GetOptionList($cid, $cuserLogin -> getUserChannel(), $channelid);
-										echo "<select name='cid' id='cid' style='width:240px' onchange='changeCid(event, this)'>\r\n";
-										echo "<option value='0'>请选择分类...</option>\r\n";
-										echo $typeOptions;
-										echo "</select>";
-										?>
-									</span>
+									<input name="date" type="text" id="date" style="width:100px">
 								</td>
-								<td width="90">&nbsp;分类名称：</td>
-								<td width="120">
-									<input type='text' name='cname' id="cname" value='' readonly="readonly"/>
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td height="24"  class="bline">
-						<table width="800" border="0" cellspacing="0" cellpadding="0">
-							<tr>
-								<td width="90">&nbsp;文件类型：</td>
-								<td width="90">
-									<select name="filetype" id="filetype" style="width:100">
-										<option value=".apk" selected>.apk</option>
-									</select>
-								</td>
-								<td width="90">星级：</td>
+								<td width="90">&nbsp;发布时间：</td>
 								<td>
-									<select name="starLevel" id="starLevel" style="width:100px">
-										<option value="1">一星</option>
-										<option value="2">二星</option>
-										<option value="3" selected>三星</option>
-										<option value="4">四星</option>
-										<option value="5">五星</option>
-									</select>
-								</td>
-								<td width="90">评分人数：</td>
-								<td>
-									<input type='text' name='scoreNum' id="scoreNum" value=''/>
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td height="24"  class="bline">
-						<table width="800" border="0" cellspacing="0" cellpadding="0">
-							<tr>
-								<td width="90">&nbsp;下载次数：</td>
-								<td>
-									<input name="downloadNum" type="text" id="downloadNum" style="width:100px">
-								</td>
-								<td width="90">&nbsp;大小信息：</td>
-								<td>
-									<input name="sizeInfo" type="text" id="sizeInfo" style="width:100px">
-									<select name="unit" id="unit" style="width:100px">
-										<option value="KB">KB</option>
-										<option value="MB" selected>MB</option>
-										<option value="GB">GB</option>
-									</select>
-									<input name="autosize" type="checkbox" class="np" id="autosize" value="1" checked>
-									自动获得 (必须包含一个本地应用)
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td height="24"  class="bline">
-						<table width="800" border="0" cellspacing="0" cellpadding="0">
-							<tr>
-								<td width="90">&nbsp;价格：</td>
-								<td width="200">
-									<input name="price" type="text" id="price" value="0" style="width:100px">
-								</td>
-								<td width="72">语言信息：</td>
-								<td width="131">
-									<select name="languageInfo" id="languageInfo" style="width:100">
-										<option value="中文" selected>中文</option>
-										<option value="英文">英文</option>
-									</select>
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td height="24"  class="bline">
-						<table width="800" border="0" cellspacing="0" cellpadding="0">
-							<tr>
-								<td width="90">&nbsp;版本：</td>
-								<td width="200">
-									<input name="version" type="text" id="version" style="width:100px">
-								</td>
-								<td width="72">发布日期：</td>
-								<td width="131">
 									<input name="pubDate" type="text" id="pubDate" style="width:100px">
 								</td>
 							</tr>
@@ -306,28 +169,9 @@
 					<td height="24"  class="bline">
 						<table width="800" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="90">&nbsp;固件信息：</td>
-								<td>
-									<input type='text' name='needOSInfo' value='android2.2及以上' style='width:300px' />
-								</td>
-								<td width="90">&nbsp;开发者：</td>
-								<td width="159"><input name="developerInfo" type="text" id="developerInfo" style="width:120px"></td>
-								<td>&nbsp;</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td height="24"  class="bline">
-						<table width="800" border="0" cellspacing="0" cellpadding="0">
-							<tr>
-								<td width="120">&nbsp;腾讯手机管家认证：</td>
-								<td width="240">
-									<input name="isTencentPMAuth" type="checkbox" id="isTencentPMAuth" value="1" checked />
-								</td>
-								<td width="90">安全管家认证：</td>
-								<td>
-									<input name="isSafeMAuth" type="checkbox" id="isSafeMAuth" value="1" checked />
+								<td width="90">&nbsp;应用信息：</td>
+								<td width="200">
+									<textarea id="apps" rows="6" cols="60"></textarea>
 								</td>
 							</tr>
 						</table>
@@ -337,7 +181,7 @@
 					<td height="24"  class="bline">
 						<table width="800" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="90">&nbsp;应用主栏目：</td>
+								<td width="120">&nbsp;应用专题主栏目：</td>
 								<td>
 									<span id='typeidct'>
 									<?php
@@ -351,30 +195,17 @@
 									<img src='images/menusearch.gif' style='cursor:pointer;' onClick="ShowCatMap(event, this, <?php echo $channelid; ?>, 'typeid')" alt='快捷选择' title='快捷选择' />
 									&nbsp;
 									<?php
-										if($cfg_need_typeid2=='Y')
-										{
+										if($cfg_need_typeid2=='Y') {
 											echo "<a href='javascript:AddTypeid2();'>【<u>选择副栏目</u>】</a>";
 										}
 										?>
 									<?php
-										if($cfg_remote_site=='Y')
-										{
-										?> 　
-									<input name="isremote" type="checkbox" id="isremote" value="1" <?php if($cfg_title_site=='Y') echo "checked";?>>是否同步远程发布  <?php GetFtp();?>     <?php
+										if($cfg_remote_site=='Y') {
+										?>
+										<input name="isremote" type="checkbox" id="isremote" value="1" <?php if($cfg_title_site=='Y') echo "checked";?>>是否同步远程发布  <?php GetFtp();?>
+										<?php
 										}
 										?>
-								</td>
-								<td width="90">&nbsp;应用顶级栏目：</td>
-								<td>
-									<span>
-									<?php
-										$typeOptions = GetOptionList($cid, $cuserLogin -> getUserChannel(), $channelid);
-										echo "<select name='topTypeId' id='topTypeId' style='width:240px'>\r\n";
-										echo "<option value='0'>请选择栏目...</option>\r\n";
-										echo $typeOptions;
-										echo "</select>";
-										?>
-									</span>
 								</td>
 							</tr>
 						</table>
@@ -384,9 +215,10 @@
 					<td height="24" colspan="4" class="bline">
 						<table width="800" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="90">&nbsp;应用副栏目：</td>
+								<td width="120">&nbsp;应用专题副栏目：</td>
 								<td>
-									<span id='typeid2ct'></span><input type='text' name='typeid2' id='typeid2' value='' style='width:200px;' />
+									<span id='typeid2ct'></span>
+									<input type='text' name='typeid2' id='typeid2' value='' style='width:200px;' />
 									<img src='images/menusearch2.gif' style='cursor:pointer;' onClick="ShowCatMap(event, this, <?php echo $channelid; ?>, 'typeid2')" alt='选择副栏目' title='选择副栏目' />
 								</td>
 							</tr>
@@ -397,9 +229,9 @@
 					<td height="24"  class="bline">
 						<table width="800" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="90">&nbsp;二维码：</td>
+								<td width="90">&nbsp;浏览次数：</td>
 								<td>
-									<input name="qrCode" type="text" id="qrCode" value="" style="width:100px"/>
+									<input name="click" type="text" id="click" style="width:100px">
 								</td>
 							</tr>
 						</table>
@@ -409,72 +241,16 @@
 					<td height="24"  class="bline">
 						<table width="800" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="90">&nbsp;软件截图：</td>
+								<td width="90">&nbsp;赞：</td>
 								<td>
-									<input name="screenShot" type="text" id="screenShot" value="" style="width:100px"/>
+									<input name="goodNum" type="text" id="goodNum" style="width:100px">
 								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td height="24" bgcolor="#F9FCEF" class="bline2"><strong>&nbsp;下载地址：</strong></td>
-				</tr>
-				<tr>
-					<td height="24"  class="bline">
-						<table width="800" border="0" cellspacing="0" cellpadding="0">
-							<tr>
-								<td width="90" height="30">&nbsp;下载地址：</td>
+								<td width="90">&nbsp;踩：</td>
 								<td>
-									<input name="downloadLink" type="text" id="downloadLink" value="http://" size="35" />
+									<input name="badNum" type="text" id="badNum" style="width:100px">
 								</td>
 							</tr>
 						</table>
-					</td>
-				</tr>
-				<tr>
-					<td height="24" bgcolor="#F9FCEF" class="bline2"><strong>&nbsp;评价：</strong></td>
-				</tr>
-				<tr>
-					<td height="24"  class="bline">
-						<table width="800" border="0" cellspacing="0" cellpadding="0">
-							<tr>
-								<td width="90">&nbsp;评价：</td>
-								<td>
-									一星<input name="star1" type="text" id="star1" value="" style="width:100px"/>
-									二星<input name="star2" type="text" id="star2" value="" style="width:100px"/>
-									三星<input name="star3" type="text" id="star3" value="" style="width:100px"/>
-									四星<input name="star4" type="text" id="star4" value="" style="width:100px"/>
-									五星<input name="star5" type="text" id="star5" value="" style="width:100px"/>
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td height="24" bgcolor="#F9FCEF" class="bline2"><strong>&nbsp;应用详细介绍：</strong></td>
-				</tr>
-				<tr>
-					<td height="24"  class="bline">
-						<table width="800" border="0" cellspacing="0" cellpadding="0">
-							<tr>
-								<td width="90">&nbsp;附加选项：</td>
-								<td><input name="remote" type="checkbox" class="np" id="remote" value="1"<?php if($cfg_rm_remote=='Y') echo ' checked'; ?>>
-									下载远程图片和资源
-									<input name="dellink" type="checkbox" class="np" id="dellink" value="1"<?php if($cfg_arc_dellink=='Y') echo ' checked'; ?>>
-									删除非站内链接 <a href="javascript:OpenMyWin('article_allowurl_edit.php');">[设置]</a>
-									<input name="autolitpic" type="checkbox" class="np" id="autolitpic" value="1">
-									提取第一个图片为缩略图
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td height="100">
-						<?php
-							GetEditor('introduction', '', 250, 'Small');
-						?>
 					</td>
 				</tr>
 			</table>
@@ -577,7 +353,7 @@
 							<tr>
 								<td width="90">&nbsp;关键字：</td>
 								<td colspan="2"><input type='text' name="keywords" id="keywords" style="width:290px;" value="" /><input name="autokey" type="checkbox" onClick="ShowHide('keywords');"; class="np" id="autokey" value="1"<?php if($cfg_arc_autokeyword=='Y') echo ' checked'; ?>>
-									<input type="button" name="Submit" value="浏览..." style="width:56;height:20" onClick="SelectKeywords('form_app.keywords');">&nbsp;&nbsp;自动获取，手动填写用","分开
+									<input type="button" name="Submit" value="浏览..." style="width:56;height:20" onClick="SelectKeywords('form_subject.keywords');">&nbsp;&nbsp;自动获取，手动填写用","分开
 								</td>
 							</tr>
 						</table>

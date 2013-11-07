@@ -17,8 +17,7 @@ if(!defined('DEDEMEMBER')) exit("dedecms");
  * @param     string  $channeltype  频道类型
  * @return    string
  */
-function GetOptionList($selid=0, $channeltype=0)
-{
+function GetOptionList($selid=0, $channeltype=0) {
     global $OptionArrayList,$channels,$dsql;
     $dsql->SetQuery("SELECT id,typename FROM `#@__channeltype` ");
     $dsql->Execute();
