@@ -128,15 +128,17 @@ function lib_channel(&$ctag, &$refObj) {
 					$linkOkstr       = $currentstyle;
 					$row['typelink'] = GetOneTypeUrlA($row);
 					$row['nid'] = GetNid($row["typedir"]);
+					$row['link'] = GetLink($row);
 					$linkOkstr       = str_replace("~rel~", $row['rel'], $linkOkstr);
 					$linkOkstr       = str_replace("~id~", $row['id'], $linkOkstr);
-					$linkOkstr       = str_replace("~typelink~", $row['typelink'], $linkOkstr);
+					$linkOkstr       = str_replace("~typelink~", $row['link'], $linkOkstr);
 					$linkOkstr       = str_replace("~typename~", $row['typename'], $linkOkstr);
 					$linkOkstr       = str_replace("~nid~", $row['nid'], $linkOkstr);
 					$likeType .= $linkOkstr;
 				} else {
 					$row['typelink'] = $row['typeurl'] = GetOneTypeUrlA($row);
 					$row['nid'] = GetNid($row["typedir"]);
+					$row['link'] = GetLink($row);
 					if (is_array($dtp2 -> CTags)) {
 						foreach ($dtp2 -> CTags as $tagid => $ctag) {
 							if (isset($row[$ctag -> GetName()]))

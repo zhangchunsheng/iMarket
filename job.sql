@@ -146,3 +146,49 @@ ALTER TABLE huohua_addonsubject ADD COLUMN `dutyadmin` MEDIUMINT(8) UNSIGNED NOT
 -- 2013-11-08
 SELECT * FROM huohua_addonapp;
 SHOW CREATE TABLE huohua_addonapp;
+SELECT * FROM huohua_arctype;
+SELECT * FROM huohua_setting;
+SELECT * FROM huohua_sysconfig;
+
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_icon` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_count` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_versionname` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_score` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_appid` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_softname` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_cid` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_fee` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_icfa` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_filesize` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_publishtime` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_starnumber` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_pkgid` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_cname` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_downcount` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_description` TEXT NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_features` TEXT NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_screenshot` TEXT NOT NULL DEFAULT '';
+
+SELECT * FROM huohua_addonapp;
+
+ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_topicid` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_smallpicurl` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_bigpicurl` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_time` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_description` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_viewcnt` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_picurl` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_disagree` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_topicname` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_agree` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_isad` VARCHAR(60) NOT NULL DEFAULT '';
+
+SHOW CREATE TABLE huohua_addonapp;
+SHOW CREATE TABLE huohua_dl_log;
+CREATE TABLE myapp_category(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	cid VARCHAR(60) NOT NULL DEFAULT '',
+	cname VARCHAR(60) NOT NULL DEFAULT '',
+	PRIMARY KEY (id)
+);
+SELECT * FROM myapp_category;

@@ -609,12 +609,12 @@
 			</section>
 			<script type="text/javascript" src="http://3gimg.qq.com/web/webapp_webmarket/android/js/in-min.js" autoload="true" core="http://3gimg.qq.com/web/webapp_webmarket/android/js/jquery-1.4.2.min.js"></script>
 			<script type="text/javascript">
-				In.add("sjqqapi",{path:"http://img1.sj.qq.com/api/scripts/sjqqapi.js?ver=2.3.5",type:"js",charset:"utf-8"});
-				In.add("scrolloading",{path:"{dede:global.cfg_templets_skin/}/js/myapp/jquery.scrolloading.js?ver=2.3.5",type:"js",charset:"utf-8"});
-				In.add("wandoujia",{path:"http://wandoujia.com/api/wdapi.js?ver=2.3.5",type:"js",charset:"utf-8"});
-				In.add("base",{path:"{dede:global.cfg_templets_skin/}/js/myapp/base.js?ver=2.3.5",type:"js",charset:"utf-8"});
-				In.add("huohua",{path:"{dede:global.cfg_templets_skin/}/js/huohua.js?ver=2.3.5",type:"js",charset:"utf-8"});
-				In.add("appdetail",{path:"{dede:global.cfg_templets_skin/}/js/myapp/appdetail.js?ver=2.3.5",type:"js",charset:"utf-8",rely:["scrolloading","base","huohua"]});
+				In.add("sjqqapi",{path:"http://img1.sj.qq.com/api/scripts/sjqqapi.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8"});
+				In.add("scrolloading",{path:"{dede:global.cfg_templets_skin/}/js/myapp/jquery.scrolloading.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8"});
+				In.add("wandoujia",{path:"http://wandoujia.com/api/wdapi.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8"});
+				In.add("base",{path:"{dede:global.cfg_templets_skin/}/js/myapp/base.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8"});
+				In.add("huohua",{path:"{dede:global.cfg_templets_skin/}/js/huohua.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8"});
+				In.add("appdetail",{path:"{dede:global.cfg_templets_skin/}/js/myapp/appdetail.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8",rely:["scrolloading","base","huohua"]});
 			</script>
 			<script type="text/javascript">
 				var g_appid = 10099632;
@@ -650,7 +650,7 @@
 				    $(".ajax_scrolloading").scrolloading({"attr":"data-func"});
 				    g_model = true;
 				    In.later(500,"sjqqapi",function(){
-				        UI.loadstyles("http://img1.sj.qq.com/api/styles/sjqqapi.css?ver=2.3.5");
+				        UI.loadstyles("http://img1.sj.qq.com/api/styles/sjqqapi.css?ver={dede:global.cfg_version_number/}");
 					});
 				});
 				

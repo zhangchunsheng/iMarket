@@ -138,55 +138,25 @@
 						</table>
 					</td>
 				</tr>
-				<tr id="pictable">
+				<tr>
 					<td height="24"  class="bline">
 						<table width="800" border="0" cellspacing="0" cellpadding="0">
 							<tr>
 								<td width="90"> &nbsp;缩 略 图：</td>
 								<td width="560">
-									<table width="100%" border="0" cellspacing="1" cellpadding="1">
-										<tr>
-											<td height="30">
-												<input name="picname" type="text" id="picname" style="width:240px" />
-												<input type="button"  value="本地上传" style="width:70px;cursor:pointer;" />
-												<iframe name='uplitpicfra' id='uplitpicfra' src='' style='display:none'></iframe>
-												<span class="litpic_span"><input name="litpic" type="file" id="litpic"  onChange="SeePicNew(this, 'divpicview', 'uplitpicfra', 165, 'app_add.php');" size="1" class='np coolbg'/></span>
-												<input type="button" name="Submit2" value="站内选择" style="margin-left:8px;" onClick="SelectImage('form_app.picname','small');" class='np coolbg'/>
-												<input type="button" name="Submit2" value="裁剪" style="margin-left:8px;" onClick="imageCut('picname');" class='np coolbg'/>
-												<input type='checkbox' class='np' name='ddisremote' value='1' id='ddisremote'/>远程
-											</td>
-										</tr>
-									</table>
-								</td>
-								<td width="150" align="center">
-									<div id='divpicview' class='divpre'></div>
+									<input name="litpic" type="text" id="litpic" style="width:600px;filter: alpha(opacity=1);-moz-opacity: .1;opacity: 1.0;cursor: text;"/>
 								</td>
 							</tr>
 						</table>
 					</td>
 				</tr>
-				<tr id="icontable">
+				<tr>
 					<td height="24"  class="bline">
 						<table width="800" border="0" cellspacing="0" cellpadding="0">
 							<tr>
 								<td width="90"> &nbsp;icon：</td>
 								<td width="560">
-									<table width="100%" border="0" cellspacing="1" cellpadding="1">
-										<tr>
-											<td height="30">
-												<input name="iconurl" type="text" id="iconurl" style="width:240px" />
-												<input type="button"  value="本地上传" style="width:70px;cursor:pointer;" />
-												<iframe name='upiconfra' id='upiconfra' src='' style='display:none'></iframe>
-												<span class="litpic_span">
-													<input name="icon" type="file" id="icon"  onChange="SeePicNew(this, 'diviconview', 'upiconfra', 165, 'app_add.php');" size="1" class='np coolbg'/>
-												</span>
-												<input type="button" name="Submit2" value="站内选择" style="margin-left:8px;" onClick="SelectImage('form_app.picname','small');" class='np coolbg'/>
-											</td>
-										</tr>
-									</table>
-								</td>
-								<td width="150" align="center">
-									<div id='diviconview' class='divpre'></div>
+									<input name="icon" type="text" id="icon" style="width:600px;filter: alpha(opacity=1);-moz-opacity: .1;opacity: 1.0;cursor: text;"/>
 								</td>
 							</tr>
 						</table>

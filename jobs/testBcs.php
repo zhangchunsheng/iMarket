@@ -42,8 +42,7 @@
 			die('Generate GET object url failed.');
 		}
 	  	echo $url;
-	}else{
+	} else {
 		die('transform failed, error:' . $baeImageService->errmsg() . "\n");
 	}
-
 ?>

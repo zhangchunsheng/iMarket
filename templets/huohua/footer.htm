@@ -2,7 +2,7 @@
 				<a href="javascript:gototop();">返回顶部</a>
 			</div>
 			<script type="text/javascript">
-				In.ready(function(){
+				In.ready(function() {
 					var srule = [];
 					srule.push("@font-face {");
 					srule.push("    font-family: 'myfont';");
@@ -19,17 +19,17 @@
 						In.css(srule.join(""));
 					//}
 				});
-				function pingHotag(str){
-				    if(typeof(pgvSendClick) == "function"){
+				function pingHotag(str) {
+				    if(typeof(pgvSendClick) == "function") {
 				        pgvSendClick({hottag:str,virtualDomain:"android.app.qq.com"});
 				    }
 				}
-				In.add("pingjs",{path:"{dede:global.cfg_templets_skin/}/js/myapp/tcss.ping.js",type:"js",charset:"utf-8"});
-				var G_STAT = window.setInterval(function(){
-				    if(typeof(g_model)!="undefined" && g_model){
+				In.add("pingjs", {path:"{dede:global.cfg_templets_skin/}/js/myapp/tcss.ping.js", type:"js", charset:"utf-8"});
+				var G_STAT = window.setInterval(function() {
+				    if(typeof(g_model)!="undefined" && g_model) {
 				        window.clearInterval(G_STAT);
-				        In("pingjs",function(){
-				            if(typeof(pgvMain) == "function"){
+				        In("pingjs",function() {
+				            if(typeof(pgvMain) == "function") {
 				                pgvMain("", {virtualDomain:"android.app.qq.com"});
 				                pageSpeedTrack();
 				            }
@@ -38,7 +38,7 @@
 				        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 				        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 				    }
-				},100);
+				}, 100);
 				var _foot_start = new Date();
 			</script>
 			<footer class="footer" role="contentinfo">
@@ -49,13 +49,13 @@
 			<script type="text/javascript">
 				var _body_end = new Date();
 				function pageSpeedTrack(){
-				    if(typeof(_head_start) == typeof(_body_end)){
+				    if(typeof(_head_start) == typeof(_body_end)) {
 				        var loading_time = _body_end - _head_start;
-				        if(loading_time>0 && loading_time<60*1000){
-				            var speed = loading_time > 3*1000 ? "slow" : "quick";
+				        if(loading_time > 0 && loading_time < 60 * 1000) {
+				            var speed = loading_time > 3 * 1000 ? "slow" : "quick";
 				            var page_path = window.location.pathname.replace(/(\.jsp)$/i, "");
 				            _gaq.push(["_trackEvent", "pagespeed", speed, page_path, loading_time]);
-				            pingHotag("pagespeed."+speed+"."+page_path+"."+window.navigator.appName.replace(/^\s*(.*?)\s.*$/, "$1"));
+				            pingHotag("pagespeed." + speed + "." + page_path + "." + window.navigator.appName.replace(/^\s*(.*?)\s.*$/, "$1"));
 				        }
 				    }
 				}

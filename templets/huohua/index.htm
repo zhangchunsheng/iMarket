@@ -167,12 +167,12 @@
 
 			<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/myapp/in-min.js" autoload="true" core="{dede:global.cfg_templets_skin/}/js/jquery-1.4.2.min.js"></script>
 			<script type="text/javascript">
-				In.add("sjqqapi",{path:"http://img1.sj.qq.com/api/scripts/sjqqapi.js?ver=2.3.5",type:"js",charset:"utf-8"});
-				In.add("storescrolload",{path:"{dede:global.cfg_templets_skin/}/js/myapp/storescrolload.min.js?ver=2.3.5",type:"js",charset:"utf-8"});
-				In.add("manifest",{path:"{dede:global.cfg_templets_skin/}/js/myapp/manifest.js?ver=2.3.5",type:"js",charset:"utf-8"});
-				In.add("base",{path:"{dede:global.cfg_templets_skin/}/js/myapp/base.js?ver=2.3.5",type:"js",charset:"utf-8"});
-				In.add("huohua",{path:"{dede:global.cfg_templets_skin/}/js/huohua.js?ver=2.3.5",type:"js",charset:"utf-8"});
-				In.add("index",{path:"{dede:global.cfg_templets_skin/}/js/myapp/index.js?ver=2.3.5",type:"js",charset:"utf-8",rely:["storescrolload","manifest","base","huohua"]});
+				In.add("sjqqapi",{path:"http://img1.sj.qq.com/api/scripts/sjqqapi.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8"});
+				In.add("storescrolload",{path:"{dede:global.cfg_templets_skin/}/js/myapp/storescrolload.min.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8"});
+				In.add("manifest",{path:"{dede:global.cfg_templets_skin/}/js/myapp/manifest.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8"});
+				In.add("base",{path:"{dede:global.cfg_templets_skin/}/js/myapp/base.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8"});
+				In.add("huohua",{path:"{dede:global.cfg_templets_skin/}/js/huohua.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8"});
+				In.add("index",{path:"{dede:global.cfg_templets_skin/}/js/myapp/index.js?ver={dede:global.cfg_version_number/}",type:"js",charset:"utf-8",rely:["storescrolload","manifest","base","huohua"]});
 				In("index",function(){
 					//加载导航下面的广告
 					getFlashAdvs();
@@ -183,7 +183,7 @@
 					$(".anim_scrolloading").scrolloading({"attr":"data-func"});
 					g_model = true;
 					In.later(500,"sjqqapi",function(){
-						UI.loadstyles("http://img1.sj.qq.com/api/styles/sjqqapi.css?ver=2.3.5");
+						UI.loadstyles("http://img1.sj.qq.com/api/styles/sjqqapi.css?ver={dede:global.cfg_version_number/}");
 					});
 				});
 			</script>
