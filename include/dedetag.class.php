@@ -764,9 +764,8 @@ class DedeTagParse
      * @param     string   $filename  要保存到的文件
      * @return    string
      */
-    function SaveTo($filename)
-    {
-        $fp = @fopen($filename,"w") or die("DedeTag Engine Create File False");
+    function SaveTo($filename) {
+        $fp = @fopen($filename, "w") or die("DedeTag Engine Create File False");
         fwrite($fp,$this->GetResult());
         fclose($fp);
     }

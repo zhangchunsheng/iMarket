@@ -38,9 +38,9 @@ MANIFEST.app_type_sort = {"key":"app_type_sort","freq":""+MANIFEST.day()+"","ver
 //游戏分类
 MANIFEST.game_type_sort = {"key":"game_type_sort","freq":""+MANIFEST.day()+"","ver":"v1.0.0"};
 //热门腾讯应用
-MANIFEST.tencent_app_hot = {"key":"tencent_app_hot","freq":""+MANIFEST.day()+"","ver":"v1.0.0"};
+MANIFEST.huohuaMarket_app_hot = {"key":"huohuaMarket_app_hot","freq":""+MANIFEST.day()+"","ver":"v1.0.0"};
 //最新腾讯应用
-MANIFEST.tencent_app_new = {"key":"tencent_app_new","freq":""+MANIFEST.day()+"","ver":"v1.0.0"};
+MANIFEST.huohuaMarket_app_new = {"key":"huohuaMarket_app_new","freq":""+MANIFEST.day()+"","ver":"v1.0.0"};
 //专题cms广告
 MANIFEST.topic_cms_advs = {"key":"topic_cms_advs","freq":""+MANIFEST.hour()+"","ver":"v1.0.0"};
 //热门专题

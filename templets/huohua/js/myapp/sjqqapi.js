@@ -287,11 +287,11 @@ var QQAPI_UI = {
 		var top0=0;
 		var top1=0;
 		try{
-			var inc0 = window.top.document.getElementById('tencent_qqapi_in0');
-			var inc1 = window.top.document.getElementById('tencent_qqapi_in1');
+			var inc0 = window.top.document.getElementById('huohuaMarket_qqapi_in0');
+			var inc1 = window.top.document.getElementById('huohuaMarket_qqapi_in1');
 		}catch(ex){
-			var inc0 = document.getElementById('tencent_qqapi_in0');
-			var inc1 = document.getElementById('tencent_qqapi_in1');
+			var inc0 = document.getElementById('huohuaMarket_qqapi_in0');
+			var inc1 = document.getElementById('huohuaMarket_qqapi_in1');
 		}
 		if (v == 0) {
 			
@@ -312,28 +312,28 @@ var QQAPI_UI = {
 			inc0.style.display="none";
 			inc1.style.display="none";
         }  
-           var tencentclose,tencentclose1,sjqqapinext,sjqqapifin,startQQPhone,dckb,apidownloadapp;
+           var huohuaMarketclose,huohuaMarketclose1,sjqqapinext,sjqqapifin,startQQPhone,dckb,apidownloadapp;
            try{
-           	tencentclose = window.top.document.getElementById("tencent_qqapi_close0");
-           	tencentclose1 = window.top.document.getElementById("tencent_qqapi_close1");
+           	huohuaMarketclose = window.top.document.getElementById("huohuaMarket_qqapi_close0");
+           	huohuaMarketclose1 = window.top.document.getElementById("huohuaMarket_qqapi_close1");
            	sjqqapinext = window.top.document.getElementById("sjqqapi_next");
            	sjqqapifin = window.top.document.getElementById("sjqqapi_fin");
            	startQQPhone = window.top.document.getElementById('startQQPhone');
            	dckb=window.top.document.getElementById('dckb');
            	apidownloadapp=window.top.document.getElementById('apidownloadapp');
            }catch(ex){
-           	tencentclose = document.getElementById("tencent_qqapi_close0");
-           	tencentclose1 = document.getElementById("tencent_qqapi_close1");
+           	huohuaMarketclose = document.getElementById("huohuaMarket_qqapi_close0");
+           	huohuaMarketclose1 = document.getElementById("huohuaMarket_qqapi_close1");
            	sjqqapinext = document.getElementById("sjqqapi_next");
            	sjqqapifin = document.getElementById("sjqqapi_fin");
            	startQQPhone = document.getElementById('startQQPhone');
            	dckb=document.getElementById('dckb');
            	apidownloadapp=document.getElementById('apidownloadapp');
            }
-		   tencentclose.onclick=function(){
+		   huohuaMarketclose.onclick=function(){
 				inc0.style.display="none";
 		   }
-		   tencentclose1.onclick=function(){
+		   huohuaMarketclose1.onclick=function(){
 				inc1.style.display="none";
 		   }
 		   sjqqapinext.onclick=function(){
@@ -427,34 +427,34 @@ var QQAPI_UI = {
 	},
 	initPopwinInnerHTML: function (opts) {
 		try{
-			var tencent_qqapi_in0=window.top.document.getElementById("tencent_qqapi_in0");
-			var tencent_qqapi_in1=window.top.document.getElementById("tencent_qqapi_in1");
+			var huohuaMarket_qqapi_in0=window.top.document.getElementById("huohuaMarket_qqapi_in0");
+			var huohuaMarket_qqapi_in1=window.top.document.getElementById("huohuaMarket_qqapi_in1");
 			var popdiv=window.top.document.getElementById("popwindiv");
 		}catch(ex){
-			var tencent_qqapi_in0=document.getElementById("tencent_qqapi_in0");
-			var tencent_qqapi_in1=document.getElementById("tencent_qqapi_in1");
+			var huohuaMarket_qqapi_in0=document.getElementById("huohuaMarket_qqapi_in0");
+			var huohuaMarket_qqapi_in1=document.getElementById("huohuaMarket_qqapi_in1");
 			var popdiv=document.getElementById("popwindiv");	
 		}
-		if ( tencent_qqapi_in0!=null) {
+		if ( huohuaMarket_qqapi_in0!=null) {
 			if(popdiv!=null){
-		        popdiv.removeChild(tencent_qqapi_in0);
+		        popdiv.removeChild(huohuaMarket_qqapi_in0);
 			}
 		}
-		if (tencent_qqapi_in1!=null) {
+		if (huohuaMarket_qqapi_in1!=null) {
 		    if(popdiv!=null){
-		        popdiv.removeChild(tencent_qqapi_in1);
+		        popdiv.removeChild(huohuaMarket_qqapi_in1);
 			}
 		}
 		var _asistanturl = qqapiConfig.installerUrl;
 		if(opts.asistanturl&&opts.asistanturl.length>0){
 			_asistanturl = opts.asistanturl;
 		}
-		var popwinInnerHTML = '<div id="tencent_qqapi_in0" class="sjqqapi_popwin">';
+		var popwinInnerHTML = '<div id="huohuaMarket_qqapi_in0" class="sjqqapi_popwin">';
 		popwinInnerHTML +='<div class="innner">';
 		if(opts.type==='soft'){
-			popwinInnerHTML += '<div class="sjqqapi_head fs14"><div class="sjqqapi_head_install">安装“</div><div class="sjqqapi_head_title_s">'+opts.title+'</div><div class="sjqqapi_head_install sjqqapiti0">”到手机</div><button class="sjqqapi_close" id="tencent_qqapi_close0">关闭</button></div>';
+			popwinInnerHTML += '<div class="sjqqapi_head fs14"><div class="sjqqapi_head_install">安装“</div><div class="sjqqapi_head_title_s">'+opts.title+'</div><div class="sjqqapi_head_install sjqqapiti0">”到手机</div><button class="sjqqapi_close" id="huohuaMarket_qqapi_close0">关闭</button></div>';
 		}else{
-			popwinInnerHTML += '<div class="sjqqapi_head fs14"><div class="sjqqapi_head_install">下载“</div><div class="sjqqapi_head_title_s">'+opts.title+'</div><div class="sjqqapi_head_install sjqqapiti0">”到手机</div><button class="sjqqapi_close" id="tencent_qqapi_close0">关闭</button></div>';	
+			popwinInnerHTML += '<div class="sjqqapi_head fs14"><div class="sjqqapi_head_install">下载“</div><div class="sjqqapi_head_title_s">'+opts.title+'</div><div class="sjqqapi_head_install sjqqapiti0">”到手机</div><button class="sjqqapi_close" id="huohuaMarket_qqapi_close0">关闭</button></div>';	
 		}
 		popwinInnerHTML += '<div class="sjqqapi_content" >';
 		if(opts.type==='soft'){
@@ -479,17 +479,17 @@ var QQAPI_UI = {
 		popwinInnerHTML += '</div>';
 		popwinInnerHTML += '</div>';
 		
-		popwinInnerHTML += '<div class="sjqqapi_popwin" id="tencent_qqapi_in1">';
+		popwinInnerHTML += '<div class="sjqqapi_popwin" id="huohuaMarket_qqapi_in1">';
 		popwinInnerHTML +='<div class="innner">';
 		if(opts.type==='soft'){
-			popwinInnerHTML += '<div class="sjqqapi_head fs14"><div class="sjqqapi_head_install">安装“</div><div class="sjqqapi_head_title_s">'+opts.title+'</div><div class="sjqqapi_head_install sjqqapiti0">”到手机</div><button class="sjqqapi_close" id="tencent_qqapi_close1">关闭</button></div>';
+			popwinInnerHTML += '<div class="sjqqapi_head fs14"><div class="sjqqapi_head_install">安装“</div><div class="sjqqapi_head_title_s">'+opts.title+'</div><div class="sjqqapi_head_install sjqqapiti0">”到手机</div><button class="sjqqapi_close" id="huohuaMarket_qqapi_close1">关闭</button></div>';
 		}else{
-			popwinInnerHTML += '<div class="sjqqapi_head fs14"><div class="sjqqapi_head_install">下载“</div><div class="sjqqapi_head_title_s">'+opts.title+'</div><div class="sjqqapi_head_install sjqqapiti0">”到手机</div><button class="sjqqapi_close" id="tencent_qqapi_close1">关闭</button></div>';	
+			popwinInnerHTML += '<div class="sjqqapi_head fs14"><div class="sjqqapi_head_install">下载“</div><div class="sjqqapi_head_title_s">'+opts.title+'</div><div class="sjqqapi_head_install sjqqapiti0">”到手机</div><button class="sjqqapi_close" id="huohuaMarket_qqapi_close1">关闭</button></div>';	
 		}
 		popwinInnerHTML += '<div class="sjqqapi_content">';
 		popwinInnerHTML += '<p class="sjqqapi_tp lh30 pt20 pb20 fs14" >正在启动腾讯手机管家(PC版)，开始安装...</p>';
 		//popwinInnerHTML += '<p>应用 ' + productname + ' 下载安装中，请保持手机和电脑处于连接状态。</p>';
-		//popwinInnerHTML += '<p class="tencent_qqapi_tip">(&nbsp;请保持手机和电脑处于连接状态&nbsp;)</p>';
+		//popwinInnerHTML += '<p class="huohuaMarket_qqapi_tip">(&nbsp;请保持手机和电脑处于连接状态&nbsp;)</p>';
 		popwinInnerHTML +='<div class="sjqqapi_c pt20">';
 		popwinInnerHTML +='<img src="'+opts.icon.b+'" width="50" height="50" class="sjqqapi_iconimg" id="sjqqapi_iconimg"/>';
 		popwinInnerHTML += '<span class="sjqqapi_st"></span>';

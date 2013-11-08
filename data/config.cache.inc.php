@@ -1,10 +1,18 @@
 <?php
+$basehost = $_SERVER["HTTP_HOST"];
+if($_SERVER["HTTP_HOST"] == "localhost") {
+	$cmspath = "/github/iMarket/iMarket";
+	$indexurl = "/github/iMarket/iMarket";
+} else {
+	$cmspath = "";
+	$indexurl = "/";
+}
 $cfg_disable_funs = 'phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents';
 $cfg_disable_tags = 'php';
-$cfg_basehost = 'http://localhost';
-$cfg_cmspath = '/github/iMarket/iMarket';
+$cfg_basehost = 'http://' . basehost;
+$cfg_cmspath = $cmspath;
 $cfg_cookie_encode = 'UeZDi1684F';
-$cfg_indexurl = '/github/iMarket/iMarket';
+$cfg_indexurl = $indexurl;
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';
 $cfg_webname = '火花市场';

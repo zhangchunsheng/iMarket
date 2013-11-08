@@ -142,3 +142,7 @@ ALTER TABLE huohua_addonsubject ADD COLUMN `description` VARCHAR(255) NOT NULL D
 ALTER TABLE huohua_addonsubject ADD COLUMN `keywords` CHAR(30) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonsubject ADD COLUMN `filename` VARCHAR(40) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonsubject ADD COLUMN `dutyadmin` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0';
+
+-- 2013-11-08
+SELECT * FROM huohua_addonapp;
+SHOW CREATE TABLE huohua_addonapp;
