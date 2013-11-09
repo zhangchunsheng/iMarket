@@ -424,7 +424,7 @@ function GetDDImgFromBody(&$body)
 function GetDDImage($litpic, $picname, $isremote) {
     global $cuserLogin,$cfg_ddimg_width,$cfg_ddimg_height,$cfg_basedir,$ddcfg_image_dir,$cfg_addon_savetype;
     $ntime = time();
-    if( ($litpic != 'none' || $litpic != 'ddfirst') && 
+    if(($litpic != 'none' || $litpic != 'ddfirst') && 
      !empty($_FILES[$litpic]['tmp_name']) && is_uploaded_file($_FILES[$litpic]['tmp_name'])) {
         //如果用户自行上传缩略图
         $istype = 0;
@@ -434,10 +434,10 @@ function GetDDImage($litpic, $picname, $isremote) {
             ShowMsg("上传的图片格式错误，请使用JPEG、GIF、PNG格式的其中一种！","-1");
             exit();
         }
-        $savepath = $ddcfg_image_dir.'/'.MyDate($cfg_addon_savetype, $ntime);
+        $savepath = $ddcfg_image_dir . '/' . MyDate($cfg_addon_savetype, $ntime);
 
         CreateDir($savepath);
-        $fullUrl = $savepath.'/'.dd2char(MyDate('mdHis', $ntime).$cuserLogin->getUserID().mt_rand(1000, 9999));
+        $fullUrl = $savepath.'/' . dd2char(MyDate('mdHis', $ntime).$cuserLogin -> getUserID() . mt_rand(1000, 9999));
         if(strtolower($_FILES[$litpic]['type']) == "image/gif") {
             $fullUrl = $fullUrl.".gif";
         } else if(strtolower($_FILES[$litpic]['type']) == "image/png") {
@@ -472,7 +472,7 @@ function GetDDImage($litpic, $picname, $isremote) {
             }
         } else {
             if($litpic=='ddfirst' && !preg_match("#^http:\/\/#i", $picname)) {
-                $oldpic = $cfg_basedir.$picname;
+                $oldpic = $cfg_basedir . $picname;
                 $litpic = str_replace('.', '-lp.', $picname);
                 if($GLOBALS['cfg_ddimg_full']=='Y') @ImageResizeNew($oldpic,$cfg_ddimg_width,$cfg_ddimg_height,$cfg_basedir.$litpic);
                 else @ImageResize($oldpic,$cfg_ddimg_width,$cfg_ddimg_height,$cfg_basedir.$litpic);
@@ -483,7 +483,8 @@ function GetDDImage($litpic, $picname, $isremote) {
             }
         }
     }
-    if($litpic=='litpic' || $litpic=='ddfirst') $litpic = '';
+    if($litpic == 'litpic' || $litpic=='ddfirst')
+		$litpic = '';
     return $litpic;
 }
 

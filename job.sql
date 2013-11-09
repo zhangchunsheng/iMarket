@@ -192,3 +192,8 @@ CREATE TABLE myapp_category(
 	PRIMARY KEY (id)
 );
 SELECT * FROM myapp_category;
+
+-- 2013-11-09
+SELECT * FROM huohua_addonapp;
+SELECT * FROM huohua_addonsubject;
+SELECT * FROM huohua_comment;
