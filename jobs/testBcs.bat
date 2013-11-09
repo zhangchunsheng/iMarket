@@ -1,0 +1,2 @@
+php testBcs.php
+pause

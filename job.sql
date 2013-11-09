@@ -197,3 +197,26 @@ SELECT * FROM myapp_category;
 SELECT * FROM huohua_addonapp;
 SELECT * FROM huohua_addonsubject;
 SELECT * FROM huohua_comment;
+
+ALTER TABLE myapp_category ADD COLUMN `huohua_cid` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE myapp_category ADD COLUMN `icfa` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE myapp_category ADD COLUMN `icon` VARCHAR(255) NOT NULL DEFAULT '';
+SELECT * FROM myapp_category;
+SELECT id FROM huohua_arctype WHERE typename='腾讯软件';
+SELECT * FROM huohua_channeltype;
+INSERT INTO myapp_category(cid,cname,icon,huohua_cid,icfa) VALUES ('$cid','$cname','$icon','$huohua_cid','$icfa');
+INSERT INTO myapp_category(cid,cname,icon,huohua_cid,icfa) VALUES ('1','1','1','1','1');
+TRUNCATE myapp_category;
+CREATE TABLE grap_log(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	`type` VARCHAR(60) NOT NULL DEFAULT '',
+	pageNo INT(10) NOT NULL DEFAULT 0 COMMENT '当前页',
+	allpage INT(10) NOT NULL DEFAULT 0 COMMENT '总页数',
+	perpage INT(10) NOT NULL DEFAULT 0 COMMENT '每页多少条',
+	`date` INT(10) NOT NULL DEFAULT 0 COMMENT '日期',
+	PRIMARY KEY(id)
+);
+SELECT * FROM grap_log;
+INSERT INTO grap_log(`type`,pageNo,allpage,perpage,`date`) VALUES ('$type','$pageNo','$allpage','$perpage','$date');
+
+SELECT * FROM myapp_category;
