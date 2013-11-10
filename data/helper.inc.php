@@ -1,7 +1,6 @@
 <?php
 //小助手配置项
-$cfg_helper_autoload = array
-(
+$cfg_helper_autoload = array (
         'charset',    /* 编码小助手 */
         'channelunit',/* 模型单元小助手 */ 
         'string',     /* 字符串小助手 */

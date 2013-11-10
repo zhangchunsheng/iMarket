@@ -1,10 +1,11 @@
 banner
 http://android.myapp.com/android/qrytopicbycms_web?r=0.7721985075622797
 首页
-http://android.myapp.com/android/qrynesseary_web?type=0&r=0.6568537969142199
-http://android.myapp.com/android/dayrecommend_web?pageNo=1&pageSize=15&r=0.5633281266782433
-http://android.myapp.com/android/qryranking_web?ranktype=0&cid=-1&cmstype=415&icontype=60&pageNo=1&pageSize=12&r=0.8312763753347099
-http://android.myapp.com/android/qryhotcate_web?hotcatenum=6&icontype=48&pagesize=5&r=0.6024830909445882
+装机备份 http://android.myapp.com/android/qrynesseary_web?type=0&r=0.6568537969142199
+精品推荐 http://android.myapp.com/android/dayrecommend_web?pageNo=1&pageSize=15&r=0.5633281266782433
+应用排行 http://android.myapp.com/android/qryranking_web?ranktype=0&cid=-1&cmstype=415&icontype=60&pageNo=1&pageSize=12&r=0.8312763753347099
+游戏排行 http://android.myapp.com/android/qryranking_web?ranktype=0&cid=120&cmstype=416&icontype=60&pageNo=1&pageSize=12&r=0.643826721701771
+热门分类 http://android.myapp.com/android/qryhotcate_web?hotcatenum=6&icontype=48&pagesize=5&r=0.6024830909445882
 
 应用
 http://android.myapp.com/android/qrycategorylist_web?r=0.4487279343884438

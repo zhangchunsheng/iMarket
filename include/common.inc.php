@@ -57,8 +57,7 @@ if (function_exists('mb_substr'))
 if (function_exists('iconv_substr'))
 	$cfg_is_iconv = TRUE;
 
-function _RunMagicQuotes(&$svar)
-{
+function _RunMagicQuotes(&$svar) {
 	if (!get_magic_quotes_gpc()) {
 		if (is_array($svar)) {
 			foreach ($svar as $_k => $_v)
@@ -280,8 +279,7 @@ if (!isset($cfg_NotPrintHead)) {
 }
 
 //自动加载类库处理
-function __autoload($classname)
-{
+function __autoload($classname) {
 	global $cfg_soft_lang;
 	$classname = preg_replace("/[^0-9a-z_]/i", '', $classname);
 	if (class_exists($classname)) {

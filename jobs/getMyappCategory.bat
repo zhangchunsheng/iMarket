@@ -1,2 +1,0 @@
-php getMyappCategory.php
-pause

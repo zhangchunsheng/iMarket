@@ -220,3 +220,160 @@ SELECT * FROM grap_log;
 INSERT INTO grap_log(`type`,pageNo,allpage,perpage,`date`) VALUES ('$type','$pageNo','$allpage','$perpage','$date');
 
 SELECT * FROM myapp_category;
+CREATE TABLE myapp_banner(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	icfa VARCHAR(60) NOT NULL DEFAULT '',
+	picsrc VARCHAR(255) NOT NULL DEFAULT '',
+	appid VARCHAR(60) NOT NULL DEFAULT '',
+	topicid VARCHAR(60) NOT NULL DEFAULT '',
+	`type` VARCHAR(60) NOT NULL DEFAULT '',
+	tgy VARCHAR(60) NOT NULL DEFAULT '',
+	PRIMARY KEY(id)
+);
+SELECT * FROM myapp_banner;
+SHOW CREATE TABLE huohua_addonapp;
+SHOW CREATE TABLE huohua_addonsubject;
+CREATE TABLE huohua_addonbanner(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	picsrc VARCHAR(255) NOT NULL DEFAULT '',
+	appid INT(10) NOT NULL DEFAULT 0,
+	`type` VARCHAR(60) NOT NULL DEFAULT '',
+	topicid INT(10) NOT NULL DEFAULT 0,
+	bannerName VARCHAR(60) NOT NULL DEFAULT '',
+	`date` INT(10) NOT NULL DEFAULT 0,
+	myapp_icfa VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_picsrc VARCHAR(255) NOT NULL DEFAULT '',
+	myapp_appid VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_topicid VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_type VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_tgy VARCHAR(60) NOT NULL DEFAULT '',
+	PRIMARY KEY(id)
+);
+SHOW CREATE TABLE huohua_addonbanner;
+
+ALTER TABLE huohua_addonbanner ADD COLUMN myapp_icfa VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN myapp_picsrc VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN myapp_appid VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN myapp_topicid VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN myapp_type VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN myapp_tgy VARCHAR(60) NOT NULL DEFAULT '';
+
+ALTER TABLE huohua_addonbanner ADD COLUMN `weight` INT(10) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonbanner ADD COLUMN `typeid2` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonbanner ADD COLUMN `topTypeId` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonbanner ADD COLUMN `writer` CHAR(20) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN `redirecturl` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN `sortrank` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonbanner ADD COLUMN `ismake` SMALLINT(6) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonbanner ADD COLUMN `shorttitle` CHAR(36) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN `color` CHAR(7) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN `source` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN `publishdate` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonbanner ADD COLUMN `notpost` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonbanner ADD COLUMN `description` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN `keywords` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN `filename` VARCHAR(40) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonbanner ADD COLUMN `dutyadmin` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0';
+
+SHOW CREATE TABLE myapp_category;
+CREATE TABLE huohua_addonappcategory(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	cid VARCHAR(60) NOT NULL DEFAULT '',
+	cname VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_cid VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_cname VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_icfa VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_icon VARCHAR(60) NOT NULL DEFAULT '',
+	PRIMARY KEY(id)
+);
+ALTER TABLE huohua_addonappcategory ADD COLUMN myapp_cid VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappcategory ADD COLUMN myapp_cname VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappcategory ADD COLUMN myapp_icfa VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappcategory ADD COLUMN myapp_icon VARCHAR(60) NOT NULL DEFAULT '';
+
+ALTER TABLE huohua_addonappcategory ADD COLUMN `weight` INT(10) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `typeid2` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `topTypeId` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `writer` CHAR(20) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `redirecturl` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `sortrank` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `ismake` SMALLINT(6) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `shorttitle` CHAR(36) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `color` CHAR(7) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `source` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `publishdate` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `notpost` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `description` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `keywords` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `filename` VARCHAR(40) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappcategory ADD COLUMN `dutyadmin` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0';
+
+CREATE TABLE huohua_addonappchannel(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	channelId VARCHAR(60) NOT NULL DEFAULT '',
+	channelName VARCHAR(60) NOT NULL DEFAULT '',
+	apps TEXT,
+	myapp_apps TEXT,
+	PRIMARY KEY(id)
+);
+SHOW CREATE TABLE huohua_addonappchannel;
+ALTER TABLE huohua_addonappchannel ADD COLUMN myapp_apps TEXT;
+
+ALTER TABLE huohua_addonappchannel ADD COLUMN `weight` INT(10) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `typeid2` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `topTypeId` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `writer` CHAR(20) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `redirecturl` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `sortrank` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `ismake` SMALLINT(6) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `shorttitle` CHAR(36) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `color` CHAR(7) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `source` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `publishdate` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `notpost` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `description` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `keywords` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `filename` VARCHAR(40) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchannel ADD COLUMN `dutyadmin` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0';
+
+-- 精品推荐 装机必备
+CREATE TABLE huohua_addonappchanneltype(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	channelName VARCHAR(60) NOT NULL DEFAULT '',
+	channelShowName VARCHAR(60) NOT NULL DEFAULT '',
+	PRIMARY KEY(id)
+);
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `weight` INT(10) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `typeid2` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `topTypeId` VARCHAR(90) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `writer` CHAR(20) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `redirecturl` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `sortrank` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `ismake` SMALLINT(6) NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `shorttitle` CHAR(36) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `color` CHAR(7) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `source` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `publishdate` INT(10) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `notpost` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `description` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `keywords` CHAR(30) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `filename` VARCHAR(40) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonappchanneltype ADD COLUMN `dutyadmin` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0';
+
+SELECT * FROM huohua_addonapp;
+SELECT * FROM huohua_addonappcategory;
+SELECT * FROM huohua_addonappchannel;
+SELECT * FROM huohua_addonappchanneltype;
+SELECT * FROM huohua_addonbanner;
+SELECT * FROM huohua_addonsubject;
+
+SELECT * FROM huohua_arctiny;
+DELETE FROM huohua_arctiny WHERE id > 11;
+ALTER TABLE huohua_arctiny AUTO_INCREMENT = 12;
+UPDATE huohua_arctiny SET channel=-3 WHERE typeid=44;
+SELECT * FROM huohua_channeltype;
+SELECT * FROM huohua_arctype;
+
+SHOW CREATE TABLE huohua_addonappcategory;
+TRUNCATE TABLE huohua_addonappcategory;
+INSERT INTO huohua_addonappcategory(cid,cname,myapp_cid,myapp_cname,myapp_icfa,myapp_icon) VALUES ('6','1','106','1','15144196000106001000','http://appimg1.3g.qq.com/msoft/icon/IP/m10w2/fenleilogo/kongjian.png')
