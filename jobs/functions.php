@@ -10,10 +10,18 @@
 			  mb_detect_encoding($content, 'UTF-8, ISO-8859-1', true));
 	}
 	
-	function addGrapLog($type, $pageNo, $allpage, $perpage) {
+	function addGrapLog($type, $pageNo, $allpage, $perpage, $url) {
 		global $mysqlUtil;
 		$date = time();
-		$sql = "INSERT INTO grap_log(`type`,pageNo,allpage,perpage,`date`) VALUES ('$type','$pageNo','$allpage','$perpage','$date')";
+		$sql = "INSERT INTO grap_log(`type`,pageNo,allpage,perpage,`date`,url) VALUES ('$type','$pageNo','$allpage','$perpage','$date','$url')";
+		$mysqlUtil -> query($sql);
+	}
+	
+	function addAppLog($type, $method, $sqlInfo) {
+		global $mysqlUtil;
+		$date = time();
+		$sqlInfo = urlencode($sqlInfo);
+		$sql = "INSERT INTO app_log(`type`,method,`sql`,`date`) VALUES ('$type','$method','$sqlInfo','$date')";
 		$mysqlUtil -> query($sql);
 	}
 	
@@ -73,6 +81,22 @@
 			}
 			$values = substr($values, 0, strlen($values) - 1);
 			return $values;
+		}
+		
+		function getUpdateMyappSQL($json) {
+			$sql = "";
+			$reflect = new ReflectionObject($json);
+			foreach($this as $key => $value) {
+				if($key == "tableName")
+					continue;
+				if($reflect -> hasProperty($key)) {
+					$sql .= "myapp_$key='" . $json -> $key . "',";
+				} else {
+					$sql .= "myapp_$key='',";
+				}
+			}
+			$sql = substr($sql, 0, strlen($sql) - 1);
+			return $sql;
 		}
 		
 		function getInsertValues($json, $array) {

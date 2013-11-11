@@ -27,18 +27,18 @@
 		}
 	}
 	
-	$typeid = 2;
+	$typeid = 3;
 	$channelid = -17;
 	
 	$url = "http://android.myapp.com/android/qrycategoryranking_web?";
 	$pageInfo = new stdClass;
-	$pageInfo -> cid = -1;
+	$pageInfo -> cid = 120;
 	$pageInfo -> ranktype = 0;
-	$pageInfo -> icfa = "15144050000000000000";
+	$pageInfo -> icfa = "15144206000120000000";
 	$pageInfo -> pageNo = 1;
 	$pageInfo -> pageIndex = -1;
 	$pageInfo -> pageSize = 10;
-	$pageInfo -> r = "0.5975102682132274";
+	$pageInfo -> r = "0.16294923843815923";
 	$pageInfo -> pageCount = 30;
 	
 	$app = new App();
@@ -76,7 +76,7 @@
 	function addApp() {
 		global $mysqlUtil,$pageInfo,$app,$typeid,$channelid;
 		
-		$type = "app";
+		$type = "game";
 		for($i = 0 ; $i < $pageInfo -> pageCount ; $i++) {
 			$appurl = getUrl();
 			$content = file_get_contents($appurl);
@@ -88,6 +88,7 @@
 			foreach($apps as $key => $value) {
 				$sql = getCountSQL($value -> appid);
 				$result = $mysqlUtil -> result($mysqlUtil -> query($sql), 0);
+				$value -> softdesc = str_replace("'", "\'", $value -> softdesc);
 				echo $result;
 				if($result >= 1) {
 					$method = "update";
@@ -129,10 +130,10 @@
 	}
 	
 	function getUpdateSQL($json) {
-		global $app;
+		global $app,$typeid;
 		$updateMyappSQL = $app -> getUpdateMyappSQL($json);
 		$pubDate = strtotime($json -> publishtime);
-		$updateSQL = "click='".$json->count."',title='".$json->softname."',litpic='".$json->icon."',userip='0.0.0.0',icon='".$json->icon."',appName='".$json->softname."',starLevel='".$json->score."',count='".$json->count."',downcount='".$json->downcount."',sizeInfo='".$json->filesize."',
+		$updateSQL = "typeid='$typeid',click='".$json->count."',title='".$json->softname."',litpic='".$json->icon."',userip='0.0.0.0',icon='".$json->icon."',appName='".$json->softname."',starLevel='".$json->score."',count='".$json->count."',downcount='".$json->downcount."',sizeInfo='".$json->filesize."',
 					priceInfo='".$json->fee."',languageInfo='".$json->lang."',version='".$json->versionname."',pubDate='$pubDate',needOSInfo='".$json->sdkver."',developerInfo='".$json->cpname."',
 					isTencentPMAuth='1',isSafeMAuth='1',introduction='".$json->softdesc."'";
 		$sql = "update huohua_addonapp set $updateSQL,$updateMyappSQL where myapp_appid=" . $json -> appid;

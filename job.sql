@@ -153,15 +153,20 @@ SELECT * FROM huohua_sysconfig;
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_icon` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_count` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_versionname` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_sdkver` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_score` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_appid` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_softname` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_cid` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_lang` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_softdesc` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_fee` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_icfa` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_filesize` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_cptype` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_publishtime` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_starnumber` VARCHAR(60) NOT NULL DEFAULT '';
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_cpname` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_pkgid` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_cname` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_downcount` VARCHAR(60) NOT NULL DEFAULT '';
@@ -170,6 +175,7 @@ ALTER TABLE huohua_addonapp ADD COLUMN `myapp_features` TEXT NOT NULL DEFAULT ''
 ALTER TABLE huohua_addonapp ADD COLUMN `myapp_screenshot` TEXT NOT NULL DEFAULT '';
 
 SELECT * FROM huohua_addonapp;
+SELECT * FROM grap_log;
 
 ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_topicid` VARCHAR(60) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_smallpicurl` VARCHAR(60) NOT NULL DEFAULT '';
@@ -360,6 +366,77 @@ ALTER TABLE huohua_addonappchanneltype ADD COLUMN `keywords` CHAR(30) NOT NULL D
 ALTER TABLE huohua_addonappchanneltype ADD COLUMN `filename` VARCHAR(40) NOT NULL DEFAULT '';
 ALTER TABLE huohua_addonappchanneltype ADD COLUMN `dutyadmin` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0';
 
+CREATE TABLE huohua_appcategory(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	cid VARCHAR(60) NOT NULL DEFAULT '',
+	cname VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_cid VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_cname VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_icfa VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_icon VARCHAR(60) NOT NULL DEFAULT '',
+	PRIMARY KEY(id)
+);
+SELECT * FROM huohua_appcategory;
+ALTER TABLE huohua_appcategory CHANGE COLUMN `myapp_icon` `myapp_icon` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'myapp_icon';
+ALTER TABLE huohua_appcategory ADD COLUMN `icon` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'icon';
+ALTER TABLE huohua_appcategory ADD COLUMN `weight` INT(10) NOT NULL DEFAULT 0 COMMENT 'weight';
+CREATE TABLE huohua_appbanner(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	picsrc VARCHAR(255) NOT NULL DEFAULT '',
+	appid INT(10) NOT NULL DEFAULT 0,
+	`type` VARCHAR(60) NOT NULL DEFAULT '',
+	topicid INT(10) NOT NULL DEFAULT 0,
+	bannerName VARCHAR(60) NOT NULL DEFAULT '',
+	`date` INT(10) NOT NULL DEFAULT 0,
+	myapp_icfa VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_picsrc VARCHAR(255) NOT NULL DEFAULT '',
+	myapp_appid VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_topicid VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_type VARCHAR(60) NOT NULL DEFAULT '',
+	myapp_tgy VARCHAR(60) NOT NULL DEFAULT '',
+	PRIMARY KEY(id)
+);
+SELECT * FROM huohua_appbanner;
+CREATE TABLE huohua_appchanneltype(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	channelName VARCHAR(60) NOT NULL DEFAULT '',
+	channelShowName VARCHAR(60) NOT NULL DEFAULT '',
+	PRIMARY KEY(id)
+);
+ALTER TABLE huohua_appchanneltype ADD COLUMN `date` INT(10) NOT NULL DEFAULT 0;
+SELECT * FROM huohua_appchanneltype;
+CREATE TABLE huohua_appchannel(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	channelId INT(10) NOT NULL DEFAULT 0 COMMENT 'channelId',
+	channelName VARCHAR(60) NOT NULL DEFAULT '',
+	`type` INT(10) NOT NULL DEFAULT 0 COMMENT '1 - 装机必备 2 - 精品推荐',
+	`name` VARCHAR(60) NOT NULL DEFAULT '',
+	appid INT(10) NOT NULL DEFAULT 0,
+	myapp_appid VARCHAR(60) NOT NULL DEFAULT '',
+	PRIMARY KEY(id)
+);
+SELECT * FROM huohua_appchannel;
+CREATE TABLE huohua_appsubject(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	subjectName VARCHAR(60) NOT NULL DEFAULT '',
+	picture VARCHAR(255) NOT NULL DEFAULT '',
+	description VARCHAR(255) NOT NULL DEFAULT '',
+	`date` INT(10) NOT NULL DEFAULT 0 COMMENT 'date',
+	pubDate INT(10) NOT NULL DEFAULT 0 COMMENT 'pubDate',
+	click INT(10) NOT NULL DEFAULT 0 COMMENT 'click',
+	goodNum INT(10) NOT NULL DEFAULT 0 COMMENT 'goodNum',
+	badNum INT(10) NOT NULL DEFAULT 0 COMMENT 'badNum',
+	PRIMARY KEY(id)
+);
+CREATE TABLE huohua_appsubject_app(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	subjectId INT(10) NOT NULL DEFAULT 0 COMMENT 'badNum',
+	appid INT(10) NOT NULL DEFAULT 0 COMMENT 'badNum',
+	myapp_appid VARCHAR(60) NOT NULL DEFAULT '' COMMENT 'myapp_appid',
+	`date` INT(10) NOT NULL DEFAULT 0 COMMENT 'date',
+	PRIMARY KEY(id)
+);
+
 SELECT * FROM huohua_addonapp;
 SELECT * FROM huohua_addonappcategory;
 SELECT * FROM huohua_addonappchannel;
@@ -376,4 +453,45 @@ SELECT * FROM huohua_arctype;
 
 SHOW CREATE TABLE huohua_addonappcategory;
 TRUNCATE TABLE huohua_addonappcategory;
-INSERT INTO huohua_addonappcategory(cid,cname,myapp_cid,myapp_cname,myapp_icfa,myapp_icon) VALUES ('6','1','106','1','15144196000106001000','http://appimg1.3g.qq.com/msoft/icon/IP/m10w2/fenleilogo/kongjian.png')
+INSERT INTO huohua_addonappcategory(cid,cname,myapp_cid,myapp_cname,myapp_icfa,myapp_icon) VALUES ('6','1','106','1','15144196000106001000','http://appimg1.3g.qq.com/msoft/icon/IP/m10w2/fenleilogo/kongjian.png');
+
+SHOW CREATE TABLE huohua_addonapp;
+SELECT * FROM huohua_addonapp;
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_downloadurl` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'myapp_downloadurl';
+
+SELECT * FROM grap_log;
+ALTER TABLE grap_log ADD COLUMN `url` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'url';
+SELECT COUNT(1) `count` FROM huohua_addonapp WHERE myapp_appid="";
+
+SHOW CREATE TABLE grap_log;
+CREATE TABLE app_log(
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	`type` VARCHAR(60) NOT NULL DEFAULT '' COMMENT 'type',
+	url VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'url',
+	`date` INT(10) NOT NULL DEFAULT 0 COMMENT 'date',
+	PRIMARY KEY(id)
+);
+ALTER TABLE app_log ADD COLUMN `method` VARCHAR(60) NOT NULL DEFAULT '' COMMENT 'method';
+ALTER TABLE app_log ADD COLUMN `sql` TEXT;
+SELECT * FROM app_log;
+SELECT * FROM huohua_addonapp;
+UPDATE huohua_addonapp SET arcrank=0,`mid`=1 WHERE myapp_appid='50801';
+ALTER TABLE huohua_addonapp ADD COLUMN `count` INT(10) NOT NULL DEFAULT 0 COMMENT 'count';
+ALTER TABLE huohua_addonapp ADD COLUMN `downcount` VARCHAR(60) NOT NULL DEFAULT '' COMMENT 'downcount';
+SELECT COUNT(1) COUNT FROM huohua_addonapp WHERE myapp_appid='45592';
+
+INSERT INTO app_log(`type`,method,`sql`,`date`) VALUES ('app','insert','','1384104017');
+INSERT INTO app_log(`type`,method,`sql`,`date`) VALUES ('app','insert','','1384104017');
+
+SELECT * FROM huohua_addonapp;
+SELECT * FROM app_log;
+
+-- 2013-11-11
+SELECT * FROM huohua_addonapp;
+SELECT * FROM huohua_addonapp WHERE myapp_appid='730577';
+SELECT * FROM app_log;
+SELECT * FROM grap_log;
+
+SELECT * FROM huohua_addonsubject;
+SELECT * FROM huohua_appsubject;
+SELECT * FROM huohua_appsubject_app;

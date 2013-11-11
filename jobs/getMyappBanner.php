@@ -20,8 +20,8 @@
 			parent::__construct("myapp_banner");
 		}
 	}
-	$sql = "truncate myapp_banner";
-	//$mysqlUtil -> query($sql);
+	$sql = "truncate huohua_appbanner";
+	$mysqlUtil -> query($sql);
 	
 	$typeid = 47;
 	$channelid = -2;
@@ -42,8 +42,9 @@
 		$banners = $content -> info -> value;
 		$type = "banner";
 		foreach($banners as $key => $value) {
-			$arcID = GetIndexKey(0, $typeid, 0, $channelid);
-			$sql = getInsertSQL($value, $arcID);
+			//$arcID = GetIndexKey(0, $typeid, 0, $channelid);
+			//$sql = getAddonInsertSQL($value, $arcID);
+			$sql = getInsertSQL($value);
 			beautiful_echo($sql);
 			$mysqlUtil -> query($sql);
 		}
@@ -67,7 +68,25 @@
 		addGrapLog($type, 0, count($banners), 0);
 	}
 	
-	function getInsertSQL($json, $arcID) {
+	function getInsertSQL($json) {
+		global $banner;
+		$keys = $banner -> getKeys($json);
+		$values = $banner -> getValues($json);
+		$insertKeys = "picsrc,appid,type,topicid,bannerName,date";
+		if($json -> type == "soft") {
+			$insertValues = "'".$json -> picsrc."','".$json -> appid."','".
+						$json -> type."','','".
+						$json -> tgy."','".time()."'";
+		} else {
+			$insertValues = "'".$json -> picsrc."','','".
+						$json -> type."','".$json -> topicid."','".
+						$json -> tgy."','".time()."'";
+		}
+		$sql = "INSERT INTO huohua_appbanner($insertKeys,$keys) VALUES ($insertValues,$values)";
+		return $sql;
+	}
+	
+	function getAddonInsertSQL($json, $arcID) {
 		global $banner,$typeid,$channelid;
 		$keys = $banner -> getKeys($json);
 		$values = $banner -> getValues($json);

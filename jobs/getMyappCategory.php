@@ -9,7 +9,7 @@
 	 */
 	include("init.php");
 	
-	$sql = "truncate myapp_category";
+	$sql = "truncate huohua_appcategory";
 	$mysqlUtil -> query($sql);
 	
 	$typeid = 44;
@@ -48,8 +48,9 @@
 			$huohua_cid = $mysqlUtil -> result($query, 0);
 			//beautiful_echo($huohua_cid);
 			
-			$arcID = GetIndexKey(0, $typeid, 0, $channelid);
-			$sql = getInsertSQL($value, $arcID, $huohua_cid);
+			//$arcID = GetIndexKey(0, $typeid, 0, $channelid);
+			//$sql = getAddonInsertSQL($value, $arcID, $huohua_cid);
+			$sql = getInsertSQL($value, $huohua_cid);
 			beautiful_echo($sql);
 			$mysqlUtil -> query($sql);
 		}
@@ -88,7 +89,16 @@
 		addGrapLog($type, 0, count($categorys), 0);
 	}
 	
-	function getInsertSQL($category, $arcID, $huohua_cid) {
+	function getInsertSQL($category, $huohua_cid) {
+		$cid = $category -> categoryid;
+		$cname = $category -> categoryname;
+		$icfa = $category -> icfa;
+		$icon = $category -> icon;
+		$sql = "INSERT INTO huohua_appcategory(cid,cname,myapp_cid,myapp_cname,myapp_icfa,myapp_icon) VALUES ('$huohua_cid','$cname','$cid','$cname','$icfa','$icon')";
+		return $sql;
+	}
+	
+	function getAddonInsertSQL($category, $arcID, $huohua_cid) {
 		global $typeid,$channelid;
 		$cid = $category -> categoryid;
 		$cname = $category -> categoryname;
