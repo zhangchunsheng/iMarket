@@ -75,6 +75,7 @@
 	
 	function addApp() {
 		global $mysqlUtil,$pageInfo,$app,$typeid,$channelid;
+		getPageCount();
 		
 		$type = "game";
 		for($i = 0 ; $i < $pageInfo -> pageCount ; $i++) {

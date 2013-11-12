@@ -18,6 +18,8 @@ if "%1"=="test" (
 	php getMyappApp.php
 ) else if "%1"=="getMyappGame" (
 	php getMyappGame.php
+) else if "%1"=="getMyappSubject" (
+	php getMyappSubject.php
 ) else if "%1"=="help" (
 	echo hh command:
 	echo hh test
@@ -31,6 +33,7 @@ if "%1"=="test" (
 	echo     getMyappBanner
 	echo     getMyappApp
 	echo     getMyappGame
+	echo     getMyappSubject
 ) else (
 	echo wrong command
 )
