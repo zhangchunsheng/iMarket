@@ -18,6 +18,8 @@ http://android.myapp.com/android/qrycategorylist_web?r=0.4487279343884438
 http://android.myapp.com/android/qrycategoryranking_web?cid=-1&ranktype=0&icfa=15144050000000000000&pageNo=1&pageIndex=-1&pageSize=10&r=0.5975102682132274
 最新
 http://android.myapp.com/android/qrycategoryranking_web?cid=-1&ranktype=2&icfa=15144050000000000000&pageNo=1&pageIndex=-1&pageSize=10&r=0.4569089023862034
+腾讯
+http://android.myapp.com/android/qryinersoftrank_web?cid=10013&ranktype=0&icfa=15144064010013001000&pageNo=1&pageIndex=-1&pageSize=10&r=0.20088630146346986
 
 游戏
 http://android.myapp.com/android/qrygamecategory_web?r=0.6747699521947652

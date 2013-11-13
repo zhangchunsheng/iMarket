@@ -20,6 +20,10 @@ if "%1"=="test" (
 	php getMyappGame.php
 ) else if "%1"=="getMyappSubject" (
 	php getMyappSubject.php
+) else if "%1"=="getMyappSubjectDetail" (
+	php getMyappSubjectDetail.php
+) else if "%1"=="getMyappCategoryApp" (
+	php getMyappCategoryApp.php
 ) else if "%1"=="help" (
 	echo hh command:
 	echo hh test
@@ -34,6 +38,8 @@ if "%1"=="test" (
 	echo     getMyappApp
 	echo     getMyappGame
 	echo     getMyappSubject
+	echo     getMyappSubjectDetail
+	echo     getMyappCategoryApp
 ) else (
 	echo wrong command
 )

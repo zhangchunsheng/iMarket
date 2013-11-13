@@ -12,6 +12,7 @@
 	echo $reflect -> hasProperty("test");
 	
 	include("functions.php");
+	include("entities\Entity.php");
 	class TestEntity extends Entity {
 		public function __construct() {
 			parent::__construct("test");
@@ -33,4 +34,7 @@
 	echo "\n";
 	
 	$testEntity -> iterateVisible();
+	
+	$str = "Don't be shy";
+	echo str_replace("'", "\'", $str);
 ?>

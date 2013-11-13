@@ -48,4 +48,5 @@ $cfg_Cs[43]=array(0,1,1,'5pmu6YCa5paH56ug');
 $cfg_Cs[45]=array(0,-4,1,'5bqU55So6aKR6YGT');
 $cfg_Cs[46]=array(0,-5,1,'6aKR6YGT57G75Z6L');
 $cfg_Cs[47]=array(0,-2,1,'YmFubmVy');
+$cfg_Cs[48]=array(2,-17,1,'5YW25a6D');
 ?>

@@ -505,3 +505,70 @@ ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_type` VARCHAR(60) NOT NULL DEF
 ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_smallpicurl` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'myapp_smallpicurl';
 ALTER TABLE huohua_addonsubject ADD COLUMN `myapp_bigpicurl` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'myapp_bigpicurl';
 SELECT * FROM huohua_addonsubject;
+
+-- 2013-11-12
+SELECT * FROM huohua_addonapp;-- writer
+SELECT cid,cname FROM huohua_addonapp ORDER BY aid DESC;
+SELECT COUNT(1) FROM huohua_addonapp WHERE cname='';
+UPDATE huohua_addonapp SET topTypeId=2;
+UPDATE huohua_addonapp SET topTypeId=3 WHERE typeid=3;
+SELECT * FROM huohua_arcrank;
+SELECT senddate,sortrank FROM huohua_addonapp;
+UPDATE huohua_addonapp SET sortrank=pubDate;
+SELECT * FROM huohua_arctiny;
+SELECT * FROM huohua_appcategory;
+SELECT cid,cname FROM huohua_appcategory WHERE myapp_cid=10013;
+SELECT * FROM huohua_arctype;
+
+SELECT * FROM huohua_addonapp WHERE cname='';
+SELECT * FROM huohua_addonapp;
+
+SELECT * FROM huohua_arctiny;
+UPDATE huohua_arctiny SET typeid=(SELECT typeid FROM huohua_addonapp WHERE huohua_arctiny.id=huohua_addonapp.aid) WHERE typeid=2 OR typeid=3;
+UPDATE huohua_arctiny SET typeid=42 WHERE typeid=0;
+UPDATE huohua_arctiny SET typeid=42 WHERE channel=-16;
+UPDATE huohua_arctiny SET typeid=44 WHERE channel=-3;
+SELECT * FROM huohua_arctiny WHERE typeid=2 OR typeid=3;
+SELECT * FROM huohua_addonapp WHERE aid<571;
+SELECT * FROM huohua_addonapp WHERE aid>571;
+SELECT FROM_BASE64(`sql`) FROM app_log;
+SELECT * FROM app_log;
+
+SELECT * FROM huohua_addonsubject;
+SELECT * FROM huohua_appsubject_app;
+ALTER TABLE huohua_appsubject_app ADD COLUMN `myapp_topicid` VARCHAR(60) NOT NULL DEFAULT '' COMMENT 'myapp_topicid';
+SELECT aid,myapp_topicid FROM huohua_addonsubject;
+SELECT * FROM huohua_addonapp WHERE myapp_appid='';
+UPDATE huohua_addonapp SET topTypeId=2 WHERE topTypeId='';
+
+SHOW CREATE TABLE huohua_appsubject_app;
+SELECT * FROM huohua_addonapp ORDER BY aid DESC;
+SELECT COUNT(1) FROM huohua_addonapp;
+SELECT * FROM huohua_appcategory;
+SELECT * FROM huohua_addonapp;
+
+INSERT INTO huohua_addonapp(aid,typeid,channel,arcrank,MID,click,title,senddate,flag,litpic,userip,topTypeId,writer,sortrank,source,publishdate,dutyadmin,cid,cname,
+						icon,appName,filetype,starLevel,COUNT,downcount,sizeInfo,
+						priceInfo,languageInfo,VERSION,pubDate,needOSInfo,developerInfo,
+						isTencentPMAuth,isSafeMAuth,introduction,myapp_icon,myapp_count,myapp_versionname,myapp_sdkver,myapp_score,myapp_appid,myapp_softname,myapp_cid,myapp_lang,myapp_softdesc,myapp_fee,myapp_icfa,myapp_filesize,myapp_cptype,myapp_publishtime,myapp_starnumber,myapp_cpname,myapp_pkgid,myapp_cname,myapp_downcount) VALUES ('861','20','-17',0,1,'307','英语流利说','1384245063','p','http://appimg1.3g.qq.com/android_new/847/10128847/16726399/icon_72.png','0.0.0.0','2','admin','1383868800','myapp','1383868800','1','20','教育',
+						'http://appimg1.3g.qq.com/android_new/847/10128847/16726399/icon_72.png','英语流利说','.apk','4','307','40万次','20.58M',
+						'免费','中文','1.5.4','1383868800','2.3.2','上海流利说信息技术有限公司',
+						'1','1','Don\'t be shy,have a try.-英语老师','http://appimg1.3g.qq.com/android_new/847/10128847/16726399/icon_72.png','307','1.5.4','2.3.2','4','10128847','英语流利说','111','中文','Don\'t be shy,have a try.-英语老师','免费','','20.58M','1','2013-11-08','80','上海流利说信息技术有限公司','16726399','教育','40万次');
+SELECT * FROM app_log;
+SELECT * FROM huohua_addonapp WHERE typeid=0;
+UPDATE huohua_addonapp SET typeid=48,cid=48,cname='其它' WHERE typeid=0;
+SELECT * FROM huohua_arctiny WHERE typeid=0;
+UPDATE huohua_arctiny SET typeid=48 WHERE typeid=0;
+ALTER TABLE huohua_addonapp ADD COLUMN `isTencent` INT(1) NOT NULL DEFAULT 0 COMMENT 'isTencent';
+SELECT * FROM huohua_appcategory;
+SELECT * FROM huohua_addonapp WHERE myapp_appid=36112;-- 48462
+SELECT COUNT(myapp_appid),myapp_appid FROM huohua_addonapp WHERE myapp_appid=48462 GROUP BY myapp_appid;
+SELECT * FROM (SELECT COUNT(myapp_appid) COUNT,myapp_appid FROM huohua_addonapp GROUP BY myapp_appid) a WHERE a.count>1;
+
+SELECT * FROM huohua_addonapp WHERE myapp_appid=10160232;-- 10099632 48462 50801
+SELECT * FROM huohua_addonapp WHERE myapp_appid=10099632 OR myapp_appid=48462 OR myapp_appid=50801;
+-- 10160223 116278 10163768 656096 10103101 10160232
+SELECT * FROM huohua_addonapp;
+SELECT * FROM huohua_addonapp ORDER BY aid DESC;
+SELECT cid,cname,myapp_cid,myapp_cname FROM huohua_appcategory;
+SELECT COUNT(1) FROM huohua_addonapp;-- 1315

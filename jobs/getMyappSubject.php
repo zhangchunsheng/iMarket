@@ -15,6 +15,7 @@
 		}
 	}
 	
+	$topTypeId = 4;
 	$typeid = 42;
 	$channelid = -16;
 	
@@ -101,11 +102,11 @@
 		global $subject,$typeid,$channelid;
 		$keys = $subject -> getKeys($json);
 		$values = $subject -> getValues($json);
-		$insertKeys = "click,title,senddate,flag,litpic,userip,subjectName,picture,description,
-					date,pubDate,goodNum,badNum";
+		$insertKeys = "click,title,senddate,flag,litpic,userip,writer,sortrank,source,publishdate,dutyadmin,
+					subjectName,picture,description,date,pubDate,goodNum,badNum";
 		$pubDate = strtotime($json -> time);
-		$insertValues = "'".$json->viewcnt."','".$json->topicname."','".time()."','p','".$json->picurl."','0.0.0.0','".$json->topicname."','".$json -> picurl."','".$json -> description."',
-					'".time()."','".$pubDate."','".$json -> agree."','".$json -> disagree."'";
+		$insertValues = "'".$json->viewcnt."','".$json->topicname."','".time()."','p','".$json->picurl."','0.0.0.0','admin','$pubDate','myapp','$pubDate','1',
+					'".$json->topicname."','".$json -> picurl."','".$json -> description."','".time()."','".$pubDate."','".$json -> agree."','".$json -> disagree."'";
 		$sql = "INSERT INTO huohua_addonsubject(aid,typeid,channel,arcrank,mid,$insertKeys,$keys) VALUES ('$arcID','$typeid','$channelid',0,1,$insertValues,$values)";
 		return $sql;
 	}
@@ -114,7 +115,8 @@
 		global $subject,$typeid;
 		$updateMyappSQL = $subject -> getUpdateMyappSQL($json);
 		$pubDate = strtotime($json -> time);
-		$updateSQL = "typeid='$typeid',click='".$json->viewcnt."',title='".$json->topicname."',litpic='".$json->picurl."',userip='0.0.0.0',subjectName='".$json->topicname."',picture='".$json->picurl."',description='".$json->description."',
+		$updateSQL = "typeid='$typeid',click='".$json->viewcnt."',title='".$json->topicname."',litpic='".$json->picurl."',userip='0.0.0.0',writer='admin',sortrank='$pubDate',source='myapp',publishdate='$pubDate',dutyadmin='1',
+					subjectName='".$json->topicname."',picture='".$json->picurl."',description='".$json->description."',
 					pubDate='".$pubDate."',goodNum='".$json->agree."',badNum='".$json->disagree."'";
 		$sql = "update huohua_addonsubject set $updateSQL,$updateMyappSQL where myapp_topicid=" . $json -> topicid;
 		return $sql;

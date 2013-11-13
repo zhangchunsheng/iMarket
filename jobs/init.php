@@ -11,6 +11,9 @@
 	$mysqlUtil -> charset = "utf8";
 	$mysqlUtil -> connect("localhost:3306", "root", "root", "huohuamarket");
 	
+	include("entities/Entity.php");
+	include("entities/App.php");
+	
 	define('DEDEINC', str_replace("\\", '/', dirname(dirname(__FILE__))) . "\include");
 	define('DEDEROOT', str_replace("\\", '/', substr(DEDEINC, 0, -8)));
 	define('DEDEDATA', DEDEROOT . '/data');
