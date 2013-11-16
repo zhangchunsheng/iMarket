@@ -1,5 +1,6 @@
 <?php
 	//error_reporting(E_ALL || ~E_NOTICE);
+	error_reporting(E_ALL || ~E_NOTICE);//E_ALL E_ERROR E_WARNING E_NOTICE
 	define("DEBUG", true);
 	define("STARTTIME", microtime());
 	$_SGLOBAL = array();
@@ -13,6 +14,7 @@
 	
 	include("entities/Entity.php");
 	include("entities/App.php");
+	include("entities/AppDetail.php");
 	
 	define('DEDEINC', str_replace("\\", '/', dirname(dirname(__FILE__))) . "\include");
 	define('DEDEROOT', str_replace("\\", '/', substr(DEDEINC, 0, -8)));

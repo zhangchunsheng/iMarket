@@ -42,3 +42,14 @@ http://android.myapp.com/android/share_web?appid=10099632&sharetype=0&reason=&r=
 专题详情
 http://android.myapp.com/android/qrytopicdetail_web?pageNo=1&pageSize=50&topicid=20241&r=0.2269687505904585
 http://android.myapp.com/android/qrytopiclist_web?pageNo=1&pageSize=5&type=1&r=0.9457609034143388
+
+应用详情
+http://android.myapp.com/android/appdetail.jsp?appid=50801&icfa=15144102050801001000&lmid=2017
+
+http://android.myapp.com/qrcode/?url=http%3A%2F%2Fandroid.myapp.com%2Fandroid%2Fdown.jsp%3Ftype%3D2%26appid%3D50801%26pkgid%3D16629897%26icfa%3D15144102050801001000%26g_f%3D990976
+http://android.myapp.com/android/down.jsp?type=2&appid=50801&pkgid=16629897&icfa=15144102050801001000&g_f=990976
+http://android.myapp.com/android/down.jsp?appid=50801&pkgid=16629897&icfa=15144102050801001000
+&lmid=2017&g_f=0&actiondetail=0&downtype=1&transactionid=&topicid=-1&softname=
+
+http://android.myapp.com/android/down.jsp?appid=50801&pkgid=16629897&icfa=15144102050801001000&lmid=2017&g_f=0&actiondetail=0&downtype=1&transactionid=&topicid=-1&softname=
+appid pkgid

@@ -49,6 +49,16 @@
 			return $appurl;
 		}
 		
+		public function getApps() {
+			global $mysqlUtil;
+			$query = $mysqlUtil -> query("SELECT aid,myapp_appid,myapp_pkgid FROM huohua_addonapp");
+			$apps = array();
+			while($row = $mysqlUtil -> fetch_array($query)) {
+				$apps[] = $row;
+			}
+			return $apps;
+		}
+		
 		public function addApps() {
 			global $mysqlUtil,$pageInfo,$topTypeId,$channelid;
 			$this -> getPageCount();
@@ -83,6 +93,31 @@
 						beautiful_echo($sql);
 						$mysqlUtil -> query($sql);
 					}
+					addAppLog($type, $method, $sql);
+				}
+				addGrapLog($type, $pageInfo -> pageNo, $pageInfo -> pageCount, $pageInfo -> pageSize, $appurl);
+				$pageInfo -> pageNo++;
+			}
+		}
+		
+		public function updateTencentApp() {
+			global $mysqlUtil,$pageInfo,$topTypeId,$channelid;
+			$this -> getPageCount();
+		
+			$type = "app";
+			for($i = 0 ; $i < $pageInfo -> pageCount ; $i++) {
+				$appurl = $this -> getUrl();
+				$content = file_get_contents($appurl);
+				$content = json_decode($content);
+				
+				$sql = "";
+				$method = "";
+				$apps = $content -> info -> value;
+				foreach($apps as $key => $value) {
+					$sql = "update huohua_addonapp set isTencent=1 WHERE myapp_appid=" . $value -> appid;
+					
+					$method = "update";
+					$mysqlUtil -> query($sql);
 					addAppLog($type, $method, $sql);
 				}
 				addGrapLog($type, $pageInfo -> pageNo, $pageInfo -> pageCount, $pageInfo -> pageSize, $appurl);

@@ -25,4 +25,10 @@
 		$sql = "INSERT INTO app_log(`type`,method,`sql`,`date`) VALUES ('$type','$method','$sqlInfo','$date')";
 		$mysqlUtil -> query($sql);
 	}
+	
+	function logFile($info) {
+		global $file;
+		$date = date("Y-m-d H24:i:s", time());
+		fwrite($file, $date . " " . $info . "\n");
+	}
 ?>

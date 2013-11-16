@@ -572,3 +572,39 @@ SELECT * FROM huohua_addonapp;
 SELECT * FROM huohua_addonapp ORDER BY aid DESC;
 SELECT cid,cname,myapp_cid,myapp_cname FROM huohua_appcategory;
 SELECT COUNT(1) FROM huohua_addonapp;-- 1315
+
+-- 2013-11-13
+SELECT * FROM huohua_addonapp;
+SELECT * FROM huohua_arctiny;
+
+UPDATE huohua_arctiny SET typeid=(SELECT typeid FROM huohua_addonapp WHERE huohua_arctiny.id=huohua_addonapp.aid) WHERE channel=-17;
+UPDATE huohua_arctiny SET typeid=42 WHERE channel=-16;
+UPDATE huohua_arctiny SET typeid=44 WHERE channel=-3;
+UPDATE huohua_arctiny SET typeid=47 WHERE channel=-2;
+SELECT * FROM huohua_arctiny WHERE typeid=0;
+SELECT * FROM huohua_addonapp WHERE aid=360;
+
+SELECT * FROM huohua_appcategory;
+SELECT * FROM huohua_addonapp WHERE isTencent=1;
+SELECT * FROM huohua_addonsubject;
+
+SELECT myapp_appid FROM huohua_addonapp;
+SHOW CREATE TABLE huohua_addonapp;
+/**
+ * downloadurl
+ */
+ALTER TABLE huohua_addonapp ADD COLUMN `myapp_qrCode` VARCHAR(100) NOT NULL DEFAULT '' COMMENT 'myapp_qrCode';
+ALTER TABLE huohua_addonapp ADD COLUMN `features` VARCHAR(100) NOT NULL DEFAULT '' COMMENT '新版特性';
+ALTER TABLE huohua_addonapp CHANGE COLUMN downloadLink `downloadurl` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'downloadurl';
+ALTER TABLE huohua_addonapp CHANGE COLUMN `features` `features` TEXT COMMENT '新版特性';
+ALTER TABLE huohua_addonapp CHANGE COLUMN `qrCode` `qrCode` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'qrCode';
+ALTER TABLE huohua_addonapp CHANGE COLUMN `myapp_qrCode` `myapp_qrCode` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'myapp_qrCode';
+SELECT * FROM huohua_addonapp;
+SELECT * FROM huohua_channeltype;
+
+SELECT aid,myapp_appid FROM huohua_addonapp;-- qrCode downloadurl features screenshot
+SELECT aid,myapp_appid,myapp_pkgid,myapp_icfa FROM huohua_addonapp;
+
+-- 2013-11-16
+SELECT * FROM huohua_addonapp;
+SHOW CREATE TABLE huohua_addonapp;
