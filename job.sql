@@ -608,3 +608,8 @@ SELECT aid,myapp_appid,myapp_pkgid,myapp_icfa FROM huohua_addonapp;
 -- 2013-11-16
 SELECT * FROM huohua_addonapp;
 SHOW CREATE TABLE huohua_addonapp;
+SELECT features,screenShot,myapp_features,myapp_screenShot,myapp_downloadurl FROM huohua_addonapp;
+SELECT COUNT(1) FROM huohua_addonapp WHERE features='';
+SELECT COUNT(1) FROM huohua_addonapp;
+SELECT * FROM huohua_addonapp WHERE features='';
+SELECT * FROM huohua_addonapp WHERE myapp_screenshot='';
