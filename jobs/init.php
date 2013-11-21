@@ -5,6 +5,7 @@
 	define("STARTTIME", microtime());
 	$_SGLOBAL = array();
 	include("MysqlUtil.class.php");
+	require_once('pinyin_table.php');
 	include("functions.php");
 	include("../libs/simplehtmldom_1_5/simple_html_dom.php");
 	

@@ -51,7 +51,17 @@
 		
 		public function getApps() {
 			global $mysqlUtil;
-			$query = $mysqlUtil -> query("SELECT aid,myapp_appid,myapp_pkgid FROM huohua_addonapp");
+			$query = $mysqlUtil -> query("SELECT aid,pkgid,appName,myapp_appid,myapp_pkgid,myapp_icon,myapp_screenShot,myapp_downloadurl FROM huohua_addonapp");
+			$apps = array();
+			while($row = $mysqlUtil -> fetch_array($query)) {
+				$apps[] = $row;
+			}
+			return $apps;
+		}
+		
+		public function getNewApps() {
+			global $mysqlUtil;
+			$query = $mysqlUtil -> query("SELECT aid,pkgid,pinyinOfAppName,myapp_appid,myapp_pkgid,myapp_icon,myapp_screenShot,myapp_downloadurl FROM huohua_addonapp where updateBz=0");
 			$apps = array();
 			while($row = $mysqlUtil -> fetch_array($query)) {
 				$apps[] = $row;
@@ -186,12 +196,12 @@
 			$keys = $this -> getKeys($json);
 			$values = $this -> getValues($json);
 			$insertKeys = "click,title,senddate,flag,litpic,userip,topTypeId,writer,sortrank,source,publishdate,dutyadmin,cid,cname,
-						icon,appName,filetype,starLevel,count,downcount,sizeInfo,
+						pkgid,icon,appName,filetype,starLevel,count,downcount,sizeInfo,
 						priceInfo,languageInfo,version,pubDate,needOSInfo,developerInfo,
 						isTencentPMAuth,isSafeMAuth,introduction";
 			$pubDate = strtotime($json -> publishtime);
 			$insertValues = "'".$json->count."','".$json->softname."','".time()."','p','".$json->icon."','0.0.0.0','$topTypeId','admin','$pubDate','myapp','$pubDate','1','$typeid','$cname',
-						'".$json->icon."','".$json -> softname."','.apk','".$json -> score."','".$json -> count."','".$json -> downcount."','".$json -> filesize."',
+						'".$json -> pkgid."','".$json->icon."','".$json -> softname."','.apk','".$json -> score."','".$json -> count."','".$json -> downcount."','".$json -> filesize."',
 						'".$json -> fee."','".$json -> lang."','".$json -> versionname."','".$pubDate."','".$json -> sdkver."','".$json -> cpname."',
 						'1','1','".$json -> softdesc."'";
 			$sql = "INSERT INTO huohua_addonapp(aid,typeid,channel,arcrank,mid,$insertKeys,$keys) VALUES ('$arcID','$typeid','$channelid',0,1,$insertValues,$values)";
@@ -203,7 +213,7 @@
 			$updateMyappSQL = $this -> getUpdateMyappSQL($json);
 			$pubDate = strtotime($json -> publishtime);
 			$updateSQL = "typeid='$typeid',click='".$json->count."',title='".$json->softname."',litpic='".$json->icon."',userip='0.0.0.0',topTypeId='$topTypeId',writer='admin',sortrank='$pubDate',source='myapp',publishdate='$pubDate',dutyadmin='1',cid='$typeid',cname='$cname',
-						icon='".$json->icon."',appName='".$json->softname."',starLevel='".$json->score."',count='".$json->count."',downcount='".$json->downcount."',sizeInfo='".$json->filesize."',
+						pkgid='".$json -> pkgid."',icon='".$json->icon."',appName='".$json->softname."',starLevel='".$json->score."',count='".$json->count."',downcount='".$json->downcount."',sizeInfo='".$json->filesize."',
 						priceInfo='".$json->fee."',languageInfo='".$json->lang."',version='".$json->versionname."',pubDate='$pubDate',needOSInfo='".$json->sdkver."',developerInfo='".$json->cpname."',
 						isTencentPMAuth='1',isSafeMAuth='1',introduction='".$json->softdesc."'";
 			$sql = "update huohua_addonapp set $updateSQL,$updateMyappSQL where myapp_appid=" . $json -> appid;

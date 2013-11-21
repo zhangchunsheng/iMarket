@@ -613,3 +613,33 @@ SELECT COUNT(1) FROM huohua_addonapp WHERE features='';
 SELECT COUNT(1) FROM huohua_addonapp;
 SELECT * FROM huohua_addonapp WHERE features='';
 SELECT * FROM huohua_addonapp WHERE myapp_screenshot='';
+
+-- 2013-11-19
+SELECT * FROM huohua_addonapp WHERE myapp_pkgid='';
+ALTER TABLE huohua_addonapp ADD COLUMN `pkgid` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'pkgid';
+UPDATE huohua_addonapp SET pkgid=myapp_pkgid;
+SELECT * FROM huohua_addonapp;
+SHOW CREATE TABLE huohua_addonapp;
+ALTER TABLE huohua_addonapp CHANGE COLUMN `myapp_icon` `myapp_icon` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'myapp_icon';
+ALTER TABLE huohua_addonapp CHANGE COLUMN `icon` `icon` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'icon';
+
+SELECT aid,pkgid,myapp_appid,myapp_pkgid,myapp_icon,myapp_screenShot,myapp_downloadurl FROM huohua_addonapp;
+ALTER TABLE huohua_addonapp ADD COLUMN `updateBz` INT(1) NOT NULL DEFAULT 0 COMMENT '0 - 未更新 1 - 已更新';
+UPDATE huohua_addonapp SET myapp_icon=icon;
+
+ALTER TABLE huohua_addonapp ADD COLUMN `pinyinOfAppName` VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'pinyinOfAppName';
+
+-- 2013-11-20
+SELECT * FROM huohua_addonapp;
+SHOW CREATE TABLE huohua_addonapp;
+SELECT aid,pkgid,myapp_appid,myapp_pkgid,myapp_icon,myapp_screenShot,myapp_downloadurl FROM huohua_addonapp;
+SELECT icon,screenShot,downloadurl FROM huohua_addonapp;
+SELECT icon,screenShot,downloadurl FROM huohua_addonapp WHERE updateBz=1;
+SELECT * FROM huohua_addonapp WHERE pinyinOfAppName='';
+SELECT COUNT(pinyinOfAppName),pinyinOfAppName FROM huohua_addonapp GROUP BY pinyinOfAppName;
+
+-- 2013-11-21
+SELECT * FROM huohua_addonapp WHERE updateBz=0;
+SELECT COUNT(1) FROM huohua_addonapp WHERE updateBz=1;-- 185
+SELECT sizeInfo FROM huohua_addonapp WHERE updateBz=0 ORDER BY sizeInfo DESC;
+SELECT sizeInfo FROM huohua_addonapp WHERE updateBz=0;

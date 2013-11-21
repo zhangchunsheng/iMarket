@@ -28,6 +28,10 @@ if "%1"=="test" (
 	php getUpdateTencentApp.php
 ) else if "%1"=="getMyappAppDetail" (
 	php getMyappAppDetail.php
+) else if "%1"=="updateApp" (
+	php updateApp.php
+) else if "%1"== "uploadDataToBae" (
+	php uploadDataToBae.php
 ) else if "%1"=="help" (
 	echo hh command:
 	echo hh test
@@ -46,6 +50,8 @@ if "%1"=="test" (
 	echo     getMyappCategoryApp
 	echo     getUpdateTencentApp
 	echo     getMyappAppDetail
+	echo     updateApp
+	echo     uploadDataToBae
 ) else (
 	echo wrong command
 )

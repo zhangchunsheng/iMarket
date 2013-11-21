@@ -53,3 +53,5 @@ http://android.myapp.com/android/down.jsp?appid=50801&pkgid=16629897&icfa=151441
 
 http://android.myapp.com/android/down.jsp?appid=50801&pkgid=16629897&icfa=15144102050801001000&lmid=2017&g_f=0&actiondetail=0&downtype=1&transactionid=&topicid=-1&softname=
 appid pkgid
+
+bucket÷–¥Ê¥¢πÊ‘Ú appid/pkgid/
