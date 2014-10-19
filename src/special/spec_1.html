@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="developer:ZhangChunsheng, team:luomor, date:2013-11-02">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>_火花市场</title>
+					<script src="http://jsqmt.qq.com/cdn_djl.js" type="text/javascript" async=""></script>
+		<script type="text/javascript">
+			var _head_start = new Date();
+			var g_returl = "http://localhost/github/iMarket/iMarket/index.php";
+			var gf_param = "";
+			var g_action = "/github/iMarket/iMarket/api/";
+			//var g_action = "http://android.myapp.com/android/";
+			//http://android.myapp.com/android/qrytopicbycms_web?r=0.018095792969688773
+			//http://android.myapp.com/android/qrynesseary_web?type=0&r=0.661279286025092
+			var g_respath = "http://localhost/github/iMarket/iMarket/templets/huohua";
+			var g_hostpath = "http://localhost";
+			var g_logined = false;
+			var g_qqno = 0;
+			var g_nickname = "";
+		</script>
+		<script>
+		  /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-45384518-1', 'studyandthinkhtml5.com');
+		  ga('send', 'pageview');*/
+		</script>
+
+		<base href="http://localhost/github/iMarket/iMarket/index.php">
+		<link rel="canonical" href="http://localhost/github/iMarket/iMarket/index.php">
+		<link rel="shortcut icon" type="image/ico" href="/github/iMarket/iMarket/templets/huohua/images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/github/iMarket/iMarket/templets/huohua/style/myapp/global.min.css?ver=2.3.5">
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" href="/github/iMarket/iMarket/templets/huohua/style/myapp/fuck-ie.css" />
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/html5.js"></script>
+		<![endif]-->
+		<noscript>
+			&lt;style type="text/css"&gt;
+				.wraper {display:none !important;}
+			&lt;/style&gt;
+			&lt;div class="ie-noscript-warning"&gt;
+			由于您的浏览器禁用了javascript脚本，网页无法正常浏览!
+			&lt;/div&gt;
+		</noscript>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/jquery-1.4.2.min.js" async=""></script>
+		<!--<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/storescrolload.min.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/manifest.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/base.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/index.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/tcss.ping.js" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="http://img1.sj.qq.com/api/scripts/sjqqapi.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://img1.sj.qq.com/api/styles/sjqqapi.css?ver=2.3.5">
+		<style type="text/css" id="in-inline-css">
+			@font-face {
+				font-family: 'myfont';
+				src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot');
+				src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot?#iefix') format('embedded-opentype'),
+				url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.woff') format('woff'),
+				url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.ttf') format('truetype'),
+				url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.svg#Untitled1Medium')
+				format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		</style>-->
+		<script src="http://jqmt.qq.com/cdn_dianjiliu.js?a=0.33706603525206447"></script>
+	</head>
+	<body>
+		<div class="wraper">
+			<header class="user-information">
+				<a href="http://t.qq.com/huohuamarke" target="_blank">联系客服</a>&nbsp;|&nbsp;
+				<a class="mblog" href="http://t.qq.com/huohuamarket" target="_blank"><s></s>关注我们</a>
+			</header>
+			<div id="login_wrap" style="position:absolute; display:none; width:552px; height:380px; padding:0; margin:0; z-index:10000;" align="center">
+				<iframe id="login_frame" name="login_frame" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
+			</div>
+			<div class="ie6-header"></div>
+			<div class="main" role="main">
+				<div class="ie-main-header"></div>
+				<header role="banner">
+					<h1 class="logo"><a href="/android/index.jsp"><img src="/github/iMarket/iMarket/templets/huohua/images/logo.png" width="210" height="60" alt="火花市场网"></a></h1>
+
+					<!--<div class="login logout">
+						<a class="user-avatar" href="javascript:openLogin();">
+							<img src="/github/iMarket/iMarket/templets/huohua/images/myapp/default-avatar.jpg" width="50" height="50" alt="">
+							<div class="shadow"></div>
+						</a>
+						<div class="user-name"><a href="javascript:openLogin();">请登录</a></div>
+						<div class="target"></div>
+					</div>-->
+
+					<nav role="navigation">
+						<h1 class="hide-clip">网站导航</h1>
+						<ul class="navigation">
+							<li>
+								<a href="/github/iMarket/iMarket/" data-nav="index" hidefocus="">
+									<span>首页</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href='/github/iMarket/iMarket/android/app/'  rel='dropmenu2' data-nav="app">
+									<span>应用</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href='/github/iMarket/iMarket/android/game/'  rel='dropmenu3' data-nav="game">
+									<span>游戏</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href='/github/iMarket/iMarket/android/subject/'  rel='dropmenu4' data-nav="subject">
+									<span>专题</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href='http://localhost/github/luomor/wordpress/wordpress/'  data-nav="">
+									<span>博客</span>
+								</a>
+							</li>
+							
+						</ul>
+					</nav>
+					<div class="search" role="form">
+						<input id="keyword" class="input-box" type="search" title="试试搜索应用名称或功能" placeholder="试试搜索应用名称或功能" role="search" onkeydown="return UI.onSearchKeyDown(event);" x-webkit-speech="">
+						<input type="button" value="搜索" class="submit-button" title="搜索" onclick="UI.searchapp();">
+					</div>
+				</header>
+				<script type="text/javascript">
+					var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-45384518-1']);
+					_gaq.push(['_trackPageview']);
+				</script>
+				<article class="mod-box mod-box-padding subjectpage">
+					<div class="ie-model-header-left w910">
+						<div class="ie-model-header-right"></div>
+					</div>
+					<ol class="bread-nav">
+						<li><a href="index.jsp">首页</a><span>&gt;</span></li>
+						<li class="bread-now">专题</li>
+					</ol>
+					<article class="latest-subject">
+						<ul id="newtopic_list" class="subject-list">
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20240&amp;lmid=2039" title="最新奇应用-第四期">			<img class="img_scrolloading_2039" data-url="http://appimg1.3g.qq.com/msoft/android/xinqisi220.110.png" width="200" height="100" alt="最新奇应用-第四期" src="http://appimg1.3g.qq.com/msoft/android/xinqisi220.110.png" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20240&amp;lmid=2039">最新奇应用-第四期</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>50447&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>45</div>
+									<p>最新奇应用又更新啦！猎奇的小伙伴们赶紧来选货！</p>
+								</div>
+							</li>
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20239&amp;lmid=2039" title="万圣节来袭">			<img class="img_scrolloading_2039" data-url="http://appimg1.3g.qq.com/msoft/android/wansheng220-110.png" width="200" height="100" alt="万圣节来袭" src="http://appimg1.3g.qq.com/msoft/android/wansheng220-110.png" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20239&amp;lmid=2039">万圣节来袭</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>91908&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>26</div>
+									<p>百鬼出没万圣来袭，小伙伴们坐稳了，这一期相当恐怖哟！~PS：附赠恶作剧应用几枚，请...</p>
+								</div>
+							</li>
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20238&amp;lmid=2039" title="最文艺应用">			<img class="img_scrolloading_2039" data-url="http://appimg1.3g.qq.com/msoft/android/wenyi220.110.png" width="200" height="100" alt="最文艺应用" src="http://appimg1.3g.qq.com/msoft/android/wenyi220.110.png" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20238&amp;lmid=2039">最文艺应用</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>262951&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>100</div>
+									<p>无视卖萌嘟嘴剪刀手，拒绝土鳖矫情无下限，我就是要时尚文艺小清新！</p>
+								</div>
+							</li>
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20237&amp;lmid=2039" title="发掘新奇应用-第三期">			<img class="img_scrolloading_2039" data-url="http://appimg1.3g.qq.com/msoft/android/xinqi220.110.png" width="200" height="100" alt="发掘新奇应用-第三期" src="http://appimg1.3g.qq.com/msoft/android/xinqi220.110.png" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20237&amp;lmid=2039">发掘新奇应用-第三期</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>280697&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>160</div>
+									<p>发掘新奇应用持续更新中~这一期里面有好几个奇葩游戏等待小伙伴们发掘！</p>
+								</div>
+							</li>
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20236&amp;lmid=2039" title="消磨时间小游戏">			<img class="img_scrolloading_2039" data-url="http://appimg1.3g.qq.com/msoft/android/xiaomogame220.110.png" width="200" height="100" alt="消磨时间小游戏" src="http://appimg1.3g.qq.com/msoft/android/xiaomogame220.110.png" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20236&amp;lmid=2039">消磨时间小游戏</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>309597&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>477</div>
+									<p>本期推出能和你一起度过休闲时间、等人等饭时间、蹲马桶时间的有趣小伙伴们。</p>
+								</div>
+							</li>
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20235&amp;lmid=2039" title="他们的晚年，你不能缺席 - 重阳">			<img class="img_scrolloading_2039" data-url="http://appimg1.3g.qq.com/msoft/android/cyj220.110.png" width="200" height="100" alt="他们的晚年，你不能缺席 - 重阳" src="http://appimg1.3g.qq.com/msoft/android/cyj220.110.png" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20235&amp;lmid=2039">他们的晚年，你不能缺席 - 重阳</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>68366&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>147</div>
+									<p>父母、长辈出席我们的第一次演出、毕业典礼、婚礼，我们在慢慢长大，他们在慢慢变老。...</p>
+								</div>
+							</li>
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20234&amp;lmid=2039" title="秋の物语-萌物当道">			<img class="img_scrolloading_2039" data-url="http://3gimg.qq.com/appcenter/icon/zhuanti/9.27/mengwu_220_110.png" width="200" height="100" alt="秋の物语-萌物当道" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20234&amp;lmid=2039">秋の物语-萌物当道</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>187743&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>152</div>
+									<p>秋天到了，一种莫名的淡淡的忧伤涌上心头。萌物当道，治愈秋伤！本期小编将知道的一帮...</p>
+								</div>
+							</li>
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20233&amp;lmid=2039" title="国庆人多恐惧症">			<img class="img_scrolloading_2039" data-url="http://appimg1.3g.qq.com/msoft/android/renduo220.110.png" width="200" height="100" alt="国庆人多恐惧症" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20233&amp;lmid=2039">国庆人多恐惧症</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>215039&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>103</div>
+									<p>人人人人人人人人人人人…
+										国庆不出门，出门踩扁人~想到景点到处是人排队拥挤就不想出...
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20232&amp;lmid=2039" title="带上我们去旅行">			<img class="img_scrolloading_2039" data-url="http://appimg1.3g.qq.com/msoft/android/lvyou220.110.png" width="200" height="100" alt="带上我们去旅行" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20232&amp;lmid=2039">带上我们去旅行</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>285917&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>316</div>
+									<p>跟国庆大假相比，中秋小假只能算是前菜。经历本周“混乱上班模式”后，将进入长达7天...</p>
+								</div>
+							</li>
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20231&amp;lmid=2039" title="月饼大乱斗">			<img class="img_scrolloading_2039" data-url="http://appimg1.3g.qq.com/msoft/android/yuebing220.110.png" width="200" height="100" alt="月饼大乱斗" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20231&amp;lmid=2039">月饼大乱斗</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>221069&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>181</div>
+									<p>中秋临近，月饼馅儿大乱斗已经开始~五仁馅儿成为今年最多被喊“滚出月饼界”的，也有...</p>
+								</div>
+							</li>
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20229&amp;lmid=2039" title="优质电子杂志-免费、环保、零重量">			<img class="img_scrolloading_2039" data-url="http://appimg1.3g.qq.com/msoft/android/zazhi220.110.jpg" width="200" height="100" alt="优质电子杂志-免费、环保、零重量" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20229&amp;lmid=2039">优质电子杂志-免费、环保、零重量</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>292506&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>485</div>
+									<p>小编曾经是各类杂志的忠实粉丝，从5元一本的画报到20元一本的vogue，可是翻看一次后就...</p>
+								</div>
+							</li>
+							<li>
+								<div class="img">		<a href="topicdetail.jsp?topicid=20228&amp;lmid=2039" title="感恩生命里的每位老师">			<img class="img_scrolloading_2039" data-url="http://appimg1.3g.qq.com/msoft/android/jiaoshijie220.110.png" width="200" height="100" alt="感恩生命里的每位老师" data-pinit="registered">		</a>	</div>
+								<div class="right">
+									<div class="sub-header"><a class="fs14" href="topicdetail.jsp?topicid=20228&amp;lmid=2039">感恩生命里的每位老师</a></div>
+									<div class="msg"><span class="pad20" title="浏览"></span>146064&nbsp;&nbsp;&nbsp;&nbsp;<font class="grey" title="顶">u</font>409</div>
+									<p>教师是燃烧自己的生命照亮别人。祝福那些曾经教会我们做人、做事的老师们！另外，也有...</p>
+								</div>
+							</li>
+						</ul>
+					</article>
+					<div class="pagenav"><a class="nowpage" href="javascript:void(0)" onclick="getAllTopic(1);"><span>1</span></a><a href="javascript:void(0)" onclick="getAllTopic(2);"><span>2</span></a><a href="javascript:void(0)" onclick="getAllTopic(3);"><span>3</span></a><a href="javascript:void(0)" onclick="getAllTopic(4);"><span>4</span></a><a href="javascript:void(0)" onclick="getAllTopic(5);"><span>5</span></a><a href="javascript:void(0)" onclick="getAllTopic(6);"><span>6</span></a><a href="javascript:void(0)" onclick="getAllTopic(7);"><span>…</span></a><a href="javascript:void(0)" onclick="getAllTopic(2, undefined);"><span class="hack">下一页</span></a></div>
+					<div class="ie-model-footer-left w910">
+						<div class="ie-model-footer-right"></div>
+					</div>
+				</article>
+				<div class="clear"></div>
+				<div class="ie-main-footer"></div>
+			</div>
+			<script type="text/javascript" src="http://3gimg.qq.com/web/webapp_webmarket/android/js/in-min.js" autoload="true" core="http://3gimg.qq.com/web/webapp_webmarket/android/js/jquery-1.4.2.min.js"></script>
+			<script type="text/javascript">
+				In.add("storescrolload",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/storescrolload.min.js?ver=2.3.5",type:"js",charset:"utf-8"});
+				In.add("manifest",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/manifest.js?ver=2.3.5",type:"js",charset:"utf-8"});
+				In.add("base",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/base.js?ver=2.3.5",type:"js",charset:"utf-8"});
+				In.add("huohua",{path:"/github/iMarket/iMarket/templets/huohua/js/huohua.js?ver=2.3.5",type:"js",charset:"utf-8"});
+				In.add("topic",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/topic.js?ver=2.3.5",type:"js",charset:"utf-8",rely:["storescrolload","manifest","base","huohua"]});
+				In("topic",function(){
+				    //最新专题
+				    init();
+				    g_model = true;
+				});
+			</script>
+						<div class="gototop" style="display: none; bottom: -3px;">
+				<a href="javascript:gototop();">返回顶部</a>
+			</div>
+			<script type="text/javascript">
+				In.ready(function(){
+					var srule = [];
+					srule.push("@font-face {");
+					srule.push("    font-family: 'myfont';");
+					srule.push("	src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot');");
+					srule.push("	src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot?#iefix') format('embedded-opentype'),")
+					srule.push("	url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.woff') format('woff'),");
+					srule.push("	url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.ttf') format('truetype'),");
+					srule.push("	url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.svg#Untitled1Medium') format('svg');");
+					srule.push("	font-weight: normal;");
+					srule.push("	font-style: normal;");
+					srule.push("}");
+					//var browserName = navigator.userAgent;
+					//if(!(/Windows NT 5.1|Windows Xp|Windows NT 5.0|Windows 2000/i.test(browserName) && /webkit/i.test(browserName) && !(/chrome/i.test(browserName) && /webkit/i.test(browserName) && /mozilla/i.test(browserName)))){
+						In.css(srule.join(""));
+					//}
+				});
+				function pingHotag(str){
+				    if(typeof(pgvSendClick) == "function"){
+				        pgvSendClick({hottag:str,virtualDomain:"android.app.qq.com"});
+				    }
+				}
+				In.add("pingjs",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/tcss.ping.js",type:"js",charset:"utf-8"});
+				var G_STAT = window.setInterval(function(){
+				    if(typeof(g_model)!="undefined" && g_model){
+				        window.clearInterval(G_STAT);
+				        In("pingjs",function(){
+				            if(typeof(pgvMain) == "function"){
+				                pgvMain("", {virtualDomain:"android.app.qq.com"});
+				                pageSpeedTrack();
+				            }
+				        });
+				        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				    }
+				},100);
+				var _foot_start = new Date();
+			</script>
+			<footer class="footer" role="contentinfo">
+				<div class="mqparty-footer">
+					<script charset="utf-8" src="/github/iMarket/iMarket/templets/huohua/js/myapp/mqq_footer_normal.js" type="text/javascript"></script>
+				</div>
+			</footer>
+			<script type="text/javascript">
+				var _body_end = new Date();
+				function pageSpeedTrack(){
+				    if(typeof(_head_start) == typeof(_body_end)){
+				        var loading_time = _body_end - _head_start;
+				        if(loading_time>0 && loading_time<60*1000){
+				            var speed = loading_time > 3*1000 ? "slow" : "quick";
+				            var page_path = window.location.pathname.replace(/(\.jsp)$/i, "");
+				            _gaq.push(["_trackEvent", "pagespeed", speed, page_path, loading_time]);
+				            pingHotag("pagespeed."+speed+"."+page_path+"."+window.navigator.appName.replace(/^\s*(.*?)\s.*$/, "$1"));
+				        }
+				    }
+				}
+			</script>
+		</div>
+	</body>
+</html>

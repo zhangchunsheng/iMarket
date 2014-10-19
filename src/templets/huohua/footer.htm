@@ -1,0 +1,65 @@
+			<div class="gototop" style="display: none; bottom: -3px;">
+				<a href="javascript:gototop();">返回顶部</a>
+			</div>
+			<script type="text/javascript">
+				In.ready(function() {
+					var srule = [];
+					srule.push("@font-face {");
+					srule.push("    font-family: 'myfont';");
+					srule.push("	src: url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.eot');");
+					srule.push("	src: url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.eot?#iefix') format('embedded-opentype'),")
+					srule.push("	url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.woff') format('woff'),");
+					srule.push("	url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.ttf') format('truetype'),");
+					srule.push("	url('{dede:global.cfg_templets_skin/}/fonts/myapp/myfont-webfont.svg#Untitled1Medium') format('svg');");
+					srule.push("	font-weight: normal;");
+					srule.push("	font-style: normal;");
+					srule.push("}");
+					//var browserName = navigator.userAgent;
+					//if(!(/Windows NT 5.1|Windows Xp|Windows NT 5.0|Windows 2000/i.test(browserName) && /webkit/i.test(browserName) && !(/chrome/i.test(browserName) && /webkit/i.test(browserName) && /mozilla/i.test(browserName)))){
+						In.css(srule.join(""));
+					//}
+				});
+				function pingHotag(str) {
+				    if(typeof(pgvSendClick) == "function") {
+				        pgvSendClick({hottag:str,virtualDomain:"android.app.qq.com"});
+				    }
+				}
+				In.add("pingjs", {path:"{dede:global.cfg_templets_skin/}/js/myapp/tcss.ping.js", type:"js", charset:"utf-8"});
+				var G_STAT = window.setInterval(function() {
+				    if(typeof(g_model)!="undefined" && g_model) {
+				        window.clearInterval(G_STAT);
+				        In("pingjs",function() {
+				            if(typeof(pgvMain) == "function") {
+				                pgvMain("", {virtualDomain:"android.app.qq.com"});
+				                pageSpeedTrack();
+				            }
+				        });
+				        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				    }
+				}, 100);
+				var _foot_start = new Date();
+			</script>
+			<footer class="footer" role="contentinfo">
+				<div class="mqparty-footer">
+					<script charset="utf-8" src="{dede:global.cfg_templets_skin/}/js/myapp/mqq_footer_normal.js" type="text/javascript"></script>
+				</div>
+			</footer>
+			<script type="text/javascript">
+				var _body_end = new Date();
+				function pageSpeedTrack(){
+				    if(typeof(_head_start) == typeof(_body_end)) {
+				        var loading_time = _body_end - _head_start;
+				        if(loading_time > 0 && loading_time < 60 * 1000) {
+				            var speed = loading_time > 3 * 1000 ? "slow" : "quick";
+				            var page_path = window.location.pathname.replace(/(\.jsp)$/i, "");
+				            _gaq.push(["_trackEvent", "pagespeed", speed, page_path, loading_time]);
+				            pingHotag("pagespeed." + speed + "." + page_path + "." + window.navigator.appName.replace(/^\s*(.*?)\s.*$/, "$1"));
+				        }
+				    }
+				}
+			</script>
+		</div>
+	</body>
+</html>

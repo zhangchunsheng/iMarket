@@ -1,0 +1,291 @@
+/*------------css declare------------/
+  webapp2.0 css for ie
+  author: choizhang
+/------------css declare------------*/
+
+/*在用户未启用javascript时的样式*/
+.ie-noscript-warning{
+    color: #0f0;
+    font-size: 28px;
+    margin: 300px;
+}
+/*微博的标志是半透明的，IE需要特别处理，滤镜不支持padding的背景*/
+.user-information .mblog{
+    _background: none;
+}
+.user-information .mblog s{
+    _zoom:1;
+    _display: inline-block;
+    _height: 10px;
+    _width: 10px;
+    _margin: 0 -2px 0 -18px;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/ie6-mblog.png');
+}
+/*主框架上面的圆角框，是半透明的，所以用了滤镜*/
+.main{
+    padding-bottom: 0;
+}
+.user-information{
+    height: 31px;
+    background: none;
+}
+.ie6-header{
+    background: url(../images/wraper-decoration.png) no-repeat;
+    _background: none;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/wraper-decoration.png");
+    height:26px;
+    _height:20px;
+}
+.ie-main-header{
+    background: url(../images/ie-main-header.jpg) no-repeat;
+    height: 14px;
+    position: relative;
+
+    width: 950px;
+    top: -20px;
+     left: -20px;
+}
+.ie-main-footer{
+    background: url(../images/ie-main-footer.jpg) no-repeat;
+    height: 17px;
+    position: relative;
+    width: 950px;
+    left: -20px;
+    clear: both;
+}
+/*搜索的圆角框是用图片做的*/
+.search{
+    background: url(../images/sprite8.png) no-repeat -287px -192px;
+    height: 34px;
+    width: 228px;
+    position: relative;
+    right: -2px;
+}
+.input-box{
+    border: 0 none;
+    width: 170px;
+    height: 18px;
+    margin: 4px 0 0 13px;
+    padding-left: 5px;
+    line-height: 18px;
+    padding-right: 0;
+}
+.search-word{
+    left: 4px;
+}
+.search-click {
+    background: url(../images/sprite8.png) no-repeat 4px -562px;
+ }
+.search-tip {
+    background: url(../images/sprite8.png) no-repeat -321px -562px;
+}
+.search-click .input-box {
+    border: 0 none;
+}
+.submit-button{
+    margin-top: -30px;
+    *margin-top: 0px;
+}
+.navigation {
+    overflow: hidden;
+    background-position: 1px 2px;
+    _background-position: 1px 0px;
+}
+.navigation  li a {
+    cursor: pointer;
+}
+
+.navigation  li a.nownav {
+    background: url(../images/sprite8.png) no-repeat 0 -444px;
+    display: inline-block;
+    padding: 0px 0px 0px 21px;
+}
+.navigation  li a.nownav span{
+    display: inline-block;
+    background: url(../images/sprite8.png) no-repeat right -444px;
+    height: 27px;
+    padding: 0 21px 0 0;
+    line-height: 27px;
+    color: #fff;
+}
+/*通栏广告,把左边的背景挡住了，所以往右一个像素*/
+.img-ad{
+    margin-left: 1px;
+}
+.flash{
+    margin-left: 1px;
+}
+.yingyongbao-download{
+    border-right: 1px solid #dcd8d6;
+}
+
+/*让各个图标在IE里面进行圆角遮罩*/
+/*.mod-app-item .app-img .shadow, .app-rank-hover .app-img .shadow{*/
+     /*display: block;*/
+     /*height: 76px;*/
+     /*width: 76px;*/
+     /*background:url(../images/icon_mask_72.png) no-repeat;*/
+    /*position: relative;*/
+    /*z-index: 9;*/
+ /*}*/
+/*.mod-app-item .app-img .shadow{*/
+    /*margin: -73px 0 0 -2px;*/
+/*}*/
+/*.category .app-img .shadow{*/
+    /*width:39px;*/
+    /*height:39px;*/
+    /*margin:-34px 0 0 -5px;*/
+    /*background:url(../images/icon_mask_30.png) no-repeat;*/
+    /*position: relative;*/
+    /*z-index: 9;*/
+/*}*/
+/*ie6不使用，因为半透明用滤镜的成本太高*/
+.shadow{
+    _display: none;
+}
+
+.all-categor-bar .btn-all a{
+    border: 0 none;
+    background: url("../images/sprite8.png") no-repeat -775px -1019px;
+}
+/*返回顶部是半透明*/
+.gototop{
+    overflow: hidden;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/ie6-btn-gotop.png');
+}
+.gototop a{
+    _background: none;
+    _padding-left: 10px;
+    _position: absolute;
+}
+/*排名左边序号背景图片*/
+.mod-box {
+    border: 0 none;
+    background: url(../images/ie-model-body.jpg) repeat-y;
+}
+.mod-box-padding {
+    padding-bottom: 13px;
+}
+.mod-box-padding h1{
+    _line-height: 1.2;
+}
+
+/*因为模块有通用的padding值，所以这里用了定位，模拟到圆角的位置去*/
+.mod-box-padding .ie-model-header-left{
+    margin: -11px 0 0 -15px;
+}
+.mod-box-padding .ie-model-footer-left{
+    margin: 0 0 -55px -15px;
+}
+/*圆角处理*/
+.ie-model-header-left{
+    background: url(../images/ie-model.png) no-repeat 0 0;
+    height: 11px;
+    overflow: hidden;
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 99;
+}
+.ie-model-header-right{
+    background: url(../images/ie-model.png) no-repeat right 0;
+    height: 11px;
+    width: 10px;
+    float: right;
+
+}
+/*因为中间的内容左右边框不能用border来模拟，只能用背景图片*/
+.daily-pick, .app-left, .search-page{
+    background: url(../images/ie-modelleft-body.jpg) repeat-y;
+    width: 600px;
+}
+.app-rank{
+    background: url(../images/ie-modelright-body.jpg) repeat-y;
+    width: 240px;
+}
+.subjectlistpage, .detailpage{
+    background: url(../images/ie660body.jpg) repeat-y;
+    width: 630px;
+}
+.subject-right, .detail-right{
+    background: url(../images/ie240body.jpg) repeat-y;
+    width: 210px;
+}
+.ie-model-footer-left{
+    background: url(../images/ie-model.png) no-repeat 0 -11px;
+    height: 13px;
+    overflow: hidden;
+    float: left;
+    margin: -12px 0 0 0px;
+    position: relative;
+    z-index: 99;
+    display: inline;
+}
+.ie-model-footer-right{
+    background: url(../images/ie-model.png) no-repeat right -11px;
+    height: 13px;
+    width: 10px;
+    float: right;
+}
+/*各种宽度的圆角模块，统计整个网站有如下5种规格*/
+.w910{
+    width: 910px;
+}
+.w630{
+    width: 630px;
+}
+.w270{
+    width: 270px;
+}
+.w660{
+    width: 660px;
+}
+.w240{
+    width: 240px;
+}
+/*对于首页中出现的通栏上下圆角透明的情况IE6单独处理，这样就不会影响其他不需要透明的情况*/
+.transparent-header{
+    background: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/ie6-model-header.png');
+}
+.transparent-header .ie-model-header-right{
+    background: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/ie6-model-headerright.png');
+    margin-right: 19px;
+    *margin-right: 0;
+}
+.transparent-footer{
+    background: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/ie6-model-footer.png');
+}
+.transparent-footer .ie-model-footer-right{
+    background: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/ie6-model-footerright.png');
+    margin-right: 18px;
+    *margin-right: 0;
+}
+.transparentsmall-header{
+    background: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/ie6-modelsmall-header.png');
+    margin: 0 0 -12px 0!important;
+}
+.transparentsmall-footer{
+    background: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/ie6-modelsmall-footer.png');
+    margin: -20px 0 0 0!important;
+    width: 630px;
+
+}
+
+/*专题页面间距是20px，跟首页等不一样，要单独处理*/
+.round20top{
+    margin: -10px 0 0 -20px;
+}
+.round20bottom{
+    *position: absolute;
+    margin: -10px 0 0 -20px;
+}
+
+.play-bg .pin{
+    _background: none;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/play-pin.png');
+}

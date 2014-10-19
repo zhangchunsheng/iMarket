@@ -1,0 +1,1 @@
+sudo yum install gd gd-devel php-gd
