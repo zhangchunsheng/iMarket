@@ -22,3 +22,9 @@ c:\windows\system32\drivers\etc\hosts
 <pre>
 127.0.0.1 www.huohuamarket.com
 </pre>
+
+## php.ini
+
+<pre>
+request_order="CGP"
+</pre>

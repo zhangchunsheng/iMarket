@@ -664,3 +664,5 @@ SET character_set_server = utf8;
 SET collation_connection = utf8_bin;
 SET collation_database = utf8_bin;
 SET collation_server = utf8_bin;
+
+select * from huohuamarket.huohua_setting;
