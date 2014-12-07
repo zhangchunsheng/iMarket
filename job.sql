@@ -653,4 +653,14 @@ SELECT COUNT(1) FROM huohua_addonapp WHERE updateBz=1;-- 185 235 324 401 479 490
 SELECT COUNT(1) FROM huohua_addonapp WHERE updateBz=0;
 
 -- 2014-12-07
-create database huohuamarket;
+create database huohuamarket DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+SET character_set_client = utf8;
+SET character_set_connection = utf8;
+SET character_set_database = utf8;
+SET character_set_results = utf8;/*这里要注意很有用*/
+SET character_set_server = utf8;
+
+SET collation_connection = utf8_bin;
+SET collation_database = utf8_bin;
+SET collation_server = utf8_bin;
