@@ -7,6 +7,19 @@ android&iOS app market
 
 <pre>
 This project base on dedecms http://www.dedecms.com/
+
+Fatal error: Call to undefined function imagettftext().
+
+You need to compile PHP with more options.
+
+--with-gd
+--enable-gd-native-ttf
+--with-png
+--with-zlib-dir=/usr/local/lib/zlib-1.2.1
+--with-ttf
+--with-jpeg-dir=/usr/local/lib/jpeg-6b/
+--with-freetype-dir=/usr/local/lib/freetype-2.1.9/
+--with-xpm-dir=/usr/X11R6/
 </pre>
 
 ## 修改hosts文件

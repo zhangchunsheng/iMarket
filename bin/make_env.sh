@@ -1,1 +1,1 @@
-sudo yum install gd gd-devel php-gd freestyle
+sudo yum install gd gd-devel php-gd
