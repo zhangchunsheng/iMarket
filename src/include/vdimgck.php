@@ -79,9 +79,11 @@ function echo_validate_image( $config = array() )
             }
             $rndstring .= $c;
         }
-    } else { 
+    } else {
         $fp = @fopen($config['wordlist_file'], 'rb');
-        if (!$fp) return FALSE;
+        if (!$fp) {
+            return FALSE;
+        }
 
         $fsize = filesize($config['wordlist_file']);
         if ($fsize < 32) return FALSE;
@@ -127,7 +129,7 @@ function echo_validate_image( $config = array() )
         $bordercolor = imagecolorallocate($im, 0x9d, 0x9e, 0x96);
         imagerectangle($im, 0, 0, $img_width-1, $img_height-1, $bordercolor);
     }
-    
+
     //输出文字
     $lastc = '';
     for($i=0;$i<$rndcodelen;$i++)
@@ -140,7 +142,7 @@ function echo_validate_image( $config = array() )
         @imagettftext($im, $font_size, $c, $y_pos, 19, $c_fontColor, $font_file, $rndstring[$i]);
         $lastc = $rndstring[$i];
     }
-    
+
     //图象效果
     switch($filter_type)
     {
