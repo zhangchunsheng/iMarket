@@ -640,6 +640,17 @@ SELECT COUNT(pinyinOfAppName),pinyinOfAppName FROM huohua_addonapp GROUP BY piny
 
 -- 2013-11-21
 SELECT * FROM huohua_addonapp WHERE updateBz=0;
-SELECT COUNT(1) FROM huohua_addonapp WHERE updateBz=1;-- 185
+SELECT COUNT(1) FROM huohua_addonapp WHERE updateBz=1;-- 185 235 324 401 479 490 514 539 559 589 602 680 763 837 938
+SELECT COUNT(1) FROM huohua_addonapp WHERE updateBz=0;
 SELECT sizeInfo FROM huohua_addonapp WHERE updateBz=0 ORDER BY sizeInfo DESC;
 SELECT sizeInfo FROM huohua_addonapp WHERE updateBz=0;
+
+-- 2013-11-25
+SELECT * FROM huohua_addonapp;
+SELECT * FROM huohua_addonapp WHERE updateBz=0;-- 572796
+SELECT myapp_appid FROM huohua_addonapp WHERE updateBz=0;
+SELECT COUNT(1) FROM huohua_addonapp WHERE updateBz=1;-- 185 235 324 401 479 490 514 539 559 589 602 680 763 837 938 1117
+SELECT COUNT(1) FROM huohua_addonapp WHERE updateBz=0;
+
+-- 2014-12-07
+create database huohuamarket;
