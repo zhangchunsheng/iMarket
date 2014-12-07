@@ -3,6 +3,12 @@ iMarket
 
 android&iOS app market
 
+## about
+
+<pre>
+This project base on dedecms http://www.dedecms.com/
+</pre>
+
 ## 修改hosts文件
 
 ### windows:
