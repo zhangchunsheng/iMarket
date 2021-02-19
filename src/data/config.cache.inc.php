@@ -2,9 +2,9 @@
 $cfg_disable_funs = 'phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents';
 $cfg_disable_tags = 'php';
 $cfg_basehost = 'http://www.huohuamarket.com';
-$cfg_cmspath = '/';
+$cfg_cmspath = '';
 $cfg_cookie_encode = 'UeZDi1684F';
-$cfg_indexurl = '/';
+$cfg_indexurl = '';
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';
 $cfg_webname = '火花市场';

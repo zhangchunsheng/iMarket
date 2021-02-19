@@ -139,7 +139,7 @@ function echo_validate_image( $config = array() )
         $c_fontColor = $fontColor[mt_rand(0,4)];
         $y_pos = $i==0 ? 4 : $i*($font_size+2);
         $c = mt_rand(0, 15);
-        imagettftext($im, $font_size, $c, $y_pos, 19, $c_fontColor, $font_file, $rndstring[$i]);
+        @imagettftext($im, $font_size, $c, $y_pos, 19, $c_fontColor, $font_file, $rndstring[$i]);
         $lastc = $rndstring[$i];
     }
 

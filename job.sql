@@ -666,3 +666,52 @@ SET collation_database = utf8_bin;
 SET collation_server = utf8_bin;
 
 select * from huohuamarket.huohua_setting;
+
+show create database huohuamarket;
+
+CREATE DATABASE `ops` DEFAULT CHARACTER SET utf8;
+
+use ops;
+create table db_changelog(
+	id int(11) not null auto_increment,
+    auth_name varchar(60) not null default '' comment '作者姓名',
+    db_name varchar(64) not null default '' comment '数据库名',
+    table_name varchar(64) not null default '' comment '表名',
+    sqls text comment '需要执行的sql语句',
+    create_time int(11) not null default 0 comment '创建时间',
+    update_time int(11) not null default 0 comment '更新时间',
+    status int(11) not null default 0 comment '100 - 新增 200 - 审核中 201 - 审核不通过需要修改 300 - 审核通过 400 - 已执行',
+    operator_name varchar(60) not null default '' comment '',
+    operator_time int(11) not null default 0 comment '',
+    primary key(id)
+);
+
+create table db_changelog_auditlog(
+	id int(11) not null auto_increment,
+    db_changelog_id varchar(60) not null default '' comment '作者姓名',
+    operator_name varchar(64) not null default '' comment '数据库名',
+    `comment` varchar(256) not null default '' comment '评论内容',
+    create_time int(11) not null default 0 comment '创建时间',
+    update_time int(11) not null default 0 comment '更新时间',
+    primary key(id)
+);
+
+-- 2015-10-02
+create database location default character set utf8;
+use location;
+create table places(
+	place_id int(11) not null auto_increment,
+    city varchar(60) not null default '' comment '城市',
+    place_type int(11) not null default 1 comment '地址类型:1-银行',
+    place_name varchar(60) not null default '' comment '地址名称',
+    place_address varchar(255) not null default '' comment '详细地址',
+    latitude decimal(12,6) not null default 0 comment '纬度',
+    longitude decimal(12,6) not null default 0 comment '经度',
+    create_time int(11) not null default 0 comment '创建时间',
+    update_time int(11) not null default 0 comment '更新时间',
+    status int(11) not null default 0 comment '状态, 1-正常 2-冻结',
+    primary key(place_id)
+);
+select * from places;
+
+select * from ops.db_changelog;

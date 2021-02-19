@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="developer:ZhangChunsheng, team:luomor, date:2013-11-02">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>天天酷跑_火花市场</title>
+					<script src="http://jsqmt.qq.com/cdn_djl.js" type="text/javascript" async=""></script>
+		<script type="text/javascript">
+			var _head_start = new Date();
+			var g_returl = "http://localhost/github/iMarket/iMarket/index.php";
+			var gf_param = "";
+			var g_action = "/github/iMarket/iMarket/api/";
+			//var g_action = "http://android.myapp.com/android/";
+			//http://android.myapp.com/android/qrytopicbycms_web?r=0.018095792969688773
+			//http://android.myapp.com/android/qrynesseary_web?type=0&r=0.661279286025092
+			var g_respath = "http://localhost/github/iMarket/iMarket/templets/huohua";
+			var g_hostpath = "http://localhost";
+			var g_logined = false;
+			var g_qqno = 0;
+			var g_nickname = "";
+		</script>
+		<script>
+		  /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-45384518-1', 'studyandthinkhtml5.com');
+		  ga('send', 'pageview');*/
+		</script>
+
+		<base href="http://localhost/github/iMarket/iMarket/index.php">
+		<link rel="canonical" href="http://localhost/github/iMarket/iMarket/index.php">
+		<link rel="shortcut icon" type="image/ico" href="/github/iMarket/iMarket/templets/huohua/images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/github/iMarket/iMarket/templets/huohua/style/myapp/global.min.css?ver=1.0">
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" href="/github/iMarket/iMarket/templets/huohua/style/myapp/fuck-ie.css" />
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/html5.js"></script>
+		<![endif]-->
+		<noscript>
+			&lt;style type="text/css"&gt;
+				.wraper {display:none !important;}
+			&lt;/style&gt;
+			&lt;div class="ie-noscript-warning"&gt;
+			由于您的浏览器禁用了javascript脚本，网页无法正常浏览!
+			&lt;/div&gt;
+		</noscript>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/jquery-1.4.2.min.js" async=""></script>
+		<!--<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/storescrolload.min.js?ver=1.0" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/manifest.js?ver=1.0" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/base.js?ver=1.0" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/index.js?ver=1.0" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/tcss.ping.js" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="http://img1.sj.qq.com/api/scripts/sjqqapi.js?ver=1.0" async="" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://img1.sj.qq.com/api/styles/sjqqapi.css?ver=1.0">
+		<style type="text/css" id="in-inline-css">
+			@font-face {
+				font-family: 'myfont';
+				src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot');
+				src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot?#iefix') format('embedded-opentype'),
+				url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.woff') format('woff'),
+				url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.ttf') format('truetype'),
+				url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.svg#Untitled1Medium')
+				format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		</style>-->
+		<script src="http://jqmt.qq.com/cdn_dianjiliu.js?a=0.33706603525206447"></script>
+	</head>
+	<body>
+		<div class="wraper">
+			<header class="user-information">
+				<a href="http://t.qq.com/huohuamarket" target="_blank">联系客服</a>&nbsp;|&nbsp;
+				<a class="mblog" href="http://t.qq.com/huohuamarket" target="_blank"><s></s>关注我们</a>
+			</header>
+			<div id="login_wrap" style="position:absolute; display:none; width:552px; height:380px; padding:0; margin:0; z-index:10000;" align="center">
+				<iframe id="login_frame" name="login_frame" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
+			</div>
+			<div class="ie6-header"></div>
+			<div class="main" role="main">
+				<div class="ie-main-header"></div>
+				<header role="banner">
+					<h1 class="logo"><a href="/android/index.jsp"><img src="/github/iMarket/iMarket/templets/huohua/images/logo.png" width="210" height="60" alt="火花市场网"></a></h1>
+
+					<!--<div class="login logout">
+						<a class="user-avatar" href="javascript:openLogin();">
+							<img src="/github/iMarket/iMarket/templets/huohua/images/myapp/default-avatar.jpg" width="50" height="50" alt="">
+							<div class="shadow"></div>
+						</a>
+						<div class="user-name"><a href="javascript:openLogin();">请登录</a></div>
+						<div class="target"></div>
+					</div>-->
+
+					<nav role="navigation">
+						<h1 class="hide-clip">网站导航</h1>
+						<ul class="navigation">
+							<li>
+								<a href="/github/iMarket/iMarket/" data-nav="index" hidefocus="">
+									<span>首页</span>
+								</a>
+							</li>
+							<li class='hover'><a href='/github/iMarket/iMarket/android/app'  rel='dropmenu2' data-nav='app'><span>应用</span></a></li>
+							<li>
+								<a href='/github/iMarket/iMarket/android/game'  rel='dropmenu3' data-nav="game">
+									<span>游戏</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href='/github/iMarket/iMarket/android/subject'  rel='dropmenu4' data-nav="subject">
+									<span>专题</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href='http://localhost/github/luomor/wordpress/wordpress/'  data-nav="">
+									<span>博客</span>
+								</a>
+							</li>
+							
+						</ul>
+					</nav>
+					<div class="search" role="form">
+						<input id="keyword" class="input-box" type="search" title="试试搜索应用名称或功能" placeholder="试试搜索应用名称或功能" role="search" onkeydown="return UI.onSearchKeyDown(event);" x-webkit-speech="">
+						<input type="button" value="搜索" class="submit-button" title="搜索" onclick="UI.searchapp();">
+					</div>
+				</header>
+				<script type="text/javascript">
+					var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-45384518-1']);
+					_gaq.push(['_trackPageview']);
+				</script>
+				<article class="mod-box detailpage" itemscope="" itemtype="http://data-vocabulary.org/Product">
+					<div class="ie-model-header-left w660 round20top">
+						<div class="ie-model-header-right"></div>
+					</div>
+					<ol class="bread-nav">
+						<li><a href="index.jsp">首页</a><span>&gt;</span></li>
+						<li><a href="game.jsp">游戏</a><span>&gt;</span></li>
+						<li><a href="game.jsp?cid=147&amp;cname=%E4%BC%91%E9%97%B2">休闲</a><span>&gt;</span></li>
+						<li class="bread-now">天天酷跑</li>
+					</ol>
+					<header class="topsection">
+						<div class="app-img">
+							<img src="http://appimg1.3g.qq.com/android_new/632/10099632/16286054/icon_72.png" width="72" height="72" itemprop="image" alt="天天酷跑">
+						</div>
+						<div class="app-msg">
+							<h1 itemprop="name">天天酷跑</h1>
+							<div><span class="star stargrey" itemprop="review" itemscope="" itemtype="http://data-vocabulary.org/Review-aggregate"><span class="star starlight" style="width:70%" itemprop="rating">3</span></span><span class="grey" itemprop="count">2369人评分</span></div>
+							<dl>
+								<dt>下&nbsp;&nbsp;&nbsp;载：</dt>
+								<dd>500万次</dd>
+								<dt>大&nbsp;&nbsp;&nbsp;小：</dt>
+								<dd>29.94M</dd>
+								<dt>资&nbsp;&nbsp;&nbsp;费：</dt>
+								<dd>免费</dd>
+								<dt>分&nbsp;&nbsp;&nbsp;类：</dt>
+								<dd itemprop="category">休闲</dd>
+								<dt>语&nbsp;&nbsp;&nbsp;言：</dt>
+								<dd>中文</dd>
+								<dt>版&nbsp;&nbsp;&nbsp;本：</dt>
+								<dd>1.0.6.0</dd>
+								<dt>时&nbsp;&nbsp;&nbsp;间：</dt>
+								<dd><time datetime="2013-09-14">2013-09-14</time></dd>
+								<dt>固&nbsp;&nbsp;&nbsp;件：</dt>
+								<dd>2.2及以上</dd>
+								<dt class="clear">开发者：</dt>
+								<dd class="brand" itemprop="brand">腾讯</dd>
+							</dl>
+							<div class="validate">
+								<img src="http://android.myapp.com/qrcode/?url=http%3A%2F%2Fandroid.myapp.com%2Fandroid%2Fdown.jsp%3Ftype%3D2%26appid%3D10099632%26pkgid%3D16286051%26icfa%3D15144206000120001000%26g_f%3D990976" width="139" height="139" alt="" data-pinit="registered"><br>
+								<a class="method" href="javascript:UI.popwinMask(1);UI.popwinWrap('#dimension_help');" tabindex="-1">如何使用二维码下载？</a>
+							</div>
+						</div>
+						<div class="safe">
+							<a href="http://android.myapp.com/android/appdetail.jsp?appid=48462" class="mbmanage">腾讯手机管家认证</a><a href="http://android.myapp.com/android/appdetail.jsp?appid=48637" class="safemanage">安全管家认证</a>
+						</div>
+						<div class="share">
+							<div class="collection"><font class="green">s</font><a class="anoline" href="javascript:openFavoriteBox();">加入收藏</a></div>
+							<div class="share-left">
+								<font class="green">f</font>分享到：
+								<ul class="share-dest" style="margin-left:70px;">
+									<li><a href="javascript:postoCommunity('qzone');" onclick="appShare(0);_gaq.push(['_trackEvent', 'appdetail', 'share - qzone', '10099632']);pingHotag('appdetail.share.qzone.10099632');" title="分享到qq空间"><img src="http://qzonestyle.gtimg.cn/ac/qzone_v5/app/app_share/qz_logo.png" width="16" height="16" alt="分享到qq空间"></a></li>
+									<li><a href="javascript:postoWeibo();" onclick="appShare(1);_gaq.push(['_trackEvent', 'appdetail', 'share - qqweibo', '10099632']);pingHotag('appdetail.share.qqweibo.10099632');" title="分享到腾讯微博"><img src="http://v.t.qq.com/share/images/s/weiboicon16.png" width="16" height="16" alt="分享到腾讯微博"></a></li>
+									<li><a href="javascript:postoCommunity('pengyou');" onclick="appShare(2);_gaq.push(['_trackEvent', 'appdetail', 'share - pengyou', '10099632']);pingHotag('appdetail.share.pengyou.10099632');" title="分享到朋友网"><img src="http://qzonestyle.gtimg.cn/ac/qzone_v5/app/qzshare/xy-icon.png" width="16" height="16" alt="分享到朋友网"></a></li>
+									<li><a href="javascript:void((function(s,d,e){if(/xiaonei\.com/.test(d.location))return;var%20f='http://share.xiaonei.com/share/buttonshare.do?link=',u=d.location,l='我在应用宝下载了“天天酷跑”',p=[e(u),'&title=',e(l)].join('');function%20a(){if(!window.open([f,p].join(''),'xnshare',['toolbar=0,status=0,resizable=1,width=626,height=436,left=',(s.width-626)/2,',top=',(s.height-436)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent));" onclick="appShare(3);_gaq.push(['_trackEvent', 'appdetail', 'share - renren', '10099632']);pingHotag('appdetail.share.renren.10099632');" title="分享到人人网"><img src="http://3gimg.qq.com/wap30/img/webmarket/renren_icon.gif" width="16" height="16" alt="分享到人人网"></a></li>
+									<li><a href="javascript:window.open('http://www.kaixin001.com/repaste/share.php?rtitle='+encodeURIComponent('我在应用宝下载了“天天酷跑”')+'&rurl='+encodeURIComponent(document.location.href)+'&rcontent='+encodeURIComponent('---腾讯移动游戏再发新作---<br/><br/>腾讯移动游戏集大成之作，专为广大微信和手机QQ用户量身打造的酷跑游戏天天酷跑，急速前行！<br/><br/>---枪神纪主角加盟酷跑---<br/><br/>清爽帅气的画风，让你在奔跑中感受到...')+'');void(0)" onclick="appShare(4);_gaq.push(['_trackEvent', 'appdetail', 'share - kaixin', '10099632']);pingHotag('appdetail.share.kaixin.10099632');" title="分享到开心网"><img src="http://3gimg.qq.com/wap30/img/webmarket/kaixin_icon.gif" width="16" height="16" alt="分享到开心网"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="installbtn">
+							<!-- <a class="keytoinstall" href="http://android.myapp.com/android/down.jsp?appid=10099632&pkgid=16286051&icfa=15144206000120001000&lmid=2034&type=3&g_f=990977" onclick="_gaq.push(['_trackEvent', 'appdetail', 'download - wandoujia', '10099632']);pingHotag('appdetail.download.wandoujia.10099632');return wdapi_apkdl_m(this, 'api_45');" name="天天酷跑1.0.6.0" title="使用豌豆荚一键安装"><span class="hide-clip">使用豌豆荚一键安装</span></a> -->
+							<a class="downtomb" style="margin-right:30px;" href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'appdetail', 'download - easy', '10099632']);pingHotag('appdetail.download.easy.10099632');" ex_url="http://android.myapp.com/android/down.jsp?appid=10099632&amp;pkgid=16286051&amp;icfa=15144206000120001000&amp;lmid=2034&amp;type=4&amp;g_f=990978&amp;actiondetail=0&amp;transactionid=&amp;topicid=-1&amp;softname=" asistanturlid="990428" appname="天天酷跑1.0.6.0" title="使用腾讯手机管家(PC版)一键安装到手机"><span class="hide-clip">使用腾讯手机管家(PC版)一键安装到手机</span></a>
+							<a class="downtopc" href="/android/down.jsp?appid=10099632&amp;pkgid=16286051&amp;icfa=15144206000120001000&amp;lmid=2034&amp;g_f=0&amp;actiondetail=0&amp;downtype=1&amp;transactionid=&amp;topicid=-1&amp;softname=" onclick="_gaq.push(['_trackPageview', '/virtual/insite/downapp/2034/detail/10099632']);pingHotag('downapp.2034.detail.10099632');" title="免费下载天天酷跑1.0.6.0到电脑"><span class="hide-clip">免费下载天天酷跑1.0.6.0到电脑</span></a>
+						</div>
+					</header>
+					<section>
+						<h1>应用介绍</h1>
+						<p itemprop="description">
+							---腾讯移动游戏再发新作---<br><br>腾讯移动游戏集大成之作，专为广大微信和手机QQ用户量身打造的酷跑游戏天天酷跑，急速前行！<br><br>---枪神纪主角加盟酷跑---<br><br>清爽帅气的画风，让你在奔跑中感受到爽快来自枪神纪的三位主角穿越到天天酷跑中，他们会有怎样的奇妙际遇？<br><br>---超炫玩法令你酣畅淋漓---<br><br> 极简：掌握跳跃与下滑两个按钮，你就掌握了整个酷跑世界！<br><br> 极酷：重型摩托、冰原野狼，强力坐骑助力奔跑；赤炎幼龙、樱花蛋仔，超萌宠物让奔跑不再单调<br><br> 极挑战：一重重令人意想不到的成就任务，燃起你挑战自我的熊熊信念！<br><br>---你不是一个人在奔跑---<br><br>奋力拼抢排行榜金皇冠、在朋友圈和QQ空间晒出自己的成绩让所有人来膜拜从此，你不再是一个人在奔跑！
+						</p>
+					</section>
+					<section>
+						<h1>软件截图</h1>
+						<div class="showpic" style="overflow:hidden;">
+							<a href="javascript:void(0);" class="prev prevdis">
+							<span class="prev-disable"></span>
+							<span class="prev-normal"></span>
+							</a>
+							<div class="pic-wrap" style="height:auto;">
+								<div class="pic-inner" style="width:37266px;">
+									<img src="http://ugc.qpic.cn/appcenter_snapshot/0/10099632_16286054_0_759845/0" data-url="http://ugc.qpic.cn/appcenter_snapshot/0/10099632_16286054_0_759845/0" width="210" alt="" data-pinit="registered">
+									<img src="http://ugc.qpic.cn/appcenter_snapshot/0/10099632_16286054_1_759845/0" data-url="http://ugc.qpic.cn/appcenter_snapshot/0/10099632_16286054_1_759845/0" width="210" alt="" data-pinit="registered">
+									<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/defaultappic.jpg" data-url="http://ugc.qpic.cn/appcenter_snapshot/0/10099632_16286054_2_759845/0" width="210" alt="" data-pinit="registered">
+									<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/defaultappic.jpg" data-url="http://ugc.qpic.cn/appcenter_snapshot/0/10099632_16286054_3_759845/0" width="210" alt="" data-pinit="registered">
+									<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/defaultappic.jpg" data-url="http://ugc.qpic.cn/appcenter_snapshot/0/10099632_16286054_4_759845/0" width="210" alt="" data-pinit="registered">
+								</div>
+							</div>
+							<a href="javascript:void(0);" class="next">
+							<span class="next-disable"></span>
+							<span class="next-normal"></span>
+							</a>
+						</div>
+					</section>
+					<section>
+						<h1>应用评论</h1>
+						<a class="report" href="javascript:UI.popwinMask(1);UI.popwinWrap('#report_app');">一键举报</a>
+						<div><a href="javascript:openCommentBox();" class="add-comment">添加评论</a></div>
+						<article id="app_score_detail" class="score ajax_scrolloading" data-func="showAppComment">
+							<h1 class="dpn">APP得分情况</h1>
+							<div class="average-score">
+								<p>平均得分</p>
+								<p class="item2">3.5星</p>
+								<p><span class="bigstar bigstargrey"><span style="width: 70%;" class="bigstar bigstarlight">70</span></span></p>
+								<p><span class="hide-clip">总评分人数</span>2369</p>
+							</div>
+							<div class="star-bar">
+								<div class="item1"><span class="black-star"></span><span class="black-star"></span><span class="black-star"></span><span class="black-star"></span><span class="black-star"></span></div>
+								<div class="item2">
+									<div class="score-value1" style="width: 100%; display: block;"></div>
+								</div>
+								<div class="item3">1160</div>
+							</div>
+							<div class="star-bar">
+								<div class="item1"><span class="black-star"></span><span class="black-star"></span><span class="black-star"></span><span class="black-star"></span></div>
+								<div class="item2">
+									<div class="score-value2" style="width: 26%; display: block;"></div>
+								</div>
+								<div class="item3">306</div>
+							</div>
+							<div class="star-bar">
+								<div class="item1"><span class="black-star"></span><span class="black-star"></span><span class="black-star"></span></div>
+								<div class="item2">
+									<div class="score-value3" style="width: 17%; display: block;"></div>
+								</div>
+								<div class="item3">199</div>
+							</div>
+							<div class="star-bar">
+								<div class="item1"><span class="black-star"></span><span class="black-star"></span></div>
+								<div class="item2">
+									<div class="score-value4" style="width: 12%; display: block;"></div>
+								</div>
+								<div class="item3">142</div>
+							</div>
+							<div class="star-bar">
+								<div class="item1"><span class="black-star"></span></div>
+								<div class="item2">
+									<div class="score-value5" style="width: 48%; display: block;"></div>
+								</div>
+								<div class="item3">562</div>
+							</div>
+						</article>
+						<article>
+							<h1 class="hide-clip">用户评论</h1>
+							<ul class="comment-list">
+								<li itemscope="" itemtype="http://data-vocabulary.org/Review">
+									<meta itemprop="itemreviewed" content="天天酷跑挺不错的，RPG里的宠物、坐骑都很新颖，跟传统的跑酷不一样。而且一起玩的好友很多，打榜挺好玩的，可以炫耀成绩。☺">
+									<div class="comment-left">
+										<img class="img_scrolloading_userphoto" src="http://qlogo1.store.qq.com/qzone/2416452684/2416452684/100" data-url="http://qlogo1.store.qq.com/qzone/2416452684/2416452684/100" width="50" height="50" alt="* ★　在棺材里慢慢摇メ">		
+										<div class="shadow"></div>
+										<div class="comment-star">评论之星</div>
+									</div>
+									<div class="first-line">		<span class="username" itemprop="reviewer">* ★　在棺材里慢慢摇メ</span>		<span class="star stargrey"><span class="star starlight" style="width:100%" itemprop="rating">100</span></span>	</div>
+									<p itemprop="description">		天天酷跑挺不错的，RPG里的宠物、坐骑都很新颖，跟传统的跑酷不一样。而且一起玩的好友很多，打榜挺好玩的，可以炫耀成绩。☺	</p>
+									<div class="clear"></div>
+									<div class="comment-func">
+										<time itemprop="dtreviewed" datetime="2013-11-05 11:04">2013-11-05 11:04</time><span>来自PC网页</span>		
+										<div class="fr">
+											<a class="u" href="javascript:void(0);" onclick="voteComment(this,25799,0);" title="顶">
+												<font class="green">u</font><label>9</label>				
+												<div style="display:none;"></div>
+											</a>
+											<a class="d" href="javascript:void(0);" onclick="voteComment(this,25799,1);" title="踩">
+												<font class="orange">d</font><label>3</label>				
+												<div style="display:none;"></div>
+											</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</li>
+								<li itemscope="" itemtype="http://data-vocabulary.org/Review">
+									<meta itemprop="itemreviewed" content="我去。有时候还上不去。">
+									<div class="comment-left">
+										<img class="img_scrolloading_userphoto" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" data-url="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" width="50" height="50" alt="">		
+										<div class="shadow"></div>
+									</div>
+									<div class="first-line">		<span class="username" itemprop="reviewer"></span>		<span class="star stargrey"><span class="star starlight" style="width:20%" itemprop="rating">20</span></span>	</div>
+									<p itemprop="description">		我去。有时候还上不去。	</p>
+									<div class="clear"></div>
+									<div class="comment-func">
+										<time itemprop="dtreviewed" datetime="2013-11-07 11:07">2013-11-07 11:07</time><span>来自网页版</span>		
+										<div class="fr">
+											<a class="u" href="javascript:void(0);" onclick="voteComment(this,25972,0);" title="顶">
+												<font class="green">u</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+											<a class="d" href="javascript:void(0);" onclick="voteComment(this,25972,1);" title="踩">
+												<font class="orange">d</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</li>
+								<li itemscope="" itemtype="http://data-vocabulary.org/Review">
+									<meta itemprop="itemreviewed" content="经常卡死。太多广告。闪退。">
+									<div class="comment-left">
+										<img class="img_scrolloading_userphoto" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" data-url="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" width="50" height="50" alt="">		
+										<div class="shadow"></div>
+									</div>
+									<div class="first-line">		<span class="username" itemprop="reviewer"></span>		<span class="star stargrey"><span class="star starlight" style="width:40%" itemprop="rating">40</span></span>	</div>
+									<p itemprop="description">		经常卡死。太多广告。闪退。	</p>
+									<div class="clear"></div>
+									<div class="comment-func">
+										<time itemprop="dtreviewed" datetime="2013-11-07 10:43">2013-11-07 10:43</time><span>来自网页版</span>		
+										<div class="fr">
+											<a class="u" href="javascript:void(0);" onclick="voteComment(this,25970,0);" title="顶">
+												<font class="green">u</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+											<a class="d" href="javascript:void(0);" onclick="voteComment(this,25970,1);" title="踩">
+												<font class="orange">d</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</li>
+								<li itemscope="" itemtype="http://data-vocabulary.org/Review">
+									<meta itemprop="itemreviewed" content="好玩，希望让我开到加成好的宠物">
+									<div class="comment-left">
+										<img class="img_scrolloading_userphoto" src="http://qlogo2.store.qq.com/qzone/1779627797/1779627797/100" data-url="http://qlogo2.store.qq.com/qzone/1779627797/1779627797/100" width="50" height="50" alt="緈諨丶呐詀">		
+										<div class="shadow"></div>
+									</div>
+									<div class="first-line">		<span class="username" itemprop="reviewer">緈諨丶呐詀</span>		<span class="star stargrey"><span class="star starlight" style="width:100%" itemprop="rating">100</span></span>	</div>
+									<p itemprop="description">		好玩，希望让我开到加成好的宠物	</p>
+									<div class="clear"></div>
+									<div class="comment-func">
+										<time itemprop="dtreviewed" datetime="2013-11-07 10:01">2013-11-07 10:01</time><span>来自<a href="http://bao.myapp.com/" target="_blank">应用宝</a></span>		
+										<div class="fr">
+											<a class="u" href="javascript:void(0);" onclick="voteComment(this,25968,0);" title="顶">
+												<font class="green">u</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+											<a class="d" href="javascript:void(0);" onclick="voteComment(this,25968,1);" title="踩">
+												<font class="orange">d</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</li>
+								<li itemscope="" itemtype="http://data-vocabulary.org/Review">
+									<meta itemprop="itemreviewed" content="好玩。顶，顶">
+									<div class="comment-left">
+										<img class="img_scrolloading_userphoto" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" data-url="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" width="50" height="50" alt="游客">		
+										<div class="shadow"></div>
+									</div>
+									<div class="first-line">		<span class="username" itemprop="reviewer">游客</span>		<span class="star stargrey"><span class="star starlight" style="width:100%" itemprop="rating">100</span></span>	</div>
+									<p itemprop="description">		好玩。顶，顶	</p>
+									<div class="clear"></div>
+									<div class="comment-func">
+										<time itemprop="dtreviewed" datetime="2013-11-07 09:39">2013-11-07 09:39</time><span>来自<a href="http://bao.myapp.com/" target="_blank">应用宝</a></span>		
+										<div class="fr">
+											<a class="u" href="javascript:void(0);" onclick="voteComment(this,25967,0);" title="顶">
+												<font class="green">u</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+											<a class="d" href="javascript:void(0);" onclick="voteComment(this,25967,1);" title="踩">
+												<font class="orange">d</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</li>
+								<li itemscope="" itemtype="http://data-vocabulary.org/Review">
+									<meta itemprop="itemreviewed" content="怎么玩不成？">
+									<div class="comment-left">
+										<img class="img_scrolloading_userphoto" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" data-url="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" width="50" height="50" alt="">		
+										<div class="shadow"></div>
+									</div>
+									<div class="first-line">		<span class="username" itemprop="reviewer"></span>		<span class="star stargrey"><span class="star starlight" style="width:20%" itemprop="rating">20</span></span>	</div>
+									<p itemprop="description">		怎么玩不成？	</p>
+									<div class="clear"></div>
+									<div class="comment-func">
+										<time itemprop="dtreviewed" datetime="2013-11-07 09:31">2013-11-07 09:31</time><span>来自网页版</span>		
+										<div class="fr">
+											<a class="u" href="javascript:void(0);" onclick="voteComment(this,25966,0);" title="顶">
+												<font class="green">u</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+											<a class="d" href="javascript:void(0);" onclick="voteComment(this,25966,1);" title="踩">
+												<font class="orange">d</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</li>
+								<li itemscope="" itemtype="http://data-vocabulary.org/Review">
+									<meta itemprop="itemreviewed" content="hao">
+									<div class="comment-left">
+										<img class="img_scrolloading_userphoto" src="http://qlogo2.store.qq.com/qzone/1871626057/1871626057/100" data-url="http://qlogo2.store.qq.com/qzone/1871626057/1871626057/100" width="50" height="50" alt="angel°若相惜">		
+										<div class="shadow"></div>
+									</div>
+									<div class="first-line">		<span class="username" itemprop="reviewer">angel°若相惜</span>		<span class="star stargrey"><span class="star starlight" style="width:40%" itemprop="rating">40</span></span>	</div>
+									<p itemprop="description">		hao	</p>
+									<div class="clear"></div>
+									<div class="comment-func">
+										<time itemprop="dtreviewed" datetime="2013-11-07 08:51">2013-11-07 08:51</time><span>来自<a href="http://bao.myapp.com/" target="_blank">应用宝</a></span>		
+										<div class="fr">
+											<a class="u" href="javascript:void(0);" onclick="voteComment(this,25965,0);" title="顶">
+												<font class="green">u</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+											<a class="d" href="javascript:void(0);" onclick="voteComment(this,25965,1);" title="踩">
+												<font class="orange">d</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</li>
+								<li itemscope="" itemtype="http://data-vocabulary.org/Review">
+									<meta itemprop="itemreviewed" content="到现在都没有新人物，坐骑出来，">
+									<div class="comment-left">
+										<img class="img_scrolloading_userphoto" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" data-url="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" width="50" height="50" alt="游客">		
+										<div class="shadow"></div>
+									</div>
+									<div class="first-line">		<span class="username" itemprop="reviewer">游客</span>		<span class="star stargrey"><span class="star starlight" style="width:60%" itemprop="rating">60</span></span>	</div>
+									<p itemprop="description">		到现在都没有新人物，坐骑出来，	</p>
+									<div class="clear"></div>
+									<div class="comment-func">
+										<time itemprop="dtreviewed" datetime="2013-11-07 08:06">2013-11-07 08:06</time><span>来自<a href="http://bao.myapp.com/" target="_blank">应用宝</a></span>		
+										<div class="fr">
+											<a class="u" href="javascript:void(0);" onclick="voteComment(this,25964,0);" title="顶">
+												<font class="green">u</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+											<a class="d" href="javascript:void(0);" onclick="voteComment(this,25964,1);" title="踩">
+												<font class="orange">d</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</li>
+								<li itemscope="" itemtype="http://data-vocabulary.org/Review">
+									<meta itemprop="itemreviewed" content="挺好玩的，不错不错">
+									<div class="comment-left">
+										<img class="img_scrolloading_userphoto" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" data-url="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" width="50" height="50" alt="">		
+										<div class="shadow"></div>
+									</div>
+									<div class="first-line">		<span class="username" itemprop="reviewer"></span>		<span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span>	</div>
+									<p itemprop="description">		挺好玩的，不错不错	</p>
+									<div class="clear"></div>
+									<div class="comment-func">
+										<time itemprop="dtreviewed" datetime="2013-11-07 06:50">2013-11-07 06:50</time><span>来自网页版</span>		
+										<div class="fr">
+											<a class="u" href="javascript:void(0);" onclick="voteComment(this,25962,0);" title="顶">
+												<font class="green">u</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+											<a class="d" href="javascript:void(0);" onclick="voteComment(this,25962,1);" title="踩">
+												<font class="orange">d</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</li>
+								<li itemscope="" itemtype="http://data-vocabulary.org/Review">
+									<meta itemprop="itemreviewed" content="更新列表失败">
+									<div class="comment-left">
+										<img class="img_scrolloading_userphoto" src="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" data-url="http://3gimg.qq.com/web/webapp_webmarket/android/images/default-avatar.jpg" width="50" height="50" alt="">		
+										<div class="shadow"></div>
+									</div>
+									<div class="first-line">		<span class="username" itemprop="reviewer"></span>		<span class="star stargrey"><span class="star starlight" style="width:20%" itemprop="rating">20</span></span>	</div>
+									<p itemprop="description">		更新列表失败	</p>
+									<div class="clear"></div>
+									<div class="comment-func">
+										<time itemprop="dtreviewed" datetime="2013-11-07 04:42">2013-11-07 04:42</time><span>来自网页版</span>		
+										<div class="fr">
+											<a class="u" href="javascript:void(0);" onclick="voteComment(this,25959,0);" title="顶">
+												<font class="green">u</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+											<a class="d" href="javascript:void(0);" onclick="voteComment(this,25959,1);" title="踩">
+												<font class="orange">d</font><label>0</label>				
+												<div style="display:none;"></div>
+											</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</li>
+							</ul>
+							<div id="comment_page" class="pagenav"><a class="nowpage" href="javascript:void(0)" onclick="showAppComment(1);"><span>1</span></a><a href="javascript:void(0)" onclick="showAppComment(2);"><span>2</span></a><a href="javascript:void(0)" onclick="showAppComment(3);"><span>3</span></a><a href="javascript:void(0)" onclick="showAppComment(4);"><span>4</span></a><a href="javascript:void(0)" onclick="showAppComment(5);"><span>5</span></a><a href="javascript:void(0)" onclick="showAppComment(6);"><span>6</span></a><a href="javascript:void(0)" onclick="showAppComment(7);"><span>…</span></a><a href="javascript:void(0)" onclick="showAppComment(2, -1);"><span class="hack">下一页</span></a></div>
+						</article>
+					</section>
+					<div class="ie-model-footer-left w660 round20bottom">
+						<div class="ie-model-footer-right"></div>
+					</div>
+				</article>
+				<aside class="mod-box mod-box-padding detail-right">
+					<div class="ie-model-header-left w240">
+						<div class="ie-model-header-right"></div>
+					</div>
+					<h1>下载此应用的用户还下载了</h1>
+					<ul id="relate_app" class="mod-app-item">
+						<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+							<div class="app-img">		<a href="appdetail.jsp?appid=724093&amp;icfa=15144272724093001000&amp;lmid=2045" title="烧饼游戏修改器">			<img class="img_scrolloading_2045" src="http://appimg1.3g.qq.com/android_new/93/724093/16705818/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/93/724093/16705818/icon_72.png" width="60" height="60" alt="烧饼游戏修改器">		</a>	</div>
+							<p class="app-name"><a href="appdetail.jsp?appid=724093&amp;icfa=15144272724093001000&amp;lmid=2045">烧饼游戏修改器</a></p>
+							<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>
+							<p>版本：2.5.1</p>
+							<p>更新时间：2013-11-05</p>
+						</li>
+						<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+							<div class="app-img">		<a href="appdetail.jsp?appid=967854&amp;icfa=15144272967854002000&amp;lmid=2045" title="老爸曾是小偷">			<img class="img_scrolloading_2045" src="http://appimg1.3g.qq.com/android_new/854/967854/16092615/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/854/967854/16092615/icon_72.png" width="60" height="60" alt="老爸曾是小偷">		</a>	</div>
+							<p class="app-name"><a href="appdetail.jsp?appid=967854&amp;icfa=15144272967854002000&amp;lmid=2045">老爸曾是小偷</a></p>
+							<p><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>
+							<p>版本：2.0.3</p>
+							<p>更新时间：2013-10-17</p>
+						</li>
+						<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+							<div class="app-img">		<a href="appdetail.jsp?appid=49367&amp;icfa=15144272049367003000&amp;lmid=2045" title="QQ浏览器">			<img class="img_scrolloading_2045" src="http://appimg1.3g.qq.com/android/49367/16694167/icon_72.png" data-url="http://appimg1.3g.qq.com/android/49367/16694167/icon_72.png" width="60" height="60" alt="QQ浏览器">		</a>	</div>
+							<p class="app-name"><a href="appdetail.jsp?appid=49367&amp;icfa=15144272049367003000&amp;lmid=2045">QQ浏览器</a></p>
+							<p><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>
+							<p>版本：4.5.2.535</p>
+							<p>更新时间：2013-11-04</p>
+						</li>
+						<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+							<div class="app-img">		<a href="appdetail.jsp?appid=47428&amp;icfa=15144272047428004000&amp;lmid=2045" title="QQ安全中心">			<img class="img_scrolloading_2045" src="http://appimg1.3g.qq.com/android/47428/15867021/icon_72.png" data-url="http://appimg1.3g.qq.com/android/47428/15867021/icon_72.png" width="60" height="60" alt="QQ安全中心">		</a>	</div>
+							<p class="app-name"><a href="appdetail.jsp?appid=47428&amp;icfa=15144272047428004000&amp;lmid=2045">QQ安全中心</a></p>
+							<p><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>
+							<p>版本：2.1</p>
+							<p>更新时间：2013-08-07</p>
+						</li>
+						<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+							<div class="app-img">		<a href="appdetail.jsp?appid=43276&amp;icfa=15144272043276005000&amp;lmid=2045" title="搜狗手机输入法">			<img class="img_scrolloading_2045" src="http://appimg1.3g.qq.com/android/43276/16663009/icon_72.png" data-url="http://appimg1.3g.qq.com/android/43276/16663009/icon_72.png" width="60" height="60" alt="搜狗手机输入法">		</a>	</div>
+							<p class="app-name"><a href="appdetail.jsp?appid=43276&amp;icfa=15144272043276005000&amp;lmid=2045">搜狗手机输入法</a></p>
+							<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>
+							<p>版本：5.0</p>
+							<p>更新时间：2013-10-30</p>
+						</li>
+						<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+							<div class="app-img">		<a href="appdetail.jsp?appid=36112&amp;icfa=15144272036112006000&amp;lmid=2045" title="QQ音乐">			<img class="img_scrolloading_2045" src="http://appimg1.3g.qq.com/android/36112/16502574/icon_72.png" data-url="http://appimg1.3g.qq.com/android/36112/16502574/icon_72.png" width="60" height="60" alt="QQ音乐">		</a>	</div>
+							<p class="app-name"><a href="appdetail.jsp?appid=36112&amp;icfa=15144272036112006000&amp;lmid=2045">QQ音乐</a></p>
+							<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>
+							<p>版本：3.5.6.9</p>
+							<p>更新时间：2013-10-12</p>
+						</li>
+						<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+							<div class="app-img">		<a href="appdetail.jsp?appid=49993&amp;icfa=15144272049993007000&amp;lmid=2045" title="天天动听音乐播放器">			<img class="img_scrolloading_2045" src="http://appimg1.3g.qq.com/android/49993/16712071/icon_72.png" data-url="http://appimg1.3g.qq.com/android/49993/16712071/icon_72.png" width="60" height="60" alt="天天动听音乐播放器">		</a>	</div>
+							<p class="app-name"><a href="appdetail.jsp?appid=49993&amp;icfa=15144272049993007000&amp;lmid=2045">天天动听音乐播放器</a></p>
+							<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>
+							<p>版本：6.3.1</p>
+							<p>更新时间：2013-11-07</p>
+						</li>
+						<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+							<div class="app-img">		<a href="appdetail.jsp?appid=48462&amp;icfa=15144272048462008000&amp;lmid=2045" title="腾讯手机管家">			<img class="img_scrolloading_2045" src="http://appimg1.3g.qq.com/android/48462/16505622/icon_72.png" data-url="http://appimg1.3g.qq.com/android/48462/16505622/icon_72.png" width="60" height="60" alt="腾讯手机管家">		</a>	</div>
+							<p class="app-name"><a href="appdetail.jsp?appid=48462&amp;icfa=15144272048462008000&amp;lmid=2045">腾讯手机管家</a></p>
+							<p><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>
+							<p>版本：4.3.1</p>
+							<p>更新时间：2013-10-12</p>
+						</li>
+						<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+							<div class="app-img">		<a href="appdetail.jsp?appid=783260&amp;icfa=15144272783260009000&amp;lmid=2045" title="保卫萝卜">			<img class="img_scrolloading_2045" src="http://appimg1.3g.qq.com/android_new/260/783260/16548547/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/260/783260/16548547/icon_72.png" width="60" height="60" alt="保卫萝卜">		</a>	</div>
+							<p class="app-name"><a href="appdetail.jsp?appid=783260&amp;icfa=15144272783260009000&amp;lmid=2045">保卫萝卜</a></p>
+							<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>
+							<p>版本：1.1.1</p>
+							<p>更新时间：2013-10-16</p>
+						</li>
+						<li class="bn" onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+							<div class="app-img">		<a href="appdetail.jsp?appid=1062726&amp;icfa=15144272106272010000&amp;lmid=2045" title="横扫僵尸">			<img class="img_scrolloading_2045" src="http://appimg1.3g.qq.com/android_new/726/1062726/16371966/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/726/1062726/16371966/icon_72.png" width="60" height="60" alt="横扫僵尸">		</a>	</div>
+							<p class="app-name"><a href="appdetail.jsp?appid=1062726&amp;icfa=15144272106272010000&amp;lmid=2045">横扫僵尸</a></p>
+							<p><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>
+							<p>版本：1.30</p>
+							<p>更新时间：2013-01-14</p>
+						</li>
+					</ul>
+					<div class="ie-model-footer-left w240">
+						<div class="ie-model-footer-right"></div>
+					</div>
+				</aside>
+				<div class="clear"></div>
+				<div class="ie-main-footer"></div>
+			</div>
+			<section class="popwin detail-popwin" style="display:none;">
+				<header>
+					<h1>云推送</h1>
+					<a href="javascript:void(0);" class="close" title="关闭">关闭</a>
+				</header>
+				<div class="body cloud">
+					<b class="notice"></b>
+					<p>请先在“应用宝”开启云推送功能</p>
+					<p class="grey">( 若未安装应用宝，可点击 <a href="#">下载安装</a> )</p>
+					<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/pop-cloud.jpg" width="551" height="226" alt="" data-pinit="registered">
+				</div>
+				<footer>
+					<a href="#" class="left"><span>确定</span></a><a href="#" class="right"><span>取消</span></a>
+				</footer>
+			</section>
+			<section id="dimension_help" class="popwin detail-popwin" style="display:none;">
+				<header>
+					<h1>二维码使用方法</h1>
+					<a href="javascript:UI.popwinWrap('#dimension_help');UI.popwinMask(0);" class="close" title="关闭">关闭</a>
+				</header>
+				<div class="body code">
+					<p>先确保手机里安装有二维码扫描应用，运行应用，再把摄像头对准二维码图片扫描，应用将自动生成下载链接，打开链接即可轻松下载。</p>
+					<img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/pop-code.jpg" width="570" height="198" alt="" data-pinit="registered">
+					<p>下载 <a href="javascript:window.location.href='searchresult.jsp?keyword='+encodeURIComponent('二维码扫描');">二维码扫描</a>  应用 </p>
+				</div>
+			</section>
+			<section id="favorite_add" class="popwin detail-popwin" style="display:none;">
+				<header>
+					<h1>加入收藏</h1>
+					<a href="javascript:UI.popwinWrap('#favorite_add');UI.popwinMask(0);" class="close" title="关闭">关闭</a>
+				</header>
+				<div class="body collect-pop">
+					<ul class="collect-nav">
+						<li class="nownav"><a href="javascript:addFavoriteTab(0);">选择收藏夹</a></li>
+						<li><a href="javascript:addFavoriteTab(1);">新建收藏夹</a></li>
+					</ul>
+					<ul class="collectc">
+						<li class="choosefile">
+							<ul class="collect-applist">
+								<li style="width:600px; height:auto; margin:0; padding:234px 0 234px 0; text-align:center; background:none; display:block; float:none;"><img src="http://3gimg.qq.com/web/webapp_webmarket/android/images/load.gif" width="16" height="16" alt=""></li>
+							</ul>
+							<div class="pagenav"></div>
+						</li>
+						<li class="newfile" style="display:none;">
+							<div class="error-tip">
+								<div class="error-logo"></div>
+								<span></span>
+							</div>
+							<div><label>新建收藏夹名称：</label></div>
+							<div><input class="filename" type="text" value=""></div>
+							<div><input id="cbox_ispub" class="open" type="checkbox" value="1"><label for="cbox_ispub">公开</label></div>
+						</li>
+					</ul>
+				</div>
+				<footer style="display:none;">
+					<a href="javascript:appAddNewFavorite();" class="left"><span>确定</span></a><a href="javascript:UI.popwinWrap('#favorite_add');UI.popwinMask(0);" class="right"><span>取消</span></a>
+				</footer>
+			</section>
+			<section id="comment_add" class="popwin detail-popwin" style="display:none;">
+				<header>
+					<h1>添加评论</h1>
+					<a href="javascript:UI.popwinWrap('#comment_add');UI.popwinMask(0);" class="close" title="关闭">关闭</a>
+				</header>
+				<div class="body addcomment">
+					<p class="startComm"><a href="javascript:changeStar(1,1);" onmouseover="changeStar(0,1);"></a><a href="javascript:changeStar(1,2);" onmouseover="changeStar(0,2);"></a><a href="javascript:changeStar(1,3);" onmouseover="changeStar(0,3);"></a><a href="javascript:changeStar(1,4);" onmouseover="changeStar(0,4);"></a><a href="javascript:changeStar(1,5);" onmouseover="changeStar(0,5);"></a><span>点星星评分</span></p>
+					<p class="tip">请您文明上网、理性发言并遵守 <a href="http://comment5.news.qq.com/note.htm" target="_blank">相关规定</a></p>
+					<div class="error-tip">
+						<div class="error-logo"></div>
+						<span></span>
+					</div>
+					<textarea onfocus="onfocusonblur(this,0);" onblur="onfocusonblur(this,1);">请先登录...</textarea>
+					<input class="validate-input" style="display:none;" type="text">
+					<!-- <img class="validate-img" src="http://android.myapp.com/verify/" width="95" height="33" alt="" />
+						<a href="javascript:getVirifyCode();">刷新验证码</a> -->
+				</div>
+				<footer>
+					<a href="javascript:doComment();" class="left"><span>提交</span></a><a href="javascript:UI.popwinWrap('#comment_add');UI.popwinMask(0);" class="right"><span>取消</span></a>
+				</footer>
+			</section>
+			<section id="report_app" class="popwin popwin-report" style="display:none;">
+				<header>
+					<h1>举报</h1>
+					<a href="javascript:UI.popwinWrap('#report_app');UI.popwinMask(0);" class="close" title="关闭">关闭</a>
+				</header>
+				<div class="body" style="padding-top:20px;">
+					<h2>天天酷跑1.0.6.0</h2>
+					<ul>
+						<li><input id="reportype1" name="reportype" type="checkbox" value="1"><label for="reportype1">无法下载</label></li>
+						<li><input id="reportype2" name="reportype" type="checkbox" value="2"><label for="reportype2">无法安装启动</label></li>
+						<li><input id="reportype5" name="reportype" type="checkbox" value="5"><label for="reportype5">版本太旧需要更新</label></li>
+						<li><input id="reportype6" name="reportype" type="checkbox" value="6"><label for="reportype6">恶意扣费</label></li>
+						<li><input id="reportype7" name="reportype" type="checkbox" value="7"><label for="reportype7">携带病毒</label></li>
+						<li><input id="reportype8" name="reportype" type="checkbox" value="8"><label for="reportype8">含有恶意插件</label></li>
+						<li><input id="reportype9" name="reportype" type="checkbox" value="9"><label for="reportype9">侵犯版权</label></li>
+					</ul>
+					<p style="margin-top:5px; font-size:12px; color:#999;">请发邮件至<a href="mailto:alarmapp@huohuaMarket.com" style="color:#999;text-decoration:underline;">alarmapp@huohuaMarket.com</a>进行侵权举报</p>
+					<p style="margin-top:15px;">您的举报信息将会同步到工信部12321举报平台</p>
+				</div>
+				<footer style="margin-top:120px;">
+					<a href="javascript:doReport();" class="left"><span>提交</span></a><a href="javascript:UI.popwinWrap('#report_app');UI.popwinMask(0);" class="right"><span>取消</span></a>
+				</footer>
+			</section>
+			<div id="message_toast" class="toast" style="display:none;">
+				<div class="toast-logo"></div>
+				<span></span>
+			</div>
+			<section id="message_info" class="popwin" style="display:none;">
+				<header>
+					<h1>消息</h1>
+					<a href="javascript:UI.popwinWrap('#message_info');UI.popwinMask(0);" class="close" title="关闭">关闭</a>
+				</header>
+				<div class="body">
+					<b class="notice"></b>
+					<div class="line1">举报失败！</div>
+				</div>
+				<footer>
+					<a href="javascript:UI.popwinWrap('#message_info');UI.popwinMask(0);" class="left"><span>确定</span></a>
+				</footer>
+			</section>
+			<script type="text/javascript" src="http://3gimg.qq.com/web/webapp_webmarket/android/js/in-min.js" autoload="true" core="http://3gimg.qq.com/web/webapp_webmarket/android/js/jquery-1.4.2.min.js"></script>
+			<script type="text/javascript">
+				In.add("sjqqapi",{path:"http://img1.sj.qq.com/api/scripts/sjqqapi.js?ver=1.0",type:"js",charset:"utf-8"});
+				In.add("scrolloading",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/jquery.scrolloading.js?ver=1.0",type:"js",charset:"utf-8"});
+				In.add("wandoujia",{path:"http://wandoujia.com/api/wdapi.js?ver=1.0",type:"js",charset:"utf-8"});
+				In.add("base",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/base.js?ver=1.0",type:"js",charset:"utf-8"});
+				In.add("huohua",{path:"/github/iMarket/iMarket/templets/huohua/js/huohua.js?ver=1.0",type:"js",charset:"utf-8"});
+				In.add("appdetail",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/appdetail.js?ver=1.0",type:"js",charset:"utf-8",rely:["scrolloading","base","huohua"]});
+			</script>
+			<script type="text/javascript">
+				var g_appid = 10099632;
+				var g_pkgid = 16286051;
+				var g_authcomment = false;
+				//截图翻页效果初始化变量
+				var g_piclength = 2;
+				g_piclength = 5
+				
+				var g_picindex = 2;
+				
+				//验证码
+				var g_virifycode = false;
+				function getVirifyCode(vcode){
+				    if(typeof(vcode) == "undefined"){
+				    	vcode = 1;
+				    }
+				    if(!g_virifycode || vcode==0){
+				        g_virifycode = true;
+				        $("#comment_add img.validate-img").attr("src","http://android.myapp.com/verify/?r="+Math.random());
+				        window.setTimeout(function(){
+				        	g_virifycode = false;
+				        },1000);
+				    }
+				}
+				
+				In("appdetail",function(){
+				    //相关推荐
+				    showRelateApp();
+				    //获取用户评分
+				    getUserScore();
+				    //评论列表
+				    $(".ajax_scrolloading").scrolloading({"attr":"data-func"});
+				    g_model = true;
+				    In.later(500,"sjqqapi",function(){
+				        UI.loadstyles("http://img1.sj.qq.com/api/styles/sjqqapi.css?ver=1.0");
+					});
+				});
+				
+				//微博分享
+				function postoWeibo(){
+				    var _t = encodeURIComponent("#做最懂你的应用宝#我在应用宝发现了一款很不错的应用“天天酷跑”，朋友们都来看看~下载地址：");
+				    var _url = encodeURIComponent(document.location);
+				    var _assname = encodeURIComponent("download_app");//你注册的帐号，不是昵称
+				    var _appkey = encodeURIComponent("1a5c6d83a6764916b1b6675d99776532");//你从腾讯获得的appkey
+				    var _pic = encodeURIComponent("http://ugc.qpic.cn/appcenter_snapshot/0/10099632_16286054_0_759845/0");//（例如：var _pic='图片url1|图片url2|图片url3....）
+				    var _site = encodeURIComponent("http://android.myapp.com/");//你的网站地址
+				    var _u = "http://v.t.qq.com/share/share.php?url="+_url+"&appkey="+_appkey+"&site="+_site+"&pic="+_pic+"&assname="+_assname+"&title="+_t;
+				    window.open(_u,"", "width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no");
+				}
+				//空间、朋友分享
+				function postoCommunity(to){
+				    var p = {
+				        url : location.href,
+				        to : to,
+				        desc : "---腾讯移动游戏再发新作---<br/><br/>腾讯移动游戏集大成之作，专为广大微信和手机QQ用户量身打造的酷跑游戏天天酷跑，急速前行！<br/><br/>---枪神纪主角加盟酷跑---<br/...",/*默认分享理由(可选)*/
+				        summary : "",/*摘要(可选)*/
+				        title : "我在应用宝下载了“天天酷跑”",/*分享标题(可选)*/
+				        site : "应用宝官网",/*分享来源 如：腾讯网(可选)*/
+				        pics : "http://ugc.qpic.cn/appcenter_snapshot/0/10099632_16286054_0_759845/0" /*分享图片的路径(可选)*/
+				    };
+				    var s = [];
+				    for(var i in p){
+				        s.push(i + "=" + encodeURIComponent(p[i]||""));
+				    }
+				    window.open("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?"+s.join("&")); 
+				}
+			</script>
+						<div class="gototop" style="display: none; bottom: -3px;">
+				<a href="javascript:gototop();">返回顶部</a>
+			</div>
+			<script type="text/javascript">
+				In.ready(function() {
+					var srule = [];
+					srule.push("@font-face {");
+					srule.push("    font-family: 'myfont';");
+					srule.push("	src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot');");
+					srule.push("	src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot?#iefix') format('embedded-opentype'),")
+					srule.push("	url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.woff') format('woff'),");
+					srule.push("	url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.ttf') format('truetype'),");
+					srule.push("	url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.svg#Untitled1Medium') format('svg');");
+					srule.push("	font-weight: normal;");
+					srule.push("	font-style: normal;");
+					srule.push("}");
+					//var browserName = navigator.userAgent;
+					//if(!(/Windows NT 5.1|Windows Xp|Windows NT 5.0|Windows 2000/i.test(browserName) && /webkit/i.test(browserName) && !(/chrome/i.test(browserName) && /webkit/i.test(browserName) && /mozilla/i.test(browserName)))){
+						In.css(srule.join(""));
+					//}
+				});
+				function pingHotag(str) {
+				    if(typeof(pgvSendClick) == "function") {
+				        pgvSendClick({hottag:str,virtualDomain:"android.app.qq.com"});
+				    }
+				}
+				In.add("pingjs", {path:"/github/iMarket/iMarket/templets/huohua/js/myapp/tcss.ping.js", type:"js", charset:"utf-8"});
+				var G_STAT = window.setInterval(function() {
+				    if(typeof(g_model)!="undefined" && g_model) {
+				        window.clearInterval(G_STAT);
+				        In("pingjs",function() {
+				            if(typeof(pgvMain) == "function") {
+				                pgvMain("", {virtualDomain:"android.app.qq.com"});
+				                pageSpeedTrack();
+				            }
+				        });
+				        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				    }
+				}, 100);
+				var _foot_start = new Date();
+			</script>
+			<footer class="footer" role="contentinfo">
+				<div class="mqparty-footer">
+					<script charset="utf-8" src="/github/iMarket/iMarket/templets/huohua/js/myapp/mqq_footer_normal.js" type="text/javascript"></script>
+				</div>
+			</footer>
+			<script type="text/javascript">
+				var _body_end = new Date();
+				function pageSpeedTrack(){
+				    if(typeof(_head_start) == typeof(_body_end)) {
+				        var loading_time = _body_end - _head_start;
+				        if(loading_time > 0 && loading_time < 60 * 1000) {
+				            var speed = loading_time > 3 * 1000 ? "slow" : "quick";
+				            var page_path = window.location.pathname.replace(/(\.jsp)$/i, "");
+				            _gaq.push(["_trackEvent", "pagespeed", speed, page_path, loading_time]);
+				            pingHotag("pagespeed." + speed + "." + page_path + "." + window.navigator.appName.replace(/^\s*(.*?)\s.*$/, "$1"));
+				        }
+				    }
+				}
+			</script>
+		</div>
+	</body>
+</html>

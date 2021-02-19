@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="developer:ZhangChunsheng, team:luomor, date:2013-11-02">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>应用  /  娱乐_火花市场</title>
+					<script src="http://jsqmt.qq.com/cdn_djl.js" type="text/javascript" async=""></script>
+		<script type="text/javascript">
+			var _head_start = new Date();
+			var g_returl = "http://localhost/github/iMarket/iMarket/index.php";
+			var gf_param = "";
+			var g_action = "/github/iMarket/iMarket/api/";
+			//var g_action = "http://android.myapp.com/android/";
+			//http://android.myapp.com/android/qrytopicbycms_web?r=0.018095792969688773
+			//http://android.myapp.com/android/qrynesseary_web?type=0&r=0.661279286025092
+			var g_respath = "http://localhost/github/iMarket/iMarket/templets/huohua";
+			var g_hostpath = "http://localhost";
+			var g_logined = false;
+			var g_qqno = 0;
+			var g_nickname = "";
+		</script>
+		<script>
+		  /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-45384518-1', 'studyandthinkhtml5.com');
+		  ga('send', 'pageview');*/
+		</script>
+
+		<base href="http://localhost/github/iMarket/iMarket/index.php">
+		<link rel="canonical" href="http://localhost/github/iMarket/iMarket/index.php">
+		<link rel="shortcut icon" type="image/ico" href="/github/iMarket/iMarket/templets/huohua/images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/github/iMarket/iMarket/templets/huohua/style/myapp/global.min.css?ver=2.3.5">
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" href="/github/iMarket/iMarket/templets/huohua/style/myapp/fuck-ie.css" />
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/html5.js"></script>
+		<![endif]-->
+		<noscript>
+			&lt;style type="text/css"&gt;
+				.wraper {display:none !important;}
+			&lt;/style&gt;
+			&lt;div class="ie-noscript-warning"&gt;
+			由于您的浏览器禁用了javascript脚本，网页无法正常浏览!
+			&lt;/div&gt;
+		</noscript>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/jquery-1.4.2.min.js" async=""></script>
+		<!--<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/storescrolload.min.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/manifest.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/base.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/index.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/tcss.ping.js" async="" charset="utf-8"></script>
+		<script type="text/javascript" src="http://img1.sj.qq.com/api/scripts/sjqqapi.js?ver=2.3.5" async="" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://img1.sj.qq.com/api/styles/sjqqapi.css?ver=2.3.5">
+		<style type="text/css" id="in-inline-css">
+			@font-face {
+				font-family: 'myfont';
+				src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot');
+				src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot?#iefix') format('embedded-opentype'),
+				url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.woff') format('woff'),
+				url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.ttf') format('truetype'),
+				url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.svg#Untitled1Medium')
+				format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		</style>-->
+		<script src="http://jqmt.qq.com/cdn_dianjiliu.js?a=0.33706603525206447"></script>
+	</head>
+	<body>
+		<div class="wraper">
+			<header class="user-information">
+				<a href="http://t.qq.com/huohuamarke" target="_blank">联系客服</a>&nbsp;|&nbsp;
+				<a class="mblog" href="http://t.qq.com/huohuamarket" target="_blank"><s></s>关注我们</a>
+			</header>
+			<div id="login_wrap" style="position:absolute; display:none; width:552px; height:380px; padding:0; margin:0; z-index:10000;" align="center">
+				<iframe id="login_frame" name="login_frame" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
+			</div>
+			<div class="ie6-header"></div>
+			<div class="main" role="main">
+				<div class="ie-main-header"></div>
+				<header role="banner">
+					<h1 class="logo"><a href="/android/index.jsp"><img src="/github/iMarket/iMarket/templets/huohua/images/logo.png" width="210" height="60" alt="火花市场网"></a></h1>
+
+					<!--<div class="login logout">
+						<a class="user-avatar" href="javascript:openLogin();">
+							<img src="/github/iMarket/iMarket/templets/huohua/images/myapp/default-avatar.jpg" width="50" height="50" alt="">
+							<div class="shadow"></div>
+						</a>
+						<div class="user-name"><a href="javascript:openLogin();">请登录</a></div>
+						<div class="target"></div>
+					</div>-->
+
+					<nav role="navigation">
+						<h1 class="hide-clip">网站导航</h1>
+						<ul class="navigation">
+							<li>
+								<a href="/github/iMarket/iMarket/" data-nav="index" hidefocus="">
+									<span>首页</span>
+								</a>
+							</li>
+							<li class='hover'><a href='/github/iMarket/iMarket/android/app'  rel='dropmenu2' data-nav='app'><span>应用</span></a></li>
+							<li>
+								<a href='/github/iMarket/iMarket/android/game'  rel='dropmenu3' data-nav="game">
+									<span>游戏</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href='/github/iMarket/iMarket/android/subject'  rel='dropmenu4' data-nav="subject">
+									<span>专题</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href='http://localhost/github/luomor/wordpress/wordpress/'  data-nav="">
+									<span>博客</span>
+								</a>
+							</li>
+							
+						</ul>
+					</nav>
+					<div class="search" role="form">
+						<input id="keyword" class="input-box" type="search" title="试试搜索应用名称或功能" placeholder="试试搜索应用名称或功能" role="search" onkeydown="return UI.onSearchKeyDown(event);" x-webkit-speech="">
+						<input type="button" value="搜索" class="submit-button" title="搜索" onclick="UI.searchapp();">
+					</div>
+				</header>
+				<script type="text/javascript">
+					var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-45384518-1']);
+					_gaq.push(['_trackPageview']);
+				</script>
+				<div class="mod-box mod-box-padding">
+					<div class="ie-model-header-left w910">
+						<div class="ie-model-header-right"></div>
+					</div>
+					<ol class="bread-nav">
+						<li><a href="index.jsp">首页</a><span>&gt;</span></li>
+						<li><a href="app.jsp">应用</a><span>&gt;</span></li>
+						<li class="bread-now">全部</li>
+					</ol>
+					<nav class="leftnav gamenav">
+						<h1 class="hide-clip">应用分类</h1>
+						<ul id="category_list">
+							<li data-cid="-1" data-icfa="15144050000000000000" class="nownav"><a href="javascript:void(0);">全部</a></li>
+							<li data-cid="10013" data-icfa="15144064010013001000"><a href="javascript:void(0);">腾讯软件</a></li>
+							<li data-cid="106" data-icfa="15144196000106001000"><a href="javascript:void(0);">社交</a></li>
+							<li data-cid="117" data-icfa="15144196000117002000"><a href="javascript:void(0);">系统</a></li>
+							<li data-cid="118" data-icfa="15144196000118003000"><a href="javascript:void(0);">安全</a></li>
+							<li data-cid="115" data-icfa="15144196000115004000"><a href="javascript:void(0);">工具</a></li>
+							<li data-cid="116" data-icfa="15144196000116005000"><a href="javascript:void(0);">通讯</a></li>
+							<li data-cid="101" data-icfa="15144196000101006000"><a href="javascript:void(0);">音乐</a></li>
+							<li data-cid="103" data-icfa="15144196000103007000"><a href="javascript:void(0);">视频</a></li>
+							<li data-cid="105" data-icfa="15144196000105008000"><a href="javascript:void(0);">娱乐</a></li>
+							<li data-cid="102" data-icfa="15144196000102009000"><a href="javascript:void(0);">阅读</a></li>
+							<li data-cid="119" data-icfa="15144196000119010000"><a href="javascript:void(0);">美化</a></li>
+							<li data-cid="107" data-icfa="15144196000107011000"><a href="javascript:void(0);">生活</a></li>
+							<li data-cid="112" data-icfa="15144196000112012000"><a href="javascript:void(0);">导航</a></li>
+							<li data-cid="104" data-icfa="15144196000104013000"><a href="javascript:void(0);">摄影</a></li>
+							<li data-cid="114" data-icfa="15144196000114014000"><a href="javascript:void(0);">理财</a></li>
+							<li data-cid="111" data-icfa="15144196000111015000"><a href="javascript:void(0);">教育</a></li>
+							<li data-cid="109" data-icfa="15144196000109016000"><a href="javascript:void(0);">健康</a></li>
+							<li data-cid="122" data-icfa="15144196000122017000"><a href="javascript:void(0);">购物</a></li>
+							<li data-cid="113" data-icfa="15144196000113018000"><a href="javascript:void(0);">办公</a></li>
+							<li data-cid="110" data-icfa="15144196000110019000"><a href="javascript:void(0);">新闻</a></li>
+							<li data-cid="108" data-icfa="15144196000108020000"><a href="javascript:void(0);">旅游</a></li>
+							<li data-cid="100" data-icfa="15144196000100021000"><a href="javascript:void(0);">儿童</a></li>
+						</ul>
+					</nav>
+					<section class="gamecontent">
+						<div class="filternav"><a class="nownav" href="javascript:void(0);" data-rank="0">排行</a><a href="javascript:void(0);" data-rank="1" style="display: none;">流行</a><a href="javascript:void(0);" data-rank="2">最新</a></div>
+						<div>
+							<ul class="longranklist">
+								<li onmouseover="$(this).addClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).addClass('stargreybg');" onmouseout="$(this).removeClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).removeClass('stargreybg');" class="">
+									<div class="app-rank-hover">
+										<div class="app-img">			<a href="appdetail.jsp?appid=49367&amp;icfa=15144052049367001000&amp;lmid=2031" title="QQ浏览器">				<img class="img_scrolloading_2031" src="http://appimg1.3g.qq.com/android/49367/16677996/icon_72.png" data-url="http://appimg1.3g.qq.com/android/49367/16677996/icon_72.png" width="72" height="72" alt="QQ浏览器">			</a>		</div>
+										<p class="app-name"><a href="appdetail.jsp?appid=49367&amp;icfa=15144052049367001000&amp;lmid=2031">QQ浏览器</a><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>
+										<p class="app-introduce">QQ浏览器（极速内核）界面清新，操作简单易用。采用腾讯自主研发的X5内核， 提供前所未有的极速上网体验。2013年，速度会更快哦！QQ浏览器，给你超快感！</p>
+										<p class="grey">发布时间：2013-11-04     <span>支持固件：2.1及以上</span></p>
+										<div class="free-download" style="width:68px;">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '49367']);pingHotag('list.download.easy.49367');" ex_url="http://android.myapp.com/android/down.jsp?appid=49367&amp;pkgid=16694167&amp;type=5&amp;icfa=15144052049367001000&amp;lmid=2031" asistanturlid="990428" appname="QQ浏览器" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>
+									</div>
+								</li>
+								<li onmouseover="$(this).addClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).addClass('stargreybg');" onmouseout="$(this).removeClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).removeClass('stargreybg');" class="">
+									<div class="app-rank-hover">
+										<div class="app-img">			<a href="appdetail.jsp?appid=43276&amp;icfa=15144052043276002000&amp;lmid=2031" title="搜狗手机输入法">				<img class="img_scrolloading_2031" src="http://appimg1.3g.qq.com/android/43276/16663009/icon_72.png" data-url="http://appimg1.3g.qq.com/android/43276/16663009/icon_72.png" width="72" height="72" alt="搜狗手机输入法">			</a>		</div>
+										<p class="app-name"><a href="appdetail.jsp?appid=43276&amp;icfa=15144052043276002000&amp;lmid=2031">搜狗手机输入法</a><span class="star stargrey"><span class="star starlight" style="width:80%" itemprop="rating">80</span></span></p>
+										<p class="app-introduce">搜狗手机输入法与搜狗拼音输入法一脉相传，以用户体验为指导+技术创新，致力于为亿万手机用户提供手机端最智能、最易用的输入法产品拥有10万大词库、算法智能、首选率高、...</p>
+										<p class="grey">发布时间：2013-10-30     <span>支持固件：2.1及以上</span></p>
+										<div class="free-download" style="width:68px;">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '43276']);pingHotag('list.download.easy.43276');" ex_url="http://android.myapp.com/android/down.jsp?appid=43276&amp;pkgid=16663009&amp;type=5&amp;icfa=15144052043276002000&amp;lmid=2031" asistanturlid="990428" appname="搜狗手机输入法" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>
+									</div>
+								</li>
+								<li onmouseover="$(this).addClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).addClass('stargreybg');" onmouseout="$(this).removeClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).removeClass('stargreybg');">
+									<div class="app-rank-hover">
+										<div class="app-img">			<a href="appdetail.jsp?appid=48462&amp;icfa=15144052048462003000&amp;lmid=2031" title="腾讯手机管家">				<img class="img_scrolloading_2031" src="http://appimg1.3g.qq.com/android/48462/16505622/icon_72.png" data-url="http://appimg1.3g.qq.com/android/48462/16505622/icon_72.png" width="72" height="72" alt="腾讯手机管家">			</a>		</div>
+										<p class="app-name"><a href="appdetail.jsp?appid=48462&amp;icfa=15144052048462003000&amp;lmid=2031">腾讯手机管家</a><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>
+										<p class="app-introduce">腾讯手机管家是一款完全免费的手机安全与管理软件，以手机安全管理先锋为使命，提供体检加速、健康优化、安全防护、软件管理等智能化的手机管理功能，更有管家安全登录QQ、...</p>
+										<p class="grey">发布时间：2013-10-12     <span>支持固件：2.1及以上</span></p>
+										<div class="free-download" style="width:68px;">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '48462']);pingHotag('list.download.easy.48462');" ex_url="http://android.myapp.com/android/down.jsp?appid=48462&amp;pkgid=16505622&amp;type=5&amp;icfa=15144052048462003000&amp;lmid=2031" asistanturlid="990428" appname="腾讯手机管家" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>
+									</div>
+								</li>
+								<li onmouseover="$(this).addClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).addClass('stargreybg');" onmouseout="$(this).removeClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).removeClass('stargreybg');" class="">
+									<div class="app-rank-hover">
+										<div class="app-img">			<a href="appdetail.jsp?appid=93283&amp;icfa=15144052093283004000&amp;lmid=2031" title="快播">				<img class="img_scrolloading_2031" src="http://appimg1.3g.qq.com/android_new/283/93283/16420147/icon_72.png" data-url="http://appimg1.3g.qq.com/android_new/283/93283/16420147/icon_72.png" width="72" height="72" alt="快播">			</a>		</div>
+										<p class="app-name"><a href="appdetail.jsp?appid=93283&amp;icfa=15144052093283004000&amp;lmid=2031">快播</a><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p>
+										<p class="app-introduce">快播3.0全新改版了！
+											雷达私人模式娱乐风向标更多强大功能助你轻松玩转掌中视界！
+											快播播放器(Qvod Player)是一款基于准视频点播(QVOD)内核的，集在线点播、在线直播及本地...
+										</p>
+										<p class="grey">发布时间：2013-09-29     <span>支持固件：2.1及以上</span></p>
+										<div class="free-download" style="width:68px;">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '93283']);pingHotag('list.download.easy.93283');" ex_url="http://android.myapp.com/android/down.jsp?appid=93283&amp;pkgid=16420147&amp;type=5&amp;icfa=15144052093283004000&amp;lmid=2031" asistanturlid="990428" appname="快播" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>
+									</div>
+								</li>
+								<li onmouseover="$(this).addClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).addClass('stargreybg');" onmouseout="$(this).removeClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).removeClass('stargreybg');">
+									<div class="app-rank-hover">
+										<div class="app-img">			<a href="appdetail.jsp?appid=50801&amp;icfa=15144052050801005000&amp;lmid=2031" title="应用宝">				<img class="img_scrolloading_2031" src="http://appimg1.3g.qq.com/android/50801/16629897/icon_72.png" data-url="http://appimg1.3g.qq.com/android/50801/16629897/icon_72.png" width="72" height="72" alt="应用宝">			</a>		</div>
+										<p class="app-name"><a href="appdetail.jsp?appid=50801&amp;icfa=15144052050801005000&amp;lmid=2031">应用宝</a><span class="star stargrey"><span class="star starlight" style="width:60%" itemprop="rating">60</span></span></p>
+										<p class="app-introduce">应用宝（Android）是腾讯应用中心倾力打造的手机应用商店，致力于为用户提供丰富、优质、安全、个性化的安卓软件游戏资源和一站式的下载管理体验，全方位覆盖用户的下载、...</p>
+										<p class="grey">发布时间：2013-10-29     <span>支持固件：2.1及以上</span></p>
+										<div class="free-download" style="width:68px;">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '50801']);pingHotag('list.download.easy.50801');" ex_url="http://android.myapp.com/android/down.jsp?appid=50801&amp;pkgid=16629897&amp;type=5&amp;icfa=15144052050801005000&amp;lmid=2031" asistanturlid="990428" appname="应用宝" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>
+									</div>
+								</li>
+								<li onmouseover="$(this).addClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).addClass('stargreybg');" onmouseout="$(this).removeClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).removeClass('stargreybg');" class="">
+									<div class="app-rank-hover">
+										<div class="app-img">			<a href="appdetail.jsp?appid=48157&amp;icfa=15144052048157006000&amp;lmid=2031" title="微信">				<img class="img_scrolloading_2031" src="http://appimg1.3g.qq.com/android/48157/16681860/icon_72.png" data-url="http://appimg1.3g.qq.com/android/48157/16681860/icon_72.png" width="72" height="72" alt="微信">			</a>		</div>
+										<p class="app-name"><a href="appdetail.jsp?appid=48157&amp;icfa=15144052048157006000&amp;lmid=2031">微信</a><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p>
+										<p class="app-introduce">1.可以发语音、文字消息、表情、图片、视频。30M流量可以收发上千条语音，省电省流量。
+											 2.朋友圈，跟朋友们分享生活点滴。
+											 3.摇一摇、查看附近的人，世界不再有陌生人...
+										</p>
+										<p class="grey">发布时间：2013-11-04     <span>支持固件：2.1及以上</span></p>
+										<div class="free-download" style="width:68px;">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '48157']);pingHotag('list.download.easy.48157');" ex_url="http://android.myapp.com/android/down.jsp?appid=48157&amp;pkgid=16696314&amp;type=5&amp;icfa=15144052048157006000&amp;lmid=2031" asistanturlid="990428" appname="微信" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>
+									</div>
+								</li>
+								<li onmouseover="$(this).addClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).addClass('stargreybg');" onmouseout="$(this).removeClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).removeClass('stargreybg');" class="">
+									<div class="app-rank-hover">
+										<div class="app-img">			<a href="appdetail.jsp?appid=45751&amp;icfa=15144052045751007000&amp;lmid=2031" title="美图秀秀">				<img class="img_scrolloading_2031" src="http://appimg1.3g.qq.com/android/45751/16421898/icon_72.png" data-url="http://appimg1.3g.qq.com/android/45751/16421898/icon_72.png" width="72" height="72" alt="美图秀秀">			</a>		</div>
+										<p class="app-name"><a href="appdetail.jsp?appid=45751&amp;icfa=15144052045751007000&amp;lmid=2031">美图秀秀</a><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>
+										<p class="app-introduce">*** 中国最受欢迎的图像处理软件 
+											*** 2亿用户正在使用！安卓手机装机必备 
+											新增动感魔幻笔功能，给你魔术般的特效体验；
+											内置8款魔幻笔，一秒钟让照片变得唯美；
+											特效可以...
+										</p>
+										<p class="grey">发布时间：2013-09-29     <span>支持固件：2.3.2及以上</span></p>
+										<div class="free-download" style="width:68px;">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '45751']);pingHotag('list.download.easy.45751');" ex_url="http://android.myapp.com/android/down.jsp?appid=45751&amp;pkgid=16421898&amp;type=5&amp;icfa=15144052045751007000&amp;lmid=2031" asistanturlid="990428" appname="美图秀秀" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>
+									</div>
+								</li>
+								<li onmouseover="$(this).addClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).addClass('stargreybg');" onmouseout="$(this).removeClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).removeClass('stargreybg');" class="">
+									<div class="app-rank-hover">
+										<div class="app-img">			<a href="appdetail.jsp?appid=50179&amp;icfa=15144052050179008000&amp;lmid=2031" title="中华万年历-日历天气">				<img class="img_scrolloading_2031" src="http://appimg1.3g.qq.com/android/50179/16624290/icon_72.png" data-url="http://appimg1.3g.qq.com/android/50179/16624290/icon_72.png" width="72" height="72" alt="中华万年历-日历天气">			</a>		</div>
+										<p class="app-name"><a href="appdetail.jsp?appid=50179&amp;icfa=15144052050179008000&amp;lmid=2031">中华万年历-日历天气</a><span class="star stargrey"><span class="star starlight" style="width:90%" itemprop="rating">90</span></span></p>
+										<p class="app-introduce">中华万年历，小巧、全面、实用、漂亮的日历软件提供公历、农历、黄历、日程、天气、记事、生日、节日、星座、解梦、生理规律等诸多实用功能占用内存小，运行流畅，符合百姓...</p>
+										<p class="grey">发布时间：2013-10-28     <span>支持固件：1.6及以上</span></p>
+										<div class="free-download" style="width:68px;">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '50179']);pingHotag('list.download.easy.50179');" ex_url="http://android.myapp.com/android/down.jsp?appid=50179&amp;pkgid=16624290&amp;type=5&amp;icfa=15144052050179008000&amp;lmid=2031" asistanturlid="990428" appname="中华万年历-日历天气" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>
+									</div>
+								</li>
+								<li onmouseover="$(this).addClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).addClass('stargreybg');" onmouseout="$(this).removeClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).removeClass('stargreybg');" class="">
+									<div class="app-rank-hover">
+										<div class="app-img">			<a href="appdetail.jsp?appid=45592&amp;icfa=15144052045592009000&amp;lmid=2031" title="QQ 2013">				<img class="img_scrolloading_2031" src="http://appimg1.3g.qq.com/android/45592/16661706/icon_72.png" data-url="http://appimg1.3g.qq.com/android/45592/16661706/icon_72.png" width="72" height="72" alt="QQ 2013">			</a>		</div>
+										<p class="app-name"><a href="appdetail.jsp?appid=45592&amp;icfa=15144052045592009000&amp;lmid=2031">QQ 2013</a><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p>
+										<p class="app-introduce">阅读中心、闪照、丰富的签名状态等更多好玩功能，尽在4.5.2新版
+											QQ是由腾讯公司打造的移动互联网应用，提供免费的多媒体沟通服务，方便用户在移动设备上通过语音、图片、视...
+										</p>
+										<p class="grey">发布时间：2013-10-25     <span>支持固件：2.1及以上</span></p>
+										<div class="free-download" style="width:68px;">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '45592']);pingHotag('list.download.easy.45592');" ex_url="http://android.myapp.com/android/down.jsp?appid=45592&amp;pkgid=16614400&amp;type=5&amp;icfa=15144052045592009000&amp;lmid=2031" asistanturlid="990428" appname="QQ 2013" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>
+									</div>
+								</li>
+								<li onmouseover="$(this).addClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).addClass('stargreybg');" onmouseout="$(this).removeClass('hover');$(this).find('&gt;div').find('&gt;p').eq(0).removeClass('stargreybg');" class="">
+									<div class="app-rank-hover">
+										<div class="app-img">			<a href="appdetail.jsp?appid=32244&amp;icfa=15144052032244010000&amp;lmid=2031" title="优酷视频播放器">				<img class="img_scrolloading_2031" src="http://appimg1.3g.qq.com/android/32244/16679094/icon_72.png" data-url="http://appimg1.3g.qq.com/android/32244/16679094/icon_72.png" width="72" height="72" alt="优酷视频播放器">			</a>		</div>
+										<p class="app-name"><a href="appdetail.jsp?appid=32244&amp;icfa=15144052032244010000&amp;lmid=2031">优酷视频播放器</a><span class="star stargrey"><span class="star starlight" style="width:70%" itemprop="rating">70</span></span></p>
+										<p class="app-introduce">优酷网推出言之有“礼”活动，只要留下“言”的证据，就有iphone5s、拍立得，京东购物卡等大礼。&lt;&lt;万万没想到&gt;&gt;机会就在眼前，一起“言焗优酷”吧～～
+											【活动奖品】
+											一等...
+										</p>
+										<p class="grey">发布时间：2013-11-01     <span>支持固件：2.2及以上</span></p>
+										<div class="free-download" style="width:68px;">			<a href="javascript:void(0);" onclick="qqapp_dl_apk(this);_gaq.push(['_trackEvent', 'list', 'download - easy', '32244']);pingHotag('list.download.easy.32244');" ex_url="http://android.myapp.com/android/down.jsp?appid=32244&amp;pkgid=16679094&amp;type=5&amp;icfa=15144052032244010000&amp;lmid=2031" asistanturlid="990428" appname="优酷视频播放器" title="使用腾讯手机管家(PC版)一键安装到手机"><span>一键安装</span></a>		</div>
+									</div>
+								</li>
+							</ul>
+							<div class="pagenav"><a class="nowpage" href="javascript:void(0)" onclick="showCategoryApp(1);"><span>1</span></a><a href="javascript:void(0)" onclick="showCategoryApp(2);"><span>2</span></a><a href="javascript:void(0)" onclick="showCategoryApp(3);"><span>3</span></a><a href="javascript:void(0)" onclick="showCategoryApp(4);"><span>4</span></a><a href="javascript:void(0)" onclick="showCategoryApp(5);"><span>5</span></a><a href="javascript:void(0)" onclick="showCategoryApp(6);"><span>6</span></a><a href="javascript:void(0)" onclick="showCategoryApp(7);"><span>…</span></a><a href="javascript:void(0)" onclick="showCategoryApp(2, -2145386483);"><span class="hack">下一页</span></a></div>
+						</div>
+					</section>
+					<div class="ie-model-footer-left w910">
+						<div class="ie-model-footer-right"></div>
+					</div>
+				</div>
+				<div class="ie-main-footer"></div>
+			</div>
+			<script type="text/javascript" src="/github/iMarket/iMarket/templets/huohua/js/myapp/in-min.js" autoload="true" core="/github/iMarket/iMarket/templets/huohua/js/jquery-1.4.2.min.js"></script>
+			<script type="text/javascript">
+				In.add("sjqqapi",{path:"http://img1.sj.qq.com/api/scripts/sjqqapi.js?ver=2.3.5",type:"js",charset:"utf-8"});
+				In.add("storescrolload",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/storescrolload.min.js?ver=2.3.5",type:"js",charset:"utf-8"});
+				In.add("manifest",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/manifest.js?ver=2.3.5",type:"js",charset:"utf-8"});
+				In.add("base",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/base.js?ver=2.3.5",type:"js",charset:"utf-8"});
+				In.add("huohua",{path:"/github/iMarket/iMarket/templets/huohua/js/huohua.js?ver=2.3.5",type:"js",charset:"utf-8"});
+				In.add("assort",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/assort.js?ver=2.3.5",type:"js",charset:"utf-8",rely:["storescrolload","manifest","base","huohua"]});
+				var g_layout = "app";
+				var g_cid = -1;
+				var g_cname = "全部";
+				var g_lmid = 0;
+				In("assort", function() {
+				    init();
+				    g_model = true;
+				    In.later(500, "sjqqapi", function() {
+				        UI.loadstyles("http://img1.sj.qq.com/api/styles/sjqqapi.css?ver=2.3.5");
+				    });
+				});
+			</script>
+						<div class="gototop" style="display: none; bottom: -3px;">
+				<a href="javascript:gototop();">返回顶部</a>
+			</div>
+			<script type="text/javascript">
+				In.ready(function(){
+					var srule = [];
+					srule.push("@font-face {");
+					srule.push("    font-family: 'myfont';");
+					srule.push("	src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot');");
+					srule.push("	src: url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.eot?#iefix') format('embedded-opentype'),")
+					srule.push("	url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.woff') format('woff'),");
+					srule.push("	url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.ttf') format('truetype'),");
+					srule.push("	url('/github/iMarket/iMarket/templets/huohua/fonts/myapp/myfont-webfont.svg#Untitled1Medium') format('svg');");
+					srule.push("	font-weight: normal;");
+					srule.push("	font-style: normal;");
+					srule.push("}");
+					//var browserName = navigator.userAgent;
+					//if(!(/Windows NT 5.1|Windows Xp|Windows NT 5.0|Windows 2000/i.test(browserName) && /webkit/i.test(browserName) && !(/chrome/i.test(browserName) && /webkit/i.test(browserName) && /mozilla/i.test(browserName)))){
+						In.css(srule.join(""));
+					//}
+				});
+				function pingHotag(str){
+				    if(typeof(pgvSendClick) == "function"){
+				        pgvSendClick({hottag:str,virtualDomain:"android.app.qq.com"});
+				    }
+				}
+				In.add("pingjs",{path:"/github/iMarket/iMarket/templets/huohua/js/myapp/tcss.ping.js",type:"js",charset:"utf-8"});
+				var G_STAT = window.setInterval(function(){
+				    if(typeof(g_model)!="undefined" && g_model){
+				        window.clearInterval(G_STAT);
+				        In("pingjs",function(){
+				            if(typeof(pgvMain) == "function"){
+				                pgvMain("", {virtualDomain:"android.app.qq.com"});
+				                pageSpeedTrack();
+				            }
+				        });
+				        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				    }
+				},100);
+				var _foot_start = new Date();
+			</script>
+			<footer class="footer" role="contentinfo">
+				<div class="mqparty-footer">
+					<script charset="utf-8" src="/github/iMarket/iMarket/templets/huohua/js/myapp/mqq_footer_normal.js" type="text/javascript"></script>
+				</div>
+			</footer>
+			<script type="text/javascript">
+				var _body_end = new Date();
+				function pageSpeedTrack(){
+				    if(typeof(_head_start) == typeof(_body_end)){
+				        var loading_time = _body_end - _head_start;
+				        if(loading_time>0 && loading_time<60*1000){
+				            var speed = loading_time > 3*1000 ? "slow" : "quick";
+				            var page_path = window.location.pathname.replace(/(\.jsp)$/i, "");
+				            _gaq.push(["_trackEvent", "pagespeed", speed, page_path, loading_time]);
+				            pingHotag("pagespeed."+speed+"."+page_path+"."+window.navigator.appName.replace(/^\s*(.*?)\s.*$/, "$1"));
+				        }
+				    }
+				}
+			</script>
+		</div>
+	</body>
+</html>
